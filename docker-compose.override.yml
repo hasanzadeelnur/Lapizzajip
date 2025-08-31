@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  lapizzajip-admin-app:
+    container_name: lapizzajip-admin-app
+    networks:
+      - vis_network
+    volumes:
+      - shared:/app/wwwroot/uploads
+    command: chmod 777 /app/wwwroot/uploads/companies/logos/
+    restart: always
+    environment:
+      - "ASPNETCORE_ENVIRONMENT=PRODUCTION"
+      - "ASPNETCORE_HTTP_PORTS=8080;5005"
+      - "ASPNETCORE_URLS=http://+:8080;http://+:5005"
+      - "ConnectionStrings:BaseDbContext=Server=vis_db,1433;Database=CompanyManagment;User Id=SA;Password=Az!23456;TrustServerCertificate=True"

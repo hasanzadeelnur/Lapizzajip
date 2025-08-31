@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  lapizzajip-admin-app:
+    image: lapizzajip-admin-app_image
+    build:
+      context: .
+      dockerfile: AdminApp/Dockerfile
+volumes:
+  shared:
+    external: true
+networks:
+  vis_network:
+    name: vis_network
+    external: true
