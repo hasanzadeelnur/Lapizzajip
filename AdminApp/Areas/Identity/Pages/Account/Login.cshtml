@@ -1,0 +1,99 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="robots" content="noindex" />
+    <title>@ViewData["Title"] - Lapizzajip</title>
+    <!-- Favicon-->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="/admin/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="/admin/plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="/admin/plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="/admin/css/style.css" rel="stylesheet">
+</head>
+
+<body class="login-page">
+    <div class="login-box">
+        <div class="logo">
+            <a href="javascript:void(0);">
+                <b style="color: white;">Lapizzajip</b>
+            </a>
+            <small style="color: #white; font-weight: bold; font-size: 20px;">Admin Panel</small>
+        </div>
+        <div class="card">
+            <div class="body">
+                <form id="account" method="post">
+                    <div class="input-group">
+                        <div class="form-line">
+                            <label asp-for="Input!.Email"></label>
+                            <input asp-for="Input!.Email" class="form-control" required autofocus />
+                            <span asp-validation-for="Input!.Email" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="form-line">
+                            <label asp-for="Input!.Password"></label>
+                            <input asp-for="Input!.Password" class="form-control" required />
+                            <span asp-validation-for="Input!.Password" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <div class="checkbox">
+                                <input type="checkbox" class="filled-in" asp-for="Input!.RememberMe" />
+                                <label asp-for="Input!.RememberMe">
+                                    @Html.DisplayNameFor(m => m.Input!.RememberMe)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <button class="btn btn-block bg-pink waves-effect" type="submit">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery Core Js -->
+    <script src="/admin/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="/admin/plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="/admin/plugins/node-waves/waves.js"></script>
+
+    <!-- Validation Plugin Js -->
+    <script src="/admin/plugins/jquery-validation/jquery.validate.js"></script>
+
+    <!-- Custom Js -->
+    <script src="/admin/js/admin.js"></script>
+    <script src="/admin/js/pages/examples/sign-in.js"></script>
+
+    <partial name="_ValidationScriptsPartial" />
+</body>
+
+</html>

@@ -1,0 +1,290 @@
+﻿@using Infrastructure.Dtos.Products
+@model ProductCommandDto
+
+@{
+    ViewData["Title"] = "Edit Product";
+    SelectList? categories = ViewData["ProductCategories"] as SelectList;
+    SelectList? brands = ViewData["ProductBrands"] as SelectList;
+}
+
+@section Styles
+{
+}
+
+@section Scripts
+{
+    <script src="/admin/js/filemanager.js"></script>
+
+    <!-- TinyMCE -->
+    <script src="/admin/plugins/tinymce/tinymce.js"></script>
+
+    <script>
+        function uuidv4() {
+            return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
+                (+c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> +c / 4).toString(16)
+            );
+        }
+
+        var imageIndex = 0;
+
+        function addImageRow(file = { productId: "@Model?.Id", imagePath: "", order: 1, id:"" }) {
+            var index = uuidv4();
+            let innerHtml = `
+                                                                <div class="row clone_images" id="image-index-` + index + `">
+                                                            <input type="hidden" name="images[` + imageIndex + `][productId]" value="` + file.productId + `" />
+                                                            <input type="hidden" name="images[` + imageIndex + `][id]" value="` + file.id + `" />
+                                                            <div class="col-md-3">
+                                                                <img src="` + file.imagePath + `" style="height: 100px; margin-bottom: 2rem;" alt="">
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <div class="form-group">
+                                                                    <div class="form-line">
+                                                                        <label class="control-label">Image Link</label>
+                                                                        <input required name="images[`+ imageIndex + `][imagePath]" class="form-control" value="` + file.imagePath + `"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <div class="form-group">
+                                                                    <div class="form-line">
+                                                                        <label class="control-label">Order</label>
+                                                                                <input required name="images[`+ imageIndex + `][order]" class="form-control" value="` + file.order + `"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <div class="form-group">
+                                                                    <button type="button" id="clone-images-button-`+ imageIndex + `" class="btn btn-default waves-effect m-r-20 clone-images-button" onclick='defineParameterName("images[` + imageIndex + `][imagePath]")' data-toggle="modal" data-target="#file-manager-popup">Select Image</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-1">
+                                                                <div class="form-group">
+                                                                            <button type="button" class="btn btn-danger waves-effect m-r-20" onclick='$("#image-index-` + index + `").remove() && renumber_images()'>Remove</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>`;
+            $("#list-of-images").append(innerHtml);
+            imageIndex++;
+        }
+
+        $(function () {
+            //TinyMCE
+            tinymce.init({
+                selector: "textarea#tinymce",
+                theme: "modern",
+                height: 300,
+                plugins: [
+                    'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+                    'searchreplace wordcount visualblocks visualchars code fullscreen',
+                    'insertdatetime media nonbreaking save table contextmenu directionality',
+                    'emoticons template paste textcolor colorpicker textpattern imagetools'
+                ],
+                toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+                toolbar2: 'print preview media | forecolor backcolor emoticons',
+                image_advtab: true
+            });
+            tinymce.suffix = ".min";
+            tinyMCE.baseURL = '/admin/plugins/tinymce';
+        });
+
+        $("#savebutton").click(function () {
+            var value = $("#Slug").val();
+            var text = $("#Title").val()
+            if (value == "") {
+                $('#Slug').val(convertToSlug(text));
+            }
+        });
+
+        function convertToSlug(Text) {
+            return Text.toLowerCase()
+                .replace(/[^\w ]+/g, '')
+                .replace(/ +/g, '-');
+        }
+
+        function renumber_images() {
+            $(".clone_images").each(function (index) {
+                $(this).find(".clone-images-button").attr("onclick", "defineParameterName('images[" + index + "][imagePath]')");
+                var prefix = "images[" + index + "]";
+                $(this).find("input").each(function () {
+                    this.name = this.name.replace(/images\[\d+\]/, prefix);
+                });
+            });
+            imageIndex--;
+        }
+    </script>
+
+    <script>
+        var documentIndex = 0;
+
+        function addDocumentsRow(file = { productId: "@Model?.Id", filePath: "", order: 1, id: "", title:"" }) {
+            var index = uuidv4();
+            let innerHtml = `
+                                        <div class="row clone_documents" id="document-index-` + index + `">
+                                            <input type="hidden" name="documents[` + documentIndex + `][parentid]" value="` + file.parentId + `" />
+                                            <input type="hidden" name="documents[` + documentIndex + `][id]" value="` + file.id + `" />
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <label class="control-label">Document Link</label>
+                                                        <input required name="documents[`+ documentIndex + `][filePath]" class="form-control" value="` + file.filePath + `"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <label class="control-label">Title</label>
+                                                                <input required name="documents[`+ documentIndex + `][title]" class="form-control" value="` + file.title + `"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <label class="control-label">Order</label>
+                                                        <input required name="documents[`+ documentIndex + `][order]" class="form-control" value="` + file.order + `"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <button type="button" id="clone-documents-button-`+ documentIndex + `" class="btn btn-default waves-effect m-r-20 clone-documents-button" onclick='defineParameterName("documents[` + documentIndex + `][filePath]")' data-toggle="modal" data-target="#file-manager-popup">Select Document</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <div class="form-group">
+                                                    <button type="button" class="btn btn-danger waves-effect m-r-20" onclick='$("#document-index-` + index + `").remove() && renumber_documents()'>Remove</button>
+                                                </div>
+                                            </div>
+                                        </div>`;
+            $("#list-of-documents").append(innerHtml);
+            documentIndex++;
+        }
+
+        function renumber_documents() {
+            $(".clone_documents").each(function (index) {
+                $(this).find(".clone-documents-button").attr("onclick", "defineParameterName('documents[" + index + "][filePath]')");
+                var prefix = "documents[" + index + "]";
+                $(this).find("input").each(function () {
+                    this.name = this.name.replace(/documents\[\d+\]/, prefix);
+                });
+            });
+            documentIndex--;
+        }
+    </script>
+}
+
+<partial name="_FileManagerModalPartial" />
+
+<!-- Vertical Layout -->
+<div class="row clearfix">
+    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    @ViewData["Title"]
+                </h2>
+            </div>
+            <div class="body">
+                <form enctype="multipart/form-data" method="post" asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <div class="form-group">
+                        <div class="form-line">
+                            <label asp-for="CategoryId" class="control-label"></label>
+                            <select asp-for="CategoryId" asp-items="categories" class="form-control categories-class">
+                            </select>
+                            <span asp-validation-for="CategoryId" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <label asp-for="Price" class="control-label"></label>
+                            <input asp-for="Price" class="form-control" />
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <label asp-for="ImagePath" class="control-label"></label>
+                                    <input asp-for="ImagePath" class="form-control" />
+                                    <span asp-validation-for="ImagePath" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-default waves-effect m-r-20" onclick='defineParameterName("ImagePath")' data-toggle="modal" data-target="#file-manager-popup">Select Image</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <label asp-for="Order" class="control-label"></label>
+                            <input asp-for="Order" class="form-control" />
+                            <span asp-validation-for="Order" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group form-check">
+                        <label asp-for="Status" class="control-label"></label>
+                        <div class="switch">
+                            <label>Passive<input asp-for="Status" type="checkbox"><span class="lever"></span>Active</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </form>
+                <div id="">
+                    <div class="header">
+                        <h2>
+                            Translations
+                        </h2>
+                        <ul class="header-dropdown m-r--5">
+                            <li class="dropdown">
+                                <a asp-action="CreateTranslation" asp-route-id='@Model?.Id' class="btn btn-primary waves-effect">Create</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Lang</th>
+                                <th>Opreations</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model?.Translations ?? [])
+                            {
+                                <tr>
+                                    <td>
+                                        @item?.Name
+                                    </td>
+                                    <td>
+                                        @item?.LanguageKey
+                                    </td>
+                                    <td>
+                                        <a asp-action="EditTranslation" asp-route-id="@item!.Id">
+                                            <i class="material-icons">mode_edit</i>
+                                        </a>
+                                        <a href="#" onclick="deleteModal('delete@(item.Id)');">
+                                            <i class="material-icons" style="color: #fb483a">delete</i>
+                                        </a>
+
+                                        <form id='delete@(item.Id)' asp-action="RemoveTranslation">
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #END# Vertical Layout -->

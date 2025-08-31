@@ -1,0 +1,159 @@
+﻿@{
+    var controllerName = ViewContext.RouteData.Values["controller"]?.ToString()?.ToLowerInvariant();
+}
+
+<section>
+    <!-- Left Sidebar -->
+    <aside id="leftsidebar" class="sidebar">
+        <!-- Menu -->
+        <div class="menu">
+            <ul class="list">
+                <li class="@(controllerName == "home" ? "active" : "")">
+                    <a asp-controller="Home" asp-action="Index">
+                        <i class="material-icons">home</i>
+                        <span>Main Page</span>
+                    </a>
+                </li>
+@*                 <li class="@(controllerName == "aboutus" ? "active" : "")">
+                    <a asp-controller="AboutUs" asp-action="Index">
+                        <i class="material-icons">domain</i>
+                        <span>About Us</span>
+                    </a>
+                </li>
+                <li class="@(controllerName == "banners" ? "active" : "")">
+                    <a asp-controller="Banners" asp-action="Index">
+                        <i class="material-icons">view_agenda</i>
+                        <span>Banners</span>
+                    </a>
+                </li>
+                <li class="@(controllerName == "blogs" ? "active" : "")">
+                    <a asp-controller="Blogs" asp-action="Index">
+                        <i class="material-icons">collections_bookmark</i>
+                        <span>Blogs</span>
+                    </a>
+                </li>
+
+                <li class="@(controllerName == "blogcategories" ? "active" : "")">
+                    <a asp-controller="BlogCategories" asp-action="Index">
+                        <i class="material-icons">view_list</i>
+                        <span>Blog Categories</span>
+                    </a>
+                </li>
+                <li class="@(controllerName == "brands" ? "active" : "")">
+                    <a asp-controller="Brands" asp-action="Index">
+                        <i class="material-icons">receipt</i>
+                        <span>Brands</span>
+                    </a>
+                </li>
+                <li class="@(controllerName == "contact" ? "active" : "")">
+                    <a asp-controller="Contact" asp-action="Index">
+                        <i class="material-icons">call</i>
+                        <span>Contact</span>
+                    </a>
+                </li>                
+                <li class="@(controllerName == "custompages" ? "active" : "")">
+                    <a asp-controller="CustomPages" asp-action="Index">
+                        <i class="material-icons">pages</i>
+                        <span>Custom Pages</span>
+                    </a>
+                </li>
+                <li class="@(controllerName == "dealsliders" ? "active" : "")">
+                    <a asp-controller="DealSliders" asp-action="Index">
+                        <i class="material-icons">view_carousel</i>
+                        <span>Deal Sliders</span>
+                    </a>
+                </li>
+                <li class="@(controllerName == "faqs" ? "active" : "")">
+                    <a asp-controller="Faqs" asp-action="Index">
+                        <i class="material-icons">collections_bookmark</i>
+                        <span>Faqs</span>
+                    </a>
+                </li>
+                <li class="@(controllerName == "messages" ? "active" : "")">
+                    <a asp-controller="Messages" asp-action="Index">
+                        <i class="material-icons">comment</i>
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li class="@(controllerName == "partners" ? "active" : "")">
+                    <a asp-controller="Partners" asp-action="Index">
+                        <i class="material-icons">work</i>
+                        <span>Partners</span>
+                    </a>
+                </li>
+                <li class="@(controllerName == "ourteams" ? "active" : "")">
+                    <a asp-controller="OurTeams" asp-action="Index">
+                        <i class="material-icons">person</i>
+                        <span>Our Teams</span>
+                    </a>
+                </li>
+                <li class="@(controllerName == "services" ? "active" : "")">
+                    <a asp-controller="Services" asp-action="Index">
+                        <i class="material-icons">store</i>
+                        <span>Services</span>
+                    </a>
+                </li>
+                <li class="@(controllerName == "sliders" ? "active" : "")">
+                    <a asp-controller="Sliders" asp-action="Index">
+                        <i class="material-icons">view_carousel</i>
+                        <span>Sliders</span>
+                    </a>
+                </li>
+                <li class="@(controllerName == "orders" ? "active" : "")">
+                    <a href="/orders">
+                        <i class="material-icons dp48">reorder</i>
+                        <span>Orders</span>
+                    </a>
+                </li> *@
+                <li class="@(controllerName == "productcategories" ? "active" : "")">
+                    <a asp-controller="ProductCategories" asp-action="Index">
+                        <i class="material-icons">view_list</i>
+                        <span>Product Categories</span>
+                    </a>
+                </li>
+                <li class="@(controllerName == "products" ? "active" : "")">
+                    <a asp-controller="Products" asp-action="Index">
+                        <i class="material-icons">store</i>
+                        <span>Products</span>
+                    </a>
+                </li>
+                <li class="@(controllerName == "settings" ? "active" : "")">
+                    <a asp-controller="Settings" asp-action="Index">
+                        <i class="material-icons">settings</i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+@*                 <li class="@(controllerName == "users" ? "active" : "")">
+                    <a asp-controller="Users" asp-action="Index">
+                        <i class="material-icons">assignment_ind</i>
+                        <span>Users</span>
+                    </a>
+                </li> *@
+                <li class="@(controllerName == "texttranslations" ? "active" : "")">
+                    <a asp-controller="TextTranslations" asp-action="Index">
+                        <i class="material-icons">format_color_text</i>
+                        <span>Text Translations</span>
+                    </a>
+                </li>
+                <li class="@(controllerName == "filemanager" ? "active" : "")">
+                    <a asp-controller="FileManager" asp-action="Index">
+                        <i class="material-icons">collections</i>
+                        <span>File Manager</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- #Menu -->
+        <!-- Footer -->
+        <div class="legal">
+            <div class="copyright">
+                &copy; 2023 <a href="https://htech.az/">HTech</a>
+            </div>
+            <div class="version">
+                <b>Version: </b> 1.0.0
+            </div>
+        </div>
+        <!-- #Footer -->
+    </aside>
+    <!-- #END# Left Sidebar -->
+</section>
