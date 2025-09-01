@@ -30,8 +30,7 @@ RUN dotnet publish "./AdminApp.csproj" -c $BUILD_CONFIGURATION -o /app/publish /
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
 WORKDIR /app
-RUN chmod 777 /app/
-RUN mkdir /app/wwwroot/uploads
-RUN chmod 777 /app/wwwroot/uploads
 COPY --from=publish /app/publish .
+RUN mkdir -p /app/wwwroot/uploads \
+    && chmod -R 777 /app/wwwroot
 ENTRYPOINT ["dotnet", "AdminApp.dll"]
