@@ -89,16 +89,16 @@
                 cellTemplate(container, options) {
                     $('<div>')
                         .append($(`
-                                                                <a href="/ProductCategories/edit/${options.value}">
-                                                            <i class="material-icons">mode_edit</i>
-                                                        </a>
-                                                            <a href="#" onclick="deleteModal('delete${options.value}');">
-                                                            <i class="material-icons" style="color: #fb483a">delete</i>
-                                                        </a>
-                                                            <form id='delete${options.value}' action="@Url.Action("Delete")" method="post">
-                                                            <input type="hidden" name="id" value="${options.value}" />
-                                                        </form>
-                                                        `))
+                                    <a href="/ProductCategories/edit/${options.value}">
+                                        <i class="material-icons">mode_edit</i>
+                                    </a>
+                                        <a href="#" onclick="deleteModal('delete${options.value}');">
+                                        <i class="material-icons" style="color: #fb483a">delete</i>
+                                    </a>
+                                    <form id='delete${options.value}' action="@Url.Action("Delete")" method="post">
+                                        <input type="hidden" name="id" value="${options.value}" />
+                                    </form>
+                                    `))
                         .appendTo(container);
                 },
             }
