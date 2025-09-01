@@ -6,9 +6,10 @@ services:
       context: .
       dockerfile: AdminApp/Dockerfile
 volumes:
-  shared:
-    external: true
+  lapizzajip_shared:
+    name: shared
+    driver: local
 networks:
-  vis_network:
-    name: vis_network
-    external: true
+  lapizzajip_network:
+    name: lapizzajip_network
+    driver: bridge
