@@ -17,3 +17,20 @@ services:
       - "WebAppUri:http://localhost:5120/"
       - "ConnectionStrings:BaseDbContext=Server=172.17.0.1; Port=5432; Database=LapizzajipDb; User Id=postgres; Password=12345678;"
       - "ConnectionStrings:IdentityContext=Server=172.17.0.1; Port=5432; Database=LapizzajipAdminDb; User Id=postgres; Password=12345678;"
+  lapizzajip-client-app:
+    container_name: lapizzajip-client-app
+    networks:
+      - lapizzajip_network
+    ports:
+      - '8088:8080'
+    volumes:
+      - lapizzajip_shared:/app/wwwroot/uploads
+    command: chmod 777 /app/wwwroot/uploads/
+    restart: always
+    environment:
+      - "ASPNETCORE_ENVIRONMENT=PRODUCTION"
+      - "ASPNETCORE_HTTP_PORTS=8080"
+      - "ASPNETCORE_URLS=http://+:8080"
+      - "WebAppUri:http://localhost:5120/"
+      - "ConnectionStrings:BaseDbContext=Server=172.17.0.1; Port=5432; Database=LapizzajipDb; User Id=postgres; Password=12345678;"
+      - "ConnectionStrings:IdentityContext=Server=172.17.0.1; Port=5432; Database=LapizzajipAdminDb; User Id=postgres; Password=12345678;"

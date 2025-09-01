@@ -5,6 +5,11 @@ services:
     build:
       context: .
       dockerfile: AdminApp/Dockerfile
+  lapizzajip-client-app:
+    image: lapizzajip-client-app_image
+    build:
+      context: .
+      dockerfile: ClientApp/Dockerfile
 volumes:
   lapizzajip_shared:
     name: shared

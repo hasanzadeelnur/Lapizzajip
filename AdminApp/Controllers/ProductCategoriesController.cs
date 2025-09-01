@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Contexts;
-using System.Xml.Linq;
 
 namespace AdminApp.Controllers;
 public class ProductCategoriesController(BaseDbContext db) : BaseController<ProductCategory, ProductCategoryCommandDto>(db)

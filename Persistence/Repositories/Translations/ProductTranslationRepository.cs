@@ -5,6 +5,6 @@ using Persistence.Contexts;
 
 namespace Persistence.Repositories.Translations;
 
-internal class ProductTranslationRepository(BaseDbContext _context) : EfRepositoryBase<ProductTranslation, Guid, BaseDbContext>(_context), IProductTranslationRepository
+public class ProductTranslationRepository(BaseDbContext _context) : EfRepositoryBase<ProductTranslation, Guid, BaseDbContext>(_context), IProductTranslationRepository
 {
 }

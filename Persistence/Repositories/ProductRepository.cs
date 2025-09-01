@@ -5,6 +5,6 @@ using Persistence.Contexts;
 
 namespace Persistence.Repositories;
 
-internal class ProductRepository(BaseDbContext _context) : EfRepositoryBase<Product, Guid, BaseDbContext>(_context), IProductRepository
+public class ProductRepository(BaseDbContext _context) : EfRepositoryBase<Product, Guid, BaseDbContext>(_context), IProductRepository
 {
 }
