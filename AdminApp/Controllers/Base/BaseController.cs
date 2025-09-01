@@ -184,9 +184,11 @@ public class BaseController<T, V>(BaseDbContext db) : Controller where T : Entit
     protected SelectList PopulateLanguages(string[] langs = null!)
     {
         Dictionary<string, string> languages = [];
+        languages.Add("ko", "Korean");
         languages.Add("en", "English");
         languages.Add("az", "Azerbaijan");
         languages.Add("ru", "Russian");
+        languages.Add("tr", "Turkish");
 
         foreach (var language in langs ?? [])
             languages.Remove(language);
