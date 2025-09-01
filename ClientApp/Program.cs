@@ -1,6 +1,7 @@
 using Application;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Domain.Enums;
 using Infrastructure.Modules;
 using Infrastructure.Resources;
 using Microsoft.AspNetCore.Localization;
@@ -46,14 +47,16 @@ builder.Services
 
 CultureInfo[] supportedCultures =
 [
-    new CultureInfo("az"),
+    new CultureInfo("ko"),
     new CultureInfo("en"),
-    //new CultureInfo("ru")
+    new CultureInfo("az"),
+    new CultureInfo("ru"),
+    new CultureInfo("tr")
 ];
 
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
-    options.DefaultRequestCulture = new RequestCulture("az");
+    options.DefaultRequestCulture = new RequestCulture("en");
     options.SupportedCultures = supportedCultures;
     options.SupportedUICultures = supportedCultures;
     options.RequestCultureProviders =
