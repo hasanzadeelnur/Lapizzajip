@@ -31,6 +31,10 @@ RUN dotnet publish "./AdminApp.csproj" -c $BUILD_CONFIGURATION -o /app/publish /
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+USER root
 RUN mkdir -p /app/wwwroot/uploads \
     && chmod -R 777 /app/wwwroot
+
+USER $APP_UID
+
 ENTRYPOINT ["dotnet", "AdminApp.dll"]
