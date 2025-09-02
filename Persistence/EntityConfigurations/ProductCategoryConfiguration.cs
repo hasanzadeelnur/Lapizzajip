@@ -12,6 +12,7 @@ internal class ProductCategoryConfiguration : BaseEntityTypeConfiguration<Produc
         builder.ToTable("ProductCategories").HasKey(c => c.Id);
 
         builder.Property(c => c.Order).HasColumnName("Order");
+        builder.Property(c => c.SpecialOrder).HasColumnName("SpecialOrder");
         builder.Property(c => c.Status).HasColumnName("Status");
 
         builder.Navigation(c => c.Translations).AutoInclude();

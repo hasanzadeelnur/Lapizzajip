@@ -1,8 +1,14 @@
-﻿<!DOCTYPE html>
+﻿@using System.Globalization
+@{
+    string? controllerName = ViewContext.RouteData.Values["controller"]?.ToString()?.ToLowerInvariant();
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Pizzon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.ornek.com/en-iyi-seo-teknikleri" />
     <meta charset="utf-8" />
     <link type="image/x-icon" href="~/assets/images/fav-icon.png" rel="icon">
     <link rel="stylesheet" href="~/assets/css/font-awesome.min.css">
@@ -189,6 +195,25 @@
                                                     <li class="level3"><a href="contact.html"><span>■</span>Contact</a></li>
                                                     <li class="level3"><a href="shop-grid.html"><span>■</span>Shop grid</a></li>
                                                     <li class="level3"><a href="404.html"><span>■</span>404</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="level dropdown set">
+                                <a href="about.html" class="page-scroll"><i class="far fa-globe-americas"></i> @CultureInfo.CurrentCulture.Name.ToUpper()</a>
+                                <span class="opener plus"></span>
+                                <div class="megamenu mobile-sub-menu content">
+                                    <div class="megamenu-inner-top">
+                                        <ul class="sub-menu-level1">
+                                            <li class="level2">
+                                                <ul class="sub-menu-level2 ">
+                                                    <li class="level3"><a class="dropdown-item" asp-controller="Home" asp-action="OnGetSetCultureCookie" asp-route-culture="ko">KO</a></li>
+                                                    <li class="level3"><a class="dropdown-item" asp-controller="Home" asp-action="OnGetSetCultureCookie" asp-route-culture="en">EN</a></li>
+                                                    <li class="level3"><a class="dropdown-item" asp-controller="Home" asp-action="OnGetSetCultureCookie" asp-route-culture="ru">RU</a></li>
+                                                    <li class="level3"><a class="dropdown-item" asp-controller="Home" asp-action="OnGetSetCultureCookie" asp-route-culture="az">AZ</a></li>
+                                                    <li class="level3"><a class="dropdown-item" asp-controller="Home" asp-action="OnGetSetCultureCookie" asp-route-culture="tr">TR</a></li>
                                                 </ul>
                                             </li>
                                         </ul>

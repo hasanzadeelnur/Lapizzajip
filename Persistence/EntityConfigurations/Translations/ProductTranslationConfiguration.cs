@@ -13,6 +13,7 @@ internal class ProductTranslationConfiguration : BaseEntityTypeConfiguration<Pro
 
         builder.Property(c => c.ProductId).HasColumnName("ProductId");
         builder.Property(c => c.Name).HasColumnName("Name").HasMaxLength(1000);
+        builder.Property(c => c.ShortDescription).HasColumnName("ShortDescription").HasMaxLength(1000);
         builder.Property(c => c.Description).HasColumnName("Description").HasMaxLength(5000);
         builder.Property(c => c.LanguageKey).HasColumnName("LanguageKey").HasMaxLength(2);
 

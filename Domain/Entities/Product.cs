@@ -8,6 +8,7 @@ public class Product : Entity<Guid>
     public string ImagePath { get; set; }
     public double Price { get; set; }
     public int Order { get; set; }
+    public int SpecialOrder { get; set; }
     public bool Status { get; set; }
 
     public virtual ProductCategory Category { get; set; }
@@ -20,12 +21,13 @@ public class Product : Entity<Guid>
         Translations = [];
     }
 
-    public Product(Guid categoryId, string imagePath, double price, int order, bool status) : this()
+    public Product(Guid categoryId, string imagePath, double price, int order, int specialOrder, bool status) : this()
     {
         CategoryId = categoryId;
         ImagePath = imagePath;
         Price = price;
         Order = order;
+        SpecialOrder = specialOrder;
         Status = status;
     }
 }

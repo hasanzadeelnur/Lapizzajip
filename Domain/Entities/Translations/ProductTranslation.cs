@@ -6,6 +6,7 @@ public class ProductTranslation : LanguageEntity
     public Guid ProductId { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
+    public string ShortDescription { get; set; }
 
     public virtual Product Product { get; set; }
 
@@ -13,13 +14,15 @@ public class ProductTranslation : LanguageEntity
     {
         Name = string.Empty;
         Description = string.Empty;
+        ShortDescription = string.Empty;
         Product = null!;
     }
 
-    public ProductTranslation(Guid productId, string name, string description) : this()
+    public ProductTranslation(Guid productId, string name, string description, string shortDescription) : this()
     {
         ProductId = productId;
         Name = name;
         Description = description;
+        ShortDescription = shortDescription;
     }
 }

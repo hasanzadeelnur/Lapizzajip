@@ -1,7 +1,6 @@
 using Application;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using Domain.Enums;
 using Infrastructure.Modules;
 using Infrastructure.Resources;
 using Microsoft.AspNetCore.Localization;

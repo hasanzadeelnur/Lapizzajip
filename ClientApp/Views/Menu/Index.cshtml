@@ -5,7 +5,7 @@
     GetListResponse<GetListProductCategoryDto> categories = ViewData[nameof(GetListProductCategoryQuery)] as GetListResponse<GetListProductCategoryDto> ?? new();
     GetListResponse<GetListProductDto> products = ViewData[nameof(GetListProductQuery)] as GetListResponse<GetListProductDto> ?? new();
 }
-<section id="top" class="page-banner" style="background: #121619 url(~/assets/images/menu-banner-1.png) no-repeat center / cover;">
+<section id="top" class="page-banner" style="background: #121619 url(images/menu-banner-1.png) no-repeat center / cover;">
     <div class="container">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12">
@@ -13,7 +13,7 @@
                     <h1 class="page-headding wow fadeInUp">Food Menus</h1>
                     <ul class="wow fadeInUp">
                         <li><a href="index.html" class="page-name">Home</a></li>
-                        <li>Menu 2</li>
+                        <li>Menu 1</li>
                     </ul>
                 </div>
             </div>
@@ -21,7 +21,9 @@
     </div>
 </section>
 
-
+<!-- --------        --------
+    Page Banner End
+--------        -------- -->
 
 <section class="menu-list ptb">
     <div class="container">
@@ -29,7 +31,6 @@
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="menu-tabbing wow fadeInUp">
                     <ul id="tabs" class="nav nav-tabs" role="tablist">
-
                         <li role="presentation" class="tab-link current" data-tab="tab-1">
                             <a href="#tab-1" class="nav-link active" id="all" data-bs-toggle="tab" data-bs-target="#data_all" role="tab" aria-selected="true">all</a>
                         </li>
@@ -48,38 +49,33 @@
             <div role="tabpanel" class="row tab-pane fade in active show" role="tabpanel" id="data_all" aria-labelledby="all">
                 @foreach (GetListProductDto product in products.Items)
                 {
-                    <div class="col-xl-6 col-lg-6 col-md-6">
-                        <div class="menu-list-box-2">
-                            <div class="list-img-2">
-                                <a href="#"><img src="@product.ImagePath" alt="@product.Name"></a>
-                            </div>
-                            <div class="menu-detail-2">
-                                <div class="iteam-name-list">
-                                    <a href="shop-detail.html" class="iteam-name">@product.Name</a>
-                                    <span class="iteam-srice">@product.Price KWN</span>
-                                </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4">
+                        <div class="menu-list-box">
+                            <div class="list-img"><a href="#"><img src="@product.ImagePath" alt="@product.Name" /></a></div>
+                            <div class="menu-detail">
+                                <a href="#" class="iteam-name">@product.Name </a>
+                                <span class="iteam-srice" style="width:100%;">@product.Price ₩</span>
                                 <p class="iteam-desc">@Html.Raw(product.Description)</p>
+                                <!-- <a href="shop-detail.html" class="iteam-order">order now</a>-->
                             </div>
                         </div>
                     </div>
                 }
             </div>
+
             @foreach (GetListProductCategoryDto category in categories.Items)
             {
                 <div role="tabpanel" class="row tab-pane fade" role="tabpanel" id="category-@(category.Id)" aria-labelledby="category-@(category.Id)">
                     @foreach (GetListProductDto product in products.Items.Where(p => p.CategoryId == category.Id))
                     {
-                        <div class="col-xl-6 col-lg-6 col-md-6">
-                            <div class="menu-list-box-2">
-                                <div class="list-img-2">
-                                    <a href="#"><img src="@product.ImagePath" alt="@product.Name"></a>
-                                </div>
-                                <div class="menu-detail-2">
-                                    <div class="iteam-name-list">
-                                        <a href="shop-detail.html" class="iteam-name">@product.Name</a>
-                                        <span class="iteam-srice">@product.Price KWN</span>
-                                    </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4">
+                            <div class="menu-list-box">
+                                <div class="list-img"><a href="#"><img src="@product.ImagePath" alt="@product.Name" /></a></div>
+                                <div class="menu-detail">
+                                    <a href="#" class="iteam-name">@product.Name </a>
+                                    <span class="iteam-srice" style="width:100%;">@product.Price ₩</span>
                                     <p class="iteam-desc">@Html.Raw(product.Description)</p>
+                                    <!-- <a href="shop-detail.html" class="iteam-order">order now</a>-->
                                 </div>
                             </div>
                         </div>
