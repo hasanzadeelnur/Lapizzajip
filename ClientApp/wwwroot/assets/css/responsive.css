@@ -205,10 +205,24 @@
 	// Home Page //----------------------------
 	________________________________________________________*/
 	.mobilemenu-content, .nav > li.level:hover .megamenu {display: block !important;}
+	.langmenu, .nav > li.level:hover .langmenu {
+		display: block !important;
+	}
 	.megamenu {display: block !important; opacity: 0; visibility: hidden; top: calc(100% + 10px);}
+	.langmenu {
+		display: block !important;
+		opacity: 0;
+		visibility: hidden;
+		top: calc(100% + 10px);
+	}
 	.header-right-link > ul > li.order-online {padding-right: 0;}
 	.header-right-link > ul > li:hover .header-link-dropdown {opacity: 1;}
 	.nav > li.level:hover .megamenu {opacity: 1; visibility: visible; top: 100%;}
+	.nav > li.level:hover .langmenu {
+		opacity: 1;
+		visibility: visible;
+		top: 100%;
+	}
 	.header-right-link ul li.cart-icon:hover > a span.icon {background-position: -9px -52px;}
 	header#header.sticky .navbar-brand img {max-width: 150px;}
 	.sticky .navbar-nav > li > a {padding-top: 25px; padding-bottom: 25px;}
@@ -245,14 +259,34 @@
 	#header .nav > li:first-child ul li.level2 a {padding-left: 0;}
 	.navbar-nav > li.dropdown > a:after {display: none;}
 	.megamenu .sub-menu-level2 li.level3 > a span{background: #fff;}
+/*	.langmenu .sub-menu-level2 li.level3 > a span {
+		background: #fff;
+	}*/
+	.langmenu, .nav > li.level:hover .langmenu {
+		display: block !important;
+	}
 	.megamenu .sub-menu-level2 li.level3 > a:hover span{background: #000;}
+/*	.langmenu .sub-menu-level2 li.level3 > a:hover span {
+		background: #000;
+	}*/
 	.nav > li:hover > a, .nav > li.active > a, .nav > li > a:focus{color: #000;}
 	#menu .level {position: relative;}
 	#menu span.opener {color: #fff; height: 16px;width: 16px;display: inline-block;position: absolute;right: 0;cursor: pointer;z-index: 1; transition: all 400ms ease;top: 15px;z-index: 1;}
 	#menu span.plus {background-position: -94px -378px;}
 	#menu span.minus {background-position: -94px -416px;}
 	.megamenu .level2 > a {position: relative; margin-bottom: 2px; margin-right: 0;}
+/*	.langmenu .level2 > a {
+		position: relative;
+		margin-bottom: 2px;
+		margin-right: 0;
+	}*/
 	.megamenu .level2 > a:before {content: "ïƒš"; font-family: FontAwesome; position: absolute; left: -11px;}
+/*	.langmenu .level2 > a:before {
+		content: "ïƒš";
+		font-family: FontAwesome;
+		position: absolute;
+		left: -11px;
+	}*/
 	.menu-list-res {display: block;}
 	.navbar-header .navbar-brand {max-width: 150px;}
 	header#header.sticky {padding: 15px 0;}
@@ -262,13 +296,49 @@
 	.megamenu .sub-menu-level1 li.level2 {float: none; margin-bottom: 15px;}
 	.megamenu {box-shadow: none;}
 	.megamenu-inner-top .left-p {padding-right: 0;}
+/*	.langmenu {
+		background-color: transparent;
+		border-top: none;
+		position: relative;
+		left: auto;
+		top: auto;
+		opacity: 1;
+		padding: 0px 30px;
+		transition: none 0s ease 0s;
+		-moz-transition: none 0s ease 0s;
+		-webkit-transition: none 0s ease 0s;
+		-o-transition: none 0s ease 0s;
+	}
+		.langmenu .container {
+			width: 100%;
+		}
+		.langmenu .sub-menu-level1 li.level2 {
+			float: none;
+			margin-bottom: 15px;
+		}
+	.langmenu {
+		box-shadow: none;
+	}
+		.langmenu .left-p {
+			padding-right: 0;
+		}*/
 	.side-toggle {display: block; overflow: unset !important;}
 	.navbar-toggle { border: none; background: none; position: relative; top: unset; right: unset; color: #333333; height: 27px; padding: 8px 10px; width: 24px; display: flex;}
 	.megamenu .level2 > a {color: #000000;}
+/*	.langmenu .level2 > a {
+		color: #000000;
+	}*/
 	.header-right-link > ul > .side-toggle {padding: 7px 8px;     padding-right: 0;}
 	.navbar-toggle span, .navbar-toggle span:before, .navbar-toggle span:after {width: 100%; left: 0;}
 	.megamenu .sub-menu-level2 li.level3 > a {color: #fff; padding: 12px 0px;}
+/*	.langmenu .sub-menu-level2 li.level3 > a {
+		color: #fff;
+		padding: 12px 0px;
+	}*/
 	.megamenu .sub-menu-level2 li.level3 > a:hover {color: #000;}
+/*	.langmenu .sub-menu-level2 li.level3 > a:hover {
+		color: #000;
+	}*/
 	button.navbar-toggle i.fa {font-size: 24px; color: #fff;}
 	button:focus {outline: none;}
 	#menu span.plus:before{content: ""; position: absolute; width: 100%; height: 2px; background: #fff; top: 10px; left: 0px;}

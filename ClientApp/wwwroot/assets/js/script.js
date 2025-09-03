@@ -42,6 +42,7 @@ $(function() {
 
             $(".level-1").on("click", function(){
               $(".level-1, .megamenu-1").toggleClass("active");
+              $(".level-1, .langmenu-1").toggleClass("active");
             });
 
             $(".set > .opener").on("click", function() {
@@ -49,6 +50,9 @@ $(function() {
                     $(this).removeClass("active");
                     $(this)
                         .siblings(".megamenu")
+                        .slideUp(200);
+                    $(this)
+                        .siblings(".langmenu")
                         .slideUp(200);
                     $(".set > a i")
                         .removeClass("fa-minus")
@@ -64,9 +68,13 @@ $(function() {
                 $(".set > .opener").removeClass("active");
                 $(this).addClass("active");
                 $(".megamenu").slideUp(200);
+                $(".langmenu").slideUp(200);
                 $(this)
                     .siblings(".megamenu")
                     .slideDown(200);
+                $(this)
+                    .siblings(".langmenu")
+                        .slideDown(200);
                 }
             });
 

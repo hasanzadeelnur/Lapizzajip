@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Http.Extensions;
+﻿using ClientApp.Repositories;
+using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClientApp.Controllers;
-public class HomeController : Controller
+public class HomeController(IGeneralRepository _generalRepository) : Controller
 {
     public IActionResult Index()
     {
@@ -29,6 +30,7 @@ public class HomeController : Controller
     [HttpPost("clearcache")]
     public IActionResult ClearCache()
     {
+        _generalRepository.RemoveCache();
         return Ok();
     }
 }

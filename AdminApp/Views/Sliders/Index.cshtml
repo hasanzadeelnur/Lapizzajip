@@ -1,0 +1,129 @@
+﻿@model IEnumerable<Slider>
+
+@{
+    ViewData["Title"] = "Sliders";
+}
+
+@section Styles
+    {
+    <!-- JQuery DataTable Css -->
+    <link href="/admin/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.min.css" rel="stylesheet">
+}
+
+@section Scripts
+    {
+    <!-- Jquery DataTable Plugin Js -->
+    <script src="/admin/plugins/jquery-datatable/jquery.dataTables.js"></script>
+    <script src="/admin/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script>
+    <script src="/admin/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
+
+    <script>
+        const dataGrid = $('#gridContainer').dxDataGrid({
+            dataSource: DevExpress.data.AspNet.createStore({
+                key: 'id',
+                loadUrl: `@Url.Action("DevxList")`,
+                loadMethod: "get",
+                onBeforeSend(method, ajaxOptions) {
+                    ajaxOptions.xhrFields = { withCredentials: false };
+                },
+            }),
+            paging: {
+                pageSize: 10,
+            },
+            pager: {
+                visible: true,
+                allowedPageSizes: [5, 10],
+                showPageSizeSelector: true,
+                showInfo: true,
+                showNavigationButtons: true,
+            },
+            grouping: {
+                autoExpandAll: false,
+            },
+            groupPanel: {
+                visible: true,
+            },
+            remoteOperations: true,
+            filterRow: {
+                visible: true,
+            },
+            selection: {
+                mode: 'multiple',
+            },
+            onSelectionChanged: function (e) {
+                multipleDeleteDataArray = [];
+                $.each(dataGrid.getSelectedRowsData(), function (index, value) {
+                    multipleDeleteDataArray.push(value.id);
+                });
+                if (dataGrid.getSelectedRowsData().length > 0) {
+                    $("#multiDeleteId").prop("disabled", false);
+                }
+                else {
+                    $("#multiDeleteId").prop("disabled", true);
+                }
+            },
+            showBorders: true,
+            sorting: {
+                mode: 'multiple',
+            },
+            columns: [ {
+                dataField: 'imagePath',
+                caption: 'Image',
+                cellTemplate(container, options) {
+                    $('<div>')
+                        .append($(`<img src="${options.value}"/>`))
+                        .appendTo(container);
+                },
+            },
+            {
+                dataField: 'languageKey',
+                caption: 'languageKey',
+            },
+            {
+                dataField: 'id',
+                caption: '',
+                width: 110,
+                allowFiltering: false,
+                allowSorting: false,
+                cellTemplate(container, options) {
+                    $('<div>')
+                        .append($(`
+                                                                 <a href="/Sliders/edit/${options.value}">
+                                                                    <i class="material-icons">mode_edit</i>
+                                                                </a>
+                                                                <a href="#" onclick="deleteModal('delete${options.value}');">
+                                                                    <i class="material-icons" style="color: #fb483a">delete</i>
+                                                                </a>
+                                                                <form id='delete${options.value}' action="@Url.Action("Delete")" method="post">
+                                                                    <input type="hidden" name="id" value="${options.value}" />
+                                                                </form>
+                                                                `))
+                        .appendTo(container);
+                },
+            }
+            ]
+        }).dxDataGrid("instance");
+    </script>
+}
+
+<!-- Basic Examples -->
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    @ViewData["Title"]
+                </h2>
+                <ul class="header-dropdown m-r--5">
+                    <li class="dropdown">
+                        <a asp-action="Create" class="btn btn-primary waves-effect">Create</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="body">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div id="gridContainer"></div>
+            </div>
+        </div>
+    </div>
+</div>

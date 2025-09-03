@@ -4,6 +4,7 @@ namespace Domain.Entities.Translations;
 public class ContactUsTranslation : LanguageEntity
 {
     public Guid ContactUsId { get; set; }
+    public string Address { get; set; }
     public string Description { get; set; }
     public string WorkingHours { get; set; }
     public string MetaTitle { get; set; }
@@ -14,6 +15,7 @@ public class ContactUsTranslation : LanguageEntity
 
     public ContactUsTranslation()
     {
+        Address = string.Empty;
         Description = string.Empty;
         WorkingHours = string.Empty;
         MetaTitle = string.Empty;
@@ -22,9 +24,10 @@ public class ContactUsTranslation : LanguageEntity
         ContactUs = null!;
     }
 
-    public ContactUsTranslation(Guid contactUsId, string description, string workingHours, string metaTitle, string metaDescription, string metaKeys) : this()
+    public ContactUsTranslation(Guid contactUsId, string address, string description, string workingHours, string metaTitle, string metaDescription, string metaKeys) : this()
     {
         ContactUsId = contactUsId;
+        Address = address;
         Description = description;
         WorkingHours = workingHours;
         MetaTitle = metaTitle;

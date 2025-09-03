@@ -1,0 +1,230 @@
+﻿@using Infrastructure.Dtos.ContactUs
+@model ContactUsCommandDto
+
+@{
+    ViewData["Title"] = "Edit Contact Us";
+}
+
+@section Styles
+{
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin="" />
+    <style>
+        #map {
+            height: 480px;
+            z-index: 0;
+        }
+    </style>
+}
+
+@section Scripts
+{
+
+    <script src="~/admin/js/filemanager.js"></script>
+
+    <!-- TinyMCE -->
+    <script src="~/admin/plugins/tinymce/tinymce.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script>
+        $(function () {
+            //TinyMCE
+            tinymce.init({
+                selector: "textarea.tinymce",
+                theme: "modern",
+                height: 300,
+                plugins: [
+                    'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+                    'searchreplace wordcount visualblocks visualchars code fullscreen',
+                    'insertdatetime media nonbreaking save table contextmenu directionality',
+                    'emoticons template paste textcolor colorpicker textpattern imagetools'
+                ],
+                toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+                toolbar2: 'print preview media | forecolor backcolor emoticons',
+                image_advtab: true
+            });
+            tinymce.suffix = ".min";
+            tinyMCE.baseURL = '/admin/plugins/tinymce';
+        });
+    </script>
+
+
+    <script>
+        var map = L.map('map', {
+            center: [@Model.MapX, @Model.MapY],
+            zoom: 20
+        });
+
+        var tiles = new L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var lat, lng, marker;
+
+        marker = L.marker([@Model.MapX, @Model.MapY]).addTo(map)
+
+        map.addEventListener('mousemove', function (ev) {
+            lat = ev.latlng.lat;
+            lng = ev.latlng.lng;
+        });
+
+        document.getElementById("map").addEventListener("contextmenu", function (event) {
+            // Prevent the browser's context menu from appearing
+            event.preventDefault();
+
+            if (marker != undefined) {
+                map.removeLayer(marker);
+            }
+
+            marker = L.marker([lat, lng]).addTo(map);
+            $("#mapXId").val(lat);
+            $("#mapYId").val(lng);
+
+            return false;
+        });
+    </script>
+}
+
+<partial name="_FileManagerModalPartial" />
+
+<!-- Vertical Layout -->
+<div class="row clearfix">
+    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    @ViewData["Title"]
+                </h2>
+            </div>
+            <div class="body">
+                <form enctype="multipart/form-data" method="post" asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <input type="hidden" asp-for="MapX" id="mapXId" />
+                    <input type="hidden" asp-for="MapY" id="mapYId"/>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <label asp-for="Phones" class="control-label"></label>
+                            <input asp-for="Phones" class="form-control" data-role="tagsinput"></input>
+                            <span asp-validation-for="Phones" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-line">
+                            <label asp-for="WhatsappNumber" class="control-label"></label>
+                            <input asp-for="WhatsappNumber" class="form-control"></input>
+                            <span asp-validation-for="WhatsappNumber" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-line">
+                            <label asp-for="Emails" class="control-label"></label>
+                            <input asp-for="Emails" class="form-control" data-role="tagsinput"/>
+                            <span asp-validation-for="Emails" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-line">
+                            <label asp-for="TikTokAddress" class="control-label"></label>
+                            <input asp-for="TikTokAddress" class="form-control" />
+                            <span asp-validation-for="TikTokAddress" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <label asp-for="FacebookAddress" class="control-label"></label>
+                            <input asp-for="FacebookAddress" class="form-control" />
+                            <span asp-validation-for="FacebookAddress" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-line">
+                            <label asp-for="LinkedinAddress" class="control-label"></label>
+                            <input asp-for="LinkedinAddress" class="form-control" />
+                            <span asp-validation-for="LinkedinAddress" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-line">
+                            <label asp-for="InstagramAddress" class="control-label"></label>
+                            <input asp-for="InstagramAddress" class="form-control" />
+                            <span asp-validation-for="InstagramAddress" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-line">
+                            <label asp-for="WhatsappNumber" class="control-label"></label>
+                            <input asp-for="WhatsappNumber" class="form-control" />
+                            <span asp-validation-for="WhatsappNumber" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="d-none d-sm-block mb-5 pb-4">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </form>
+
+                <div id="">
+                    <div class="header">
+                        <h2>
+                            Translations
+                        </h2>
+                        <ul class="header-dropdown m-r--5">
+                            <li class="dropdown">
+                                <a asp-action="CreateTranslation" asp-route-id='@Model?.Id' class="btn btn-primary waves-effect">Create</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Working Hours</th>
+                                <th>Lang</th>
+                                <th>Opreations</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model?.Translations ?? [])
+                            {
+                                <tr>
+                                    <td>
+                                        @item?.WorkingHours
+                                    </td>
+                                    <td>
+                                        @item?.LanguageKey
+                                    </td>
+                                    <td>
+                                        <a asp-action="EditTranslation" asp-route-id="@item!.Id">
+                                            <i class="material-icons">mode_edit</i>
+                                        </a>
+                                        <a href="#" onclick="deleteModal('delete@(item.Id)');">
+                                            <i class="material-icons" style="color: #fb483a">delete</i>
+                                        </a>
+
+                                        <form id='delete@(item.Id)' asp-action="RemoveTranslation">
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #END# Vertical Layout -->

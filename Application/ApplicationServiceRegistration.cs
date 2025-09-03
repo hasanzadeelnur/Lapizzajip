@@ -35,7 +35,6 @@ namespace Application
 
             //services.AddSingleton<LoggerServiceBase, ElasticLogger>();
 
-
             return services;
         }
 

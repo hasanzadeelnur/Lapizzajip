@@ -1,6 +1,9 @@
 using Application;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using ClientApp.Repositories;
+using Core.CrossCuttingConcerns.Serilog.Loggers;
+using Infrastructure.Libs;
 using Infrastructure.Modules;
 using Infrastructure.Resources;
 using Microsoft.AspNetCore.Localization;
@@ -42,6 +45,9 @@ builder.Services
                     return factory.Create("SharedResource", assemblyName.Name!);
                 };
         });
+
+builder.Services.AddScoped<IGeneralRepository, GeneralRepository>();
+builder.Services.AddSingleton<IMyCache, MyMemoryCache>();
 
 
 CultureInfo[] supportedCultures =
