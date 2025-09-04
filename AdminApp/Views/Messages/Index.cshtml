@@ -1,7 +1,7 @@
-﻿@model IEnumerable<Slider>
+﻿@model IEnumerable<CustomerMessage>
 
 @{
-    ViewData["Title"] = "Sliders";
+    ViewData["Title"] = "Messages";
 }
 
 @section Styles
@@ -66,18 +66,31 @@
             sorting: {
                 mode: 'multiple',
             },
-            columns: [ {
-                dataField: 'imagePath',
-                caption: 'Image',
-                cellTemplate(container, options) {
-                    $('<div>')
-                        .append($(`<img src="${options.value}"/>`))
-                        .appendTo(container);
-                },
+            columns: [{
+                dataField: 'id',
+                caption: 'Id',
+            }, {
+                dataField: 'customerName',
+                caption: 'Customer Name',
+            },         
+            {
+                dataField: 'customerEmail',
+                caption: 'Customer Email',
             },
             {
-                dataField: 'title',
-                caption: 'Title',
+                dataField: 'subject',
+                caption: 'Subject',
+            },
+            {
+                dataField: 'message',
+                caption: 'Message',
+            },
+            {
+                dataField: 'createdDate',
+                caption: 'Created Date',
+                dataType: "date",
+                format: "dd-MM-yyyy HH:mm",
+                sortOrder: 'desc',
             },
             {
                 dataField: 'id',
@@ -88,16 +101,13 @@
                 cellTemplate(container, options) {
                     $('<div>')
                         .append($(`
-                                                                 <a href="/Sliders/edit/${options.value}">
-                                                                    <i class="material-icons">mode_edit</i>
-                                                                </a>
-                                                                <a href="#" onclick="deleteModal('delete${options.value}');">
-                                                                    <i class="material-icons" style="color: #fb483a">delete</i>
-                                                                </a>
-                                                                <form id='delete${options.value}' action="@Url.Action("Delete")" method="post">
-                                                                    <input type="hidden" name="id" value="${options.value}" />
-                                                                </form>
-                                                                `))
+                                                            <a href="#" onclick="deleteModal('delete${options.value}');">
+                                                            <i class="material-icons" style="color: #fb483a">delete</i>
+                                                        </a>
+                                                            <form id='delete${options.value}' action="@Url.Action("Delete")" method="post">
+                                                            <input type="hidden" name="id" value="${options.value}" />
+                                                        </form>
+                                                        `))
                         .appendTo(container);
                 },
             }
@@ -114,11 +124,6 @@
                 <h2>
                     @ViewData["Title"]
                 </h2>
-                <ul class="header-dropdown m-r--5">
-                    <li class="dropdown">
-                        <a asp-action="Create" class="btn btn-primary waves-effect">Create</a>
-                    </li>
-                </ul>
             </div>
             <div class="body">
                 <div asp-validation-summary="All" class="text-danger"></div>
@@ -127,3 +132,4 @@
         </div>
     </div>
 </div>
+<!-- #END# Basic Examples -->

@@ -8,7 +8,11 @@ public class GetContactUsResponse
     public string Address { get; set; }
     public string Phones { get; set; }
     public string Emails { get; set; }
+    public string Description { get; set; }
     public string WorkingHours { get; set; }
+    public string MetaTitle { get; set; }
+    public string MetaDescription { get; set; }
+    public string MetaKeys { get; set; }
     public string TikTokAddress { get; set; }
     public string FacebookAddress { get; set; }
     public string LinkedinAddress { get; set; }

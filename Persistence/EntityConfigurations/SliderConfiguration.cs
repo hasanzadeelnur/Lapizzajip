@@ -15,6 +15,9 @@ internal class SliderConfiguration : BaseEntityTypeConfiguration<Slider, Guid>
         builder.Property(b => b.Order).HasColumnName("Order").HasDefaultValue(1);
         builder.Property(b => b.Status).HasColumnName("Status");
 
+        builder.Navigation(c => c.Translations).AutoInclude();
+        builder.Navigation(c => c.Images).AutoInclude();
+
         builder.HasQueryFilter(oa => !oa.DeletedDate.HasValue);
 
         base.Configure(builder);

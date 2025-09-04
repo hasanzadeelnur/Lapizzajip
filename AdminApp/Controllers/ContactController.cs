@@ -3,13 +3,10 @@ using Application.Services.Repositories;
 using Domain.Entities;
 using Domain.Entities.Translations;
 using Infrastructure.Dtos.ContactUs;
-using Infrastructure.Dtos.Products;
 using Mapster;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Contexts;
-using System.Xml.Linq;
 
 namespace AdminApp.Controllers;
 

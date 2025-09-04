@@ -1,7 +1,6 @@
 ﻿using Application.Features.ProductCategories.Queries.GetList;
 using Application.Features.Products.Queries.GetList;
 using ClientApp.Controllers.Base;
-using Core.Application.Requests;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClientApp.Controllers;

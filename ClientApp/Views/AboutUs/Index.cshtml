@@ -1,0 +1,63 @@
+﻿@using Application.Features.AboutUs.Queries.GetData
+@using Application.Features.Services.Queries.GetList
+@{
+    GetAboutUsResponse aboutus = ViewData[nameof(IGeneralRepository.GetAboutUs)] as GetAboutUsResponse ?? new();
+    List<GetListServiceResponse> services = ViewData[nameof(IGeneralRepository.GetServices)] as List<GetListServiceResponse> ?? [];
+    Dictionary<string, string> textTranslations = await generalRepository.GetTranslations();
+    Dictionary<string, string> settings = await generalRepository.GetSettings();
+    TempData["Title"] = textTranslations["about_us_header_title"];
+    TempData["MetaKeywords"] = textTranslations["about_us_keywords_meta"];
+    TempData["MetaDescription"] = textTranslations["about_us_description_meta"];
+}
+
+<section id="top" class="page-banner" style="background: #121619 url(images/blog-7.jpg) no-repeat center / cover;">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12">
+                <div class="page-title">
+                    <h1 class="page-headding wow fadeInUp">About Us</h1>
+                    <ul class="wow fadeInUp">
+                        <li><a href="index.html" class="page-name">Home</a></li>
+                        <li>About Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-section ptb">
+    <div class="container">
+        <div class="row flex-center">
+            <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInLeft">
+                <div class="about-img"><img src="@aboutus.FirstImagePath" alt="about"></div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInRight">
+                <div class="about-text">
+                    @Html.Raw(aboutus.FirstBody)
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="our-story ptb">
+    <div class="container">
+        @Html.Raw(aboutus.StoryBody)
+    </div>
+</section>
+
+<section class="experience ptb">
+    <div class="container">
+        <div class="row flex-center">
+            <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInLeft">
+                <div class="about-img"><img src="@aboutus.SecondImagePath" alt="about"></div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInRight">
+                <div class="about-text">
+                    @Html.Raw(aboutus.FirstBody)
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

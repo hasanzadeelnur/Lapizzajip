@@ -1,10 +1,13 @@
 ﻿using Application.Features.AboutUs.Queries.GetData;
+using Application.Features.ContactUs.Commands.SendMessage;
 using Application.Features.ContactUs.Queries.GetData;
 using Application.Features.Services.Queries.GetList;
 using Application.Features.Settings.Queries.GetList;
 using Application.Features.Sliders.Queries.GetList;
 using Application.Features.TextTranslations.Queries.GetList;
+using Infrastructure.Dtos.Messages;
 using Infrastructure.Libs;
+using Mapster;
 using MediatR;
 using Microsoft.Extensions.Caching.Memory;
 using System.Globalization;
@@ -14,10 +17,11 @@ namespace ClientApp.Repositories;
 public interface IGeneralRepository
 {
     void RemoveCache();
-    Task<List<GetListSliderResponse>> GetSliders();
+    Task<List<GetListSliderDto>> GetSliders();
     Task<List<GetListServiceResponse>> GetServices();
     Task<GetAboutUsResponse> GetAboutUs();
     Task<GetContactUsResponse> GetContactUs();
+    Task<SendedMessageResponse> CreateCustomerMessage(CreateMessageDto request);
     Task<Dictionary<string, string>> GetTranslations();
     Task<Dictionary<string, string>> GetSettings();
 }
@@ -33,9 +37,9 @@ public class GeneralRepository(IMediator _mediator, IHttpContextAccessor httpCon
         _cache.Clear();
     }
 
-    public async Task<List<GetListSliderResponse>> GetSliders()
+    public async Task<List<GetListSliderDto>> GetSliders()
     {
-        bool result = _cache.TryGetValue($"{nameof(GetSliders)}_{_culture}", out List<GetListSliderResponse>? sliders);
+        bool result = _cache.TryGetValue($"{nameof(GetSliders)}_{_culture}", out List<GetListSliderDto>? sliders);
         if (!result)
         {
             sliders = await _mediator.Send(new GetListSliderQuery());
@@ -64,6 +68,13 @@ public class GeneralRepository(IMediator _mediator, IHttpContextAccessor httpCon
             _cache.Set($"{nameof(GetContactUs)}_{_culture}", response);
         }
         return response ?? new();
+    }
+
+    public async Task<SendedMessageResponse> CreateCustomerMessage(CreateMessageDto request)
+    {
+        SendMessageCommand sendMessageCommand = request.Adapt<SendMessageCommand>();
+        SendedMessageResponse response = await _mediator.Send(sendMessageCommand);
+        return response;
     }
     public async Task<Dictionary<string, string>> GetTranslations()
     {

@@ -1,8 +1,9 @@
 ﻿@using Infrastructure.Dtos.ContactUs
-@model ContactUsTranslationCommandDto
+@using Infrastructure.Dtos.Sliders
+@model SliderTranslationCommandDto
 
 @{
-    ViewData["Title"] = "Edit Contact Us Translation";
+    ViewData["Title"] = "Create Slider Translation";
     SelectList? languages = ViewData["Languages"] as SelectList;
 }
 
@@ -13,8 +14,6 @@
 
 @section Scripts
 {
-    <script src="/admin/devextreme/js/dx.all.js"></script>
-
     <script src="/admin/js/filemanager.js"></script>
 
     <!-- TinyMCE -->
@@ -55,9 +54,9 @@
                 </h2>
             </div>
             <div class="body">
-                <form enctype="multipart/form-data" asp-action="EditTranslation">
+                <form enctype="multipart/form-data" asp-action="CreateTranslation">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <input type="hidden" asp-for="Id" />
+                    <input type="hidden" asp-for="Id" value="" />
                     <div class="form-group">
                         <div class="form-line">
                             <label asp-for="LanguageKey" class="control-label"></label>
@@ -69,45 +68,21 @@
 
                     <div class="form-group">
                         <div class="form-line">
-                            <label asp-for="Address" class="control-label"></label>
-                            <input asp-for="Address" class="form-control" />
-                            <span asp-validation-for="Address" class="text-danger"></span>
+                            <label asp-for="Title" class="control-label"></label>
+                            <input asp-for="Title" class="form-control" />
+                            <span asp-validation-for="Title" class="text-danger"></span>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="form-line">
-                            <label asp-for="WorkingHours" class="control-label"></label>
-                            <input asp-for="WorkingHours" class="form-control" />
-                            <span asp-validation-for="WorkingHours" class="text-danger"></span>
+                            <label asp-for="Subtitle" class="control-label"></label>
+                            <input asp-for="Subtitle" class="form-control" />
+                            <span asp-validation-for="Subtitle" class="text-danger"></span>
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <div class="form-line">
-                            <label asp-for="MetaTitle" class="control-label"></label>
-                            <input asp-for="MetaTitle" class="form-control" />
-                            <span asp-validation-for="MetaTitle" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="form-line">
-                            <label asp-for="MetaDescription" class="control-label"></label>
-                            <textarea asp-for="MetaDescription" class="form-control"></textarea>
-                            <span asp-validation-for="MetaDescription" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="form-line">
-                            <label asp-for="MetaKeys" class="control-label"></label>
-                            <input asp-for="MetaKeys" class="form-control" />
-                            <span asp-validation-for="MetaKeys" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                    <input type="hidden" asp-for="ContactUsId" />
+                    <input type="hidden" asp-for="SliderId" value="@Context.Request.RouteValues["id"]" />
                     <div class="form-group">
                         <input type="submit" value="Save" class="btn btn-primary" />
                     </div>

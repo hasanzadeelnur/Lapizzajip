@@ -4,36 +4,36 @@ public class GetAboutUsResponse
 {
     public Guid Id { get; set; }
     public string FirstImagePath { get; set; }
+    public string FirstBody { get; set; }
     public string SecondImagePath { get; set; }
-    public string Title { get; set; }
-    public string Body { get; set; }
-    public string Thumbnail { get; set; }
-    public string YoutubeLink { get; set; }
-    public string InstagramUserId { get; set; }
-    public string AccessToken { get; set; }
+    public string SecondBody { get; set; }
+    public string StoryBody { get; set; }
+    public string MetaTitle { get; set; }
+    public string MetaDescription { get; set; }
+    public string MetaKeys { get; set; }
 
     public GetAboutUsResponse()
     {
         FirstImagePath = string.Empty;
+        FirstBody = string.Empty;
         SecondImagePath = string.Empty;
-        Title = string.Empty;
-        Body = string.Empty;
-        Thumbnail = string.Empty;
-        YoutubeLink = string.Empty;
-        InstagramUserId = string.Empty;
-        AccessToken = string.Empty;
+        SecondBody = string.Empty;
+        StoryBody = string.Empty;
+        MetaTitle = string.Empty;
+        MetaDescription = string.Empty;
+        MetaKeys = string.Empty;
     }
 
-    public GetAboutUsResponse(Guid id, string firstImagePath, string secondImagePath, string title, string body, string thumbnail, string youtubeLink, string userId, string accessToken)
+    public GetAboutUsResponse(Guid id, string firstImagePath, string firstBody, string secondImagePath, string secondBody, string storyBody, string metaTitle, string metaDescription, string metaKeys, string languageKey)
     {
         Id = id;
         FirstImagePath = firstImagePath;
+        FirstBody = firstBody;
         SecondImagePath = secondImagePath;
-        Title = title;
-        Body = body;
-        Thumbnail = thumbnail;
-        YoutubeLink = youtubeLink;
-        InstagramUserId = userId;
-        AccessToken = accessToken;
+        SecondBody = secondBody;
+        StoryBody = storyBody;
+        MetaTitle = metaTitle;
+        MetaDescription = metaDescription;
+        MetaKeys = metaKeys;
     }
 }

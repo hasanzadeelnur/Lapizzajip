@@ -14,7 +14,6 @@ internal class SliderImageConfiguration : BaseEntityTypeConfiguration<SliderImag
         builder.Property(b => b.SliderId).HasColumnName("SliderId");
         builder.Property(b => b.ImagePath).HasColumnName("ImagePath").HasMaxLength(1000);
         builder.Property(b => b.Order).HasColumnName("Order").HasDefaultValue(1);
-        builder.Property(b => b.Status).HasColumnName("Status");
 
         builder.HasQueryFilter(oa => !oa.DeletedDate.HasValue);
 

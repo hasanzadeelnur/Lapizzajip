@@ -7,7 +7,6 @@ public class SliderImage : Entity<Guid>
     public Guid SliderId { get; set; }
     public string ImagePath { get; set; }
     public int Order { get; set; }
-    public bool Status { get; set; }
 
     public virtual Slider Slider { get; set; }
 
@@ -18,11 +17,10 @@ public class SliderImage : Entity<Guid>
         Slider = null!;
     }
 
-    public SliderImage(Guid sliderId, string imagePath, int order, bool status) : this()
+    public SliderImage(Guid sliderId, string imagePath, int order) : this()
     {
         SliderId = sliderId;
         ImagePath = imagePath;
         Order = order;
-        Status = status;
     }
 }

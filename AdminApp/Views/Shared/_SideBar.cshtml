@@ -20,6 +20,18 @@
                         <span>About Us</span>
                     </a>
                 </li>
+                <li class="@(controllerName == "contact" ? "active" : "")">
+                    <a asp-controller="Contact" asp-action="Index">
+                        <i class="material-icons">call</i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="@(controllerName == "messages" ? "active" : "")">
+                    <a asp-controller="Messages" asp-action="Index">
+                        <i class="material-icons">comment</i>
+                        <span>Messages</span>
+                    </a>
+                </li>
                 @*                 <li class="@(controllerName == "aboutus" ? "active" : "")">
                     <a asp-controller="AboutUs" asp-action="Index">
                         <i class="material-icons">domain</i>
@@ -121,6 +133,12 @@
                     <a asp-controller="Products" asp-action="Index">
                         <i class="material-icons">store</i>
                         <span>Products</span>
+                    </a>
+                </li>
+                <li class="@(controllerName == "sliders" ? "active" : "")">
+                    <a asp-controller="Sliders" asp-action="Index">
+                        <i class="material-icons">view_carousel</i>
+                        <span>Sliders</span>
                     </a>
                 </li>
                 <li class="@(controllerName == "services" ? "active" : "")">

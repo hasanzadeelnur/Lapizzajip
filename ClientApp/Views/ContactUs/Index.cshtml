@@ -1,0 +1,152 @@
+﻿@using Application.Features.ContactUs.Queries.GetData
+@using Infrastructure.Dtos.Messages
+@model CreateMessageDto
+@{
+    GetContactUsResponse contactUs = ViewData[nameof(IGeneralRepository.GetContactUs)] as GetContactUsResponse ?? new();
+    Dictionary<string, string> textTranslations = await generalRepository.GetTranslations();
+    Dictionary<string, string> settings = await generalRepository.GetSettings();
+    TempData["Title"] = textTranslations["contact_us_header_title"];
+    TempData["MetaKeywords"] = textTranslations["contact_us_keywords_meta"];
+    TempData["MetaDescription"] = textTranslations["contact_us_description_meta"];
+}
+<section id="top" class="page-banner" style="background: #121619 url(images/blog-8.jpg) no-repeat center / cover;">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12">
+                <div class="page-title">
+                    <h1 class="page-headding wow fadeInUp">contact Us</h1>
+                    <ul class="wow fadeInUp">
+                        <li><a href="index.html" class="page-name">Home</a></li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact ptb">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12">
+                <div class="headding-part text-center">
+                    <p class="headding-sub wow fadeInUp">Get in touch</p>
+                    <h2 class="headding-title text-uppercase fw-bold wow fadeInUp">contact us</h2>
+                </div>
+            </div>
+        </div>
+        <div class="contact-in">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-5 wow fadeInLeft">
+                    <div class="contact-detail">
+                        @Html.Raw(contactUs.Description)
+                        <ul>
+                            <li><i class="fa fa-home" aria-hidden="true"></i><div class="con-list">@contactUs.Address</div></li>
+                            <li>
+                                <i class="fa fa-phone" aria-hidden="true"></i><div class="con-list">
+                                    @foreach (string phone in contactUs.Phones.Split(',') ?? [])
+                                    {
+                                        <a href="tel:@phone">@phone</a>
+                                    }
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope" aria-hidden="true"></i><div class="con-list">
+                                    @foreach (string email in contactUs.Emails.Split(',') ?? [])
+                                    {
+                                        <a href="mailto:@email">@email</a>
+                                    }
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                <div class="con-list">
+                                    @foreach (string workingHour in contactUs.WorkingHours.Split(',') ?? [])
+                                    {
+                                        <span>@workingHour</span>
+                                    }
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-8 col-md-7 wow fadeInRight">
+                    <div class="leave">
+                        <form method="post" id="contact-form" asp-controller="ContactUs" asp-action="Index">
+                            <input asp-for="ReCaptchaKey" id="reCaptchaKeyInput" type="hidden" />
+                            <input asp-for="IPAddress" id="ipAddressInput" type="hidden" />
+                            <div class="form-group">
+                                <input type="text" class="form-control" asp-for="CustomerName"
+                                       placeholder="@textTranslations["contact_us_get_in_touch_your_name_placeholder"]" required>
+                                <span asp-validation-for="CustomerName" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" class="form-control" asp-for="CustomerEmail"
+                                       placeholder="@textTranslations["contact_us_get_in_touch_your_email_placeholder"]" required>
+                                <span asp-validation-for="CustomerEmail" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" asp-for="CustomerPhone"
+                                       placeholder="@textTranslations["contact_us_get_in_touch_your_phone_placeholder"]" required>
+                                <span asp-validation-for="CustomerPhone" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" asp-for="Subject"
+                                       placeholder="@textTranslations["contact_us_get_in_touch_your_subject_placeholder"]" required>
+                                <span asp-validation-for="Subject" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <textarea asp-for="Message" cols="30" rows="4" class="form-control"
+                                          placeholder="@textTranslations["contact_us_get_in_touch_your_message_placeholder"]" required></textarea>
+                                <span asp-validation-for="Message" class="text-danger"></span>
+                            </div>
+                            <button type="submit" class="theme-btn g-recaptcha"
+                                    data-sitekey="@(_configuration["ReCaptchaClientSide"])"
+                                    data-callback='onSubmit'
+                                    data-action='submit'>
+                                @textTranslations["contact_us_get_in_touch_button"] <i class="far fa-paper-plane"></i>
+                            </button>
+                            <input type="submit" name="submit" value="Send Message" class="post-com text-success"></input>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-map wow fadeInUp">
+    <iframe class="map-pizzon" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2293.1228588802205!2d-2.940742383978084!3d54.918316163505814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487d1a03882d54af%3A0xa4639d28db5b99d9!2s55%20Drumburgh%20Ave%2C%20Carlisle%20CA3%200PD%2C%20UK!5e0!3m2!1sen!2sin!4v1599636489278!5m2!1sen!2sin" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</section>
+
+@section Styles
+{
+
+}
+
+@section Scripts
+{
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+            function getIPAddress() {
+            // Fetch the IP address from the API
+            fetch("https://api.ipify.org?format=json")
+                .then(response => response.json())
+                .then(data => {
+                    // Display the IP address on the screen
+                    document.getElementById("ipAddressInput").value = data.ip;
+                }).catch(error => { });
+        }
+
+        function onSubmit(token) {
+            getIPAddress();
+            document.getElementById("reCaptchaKeyInput").value = token;
+            var validator = $("#contact-form").validate();
+            var checkValidator = validator.form();
+            if (checkValidator) {
+                document.getElementById("contact-form").submit();
+            }
+        }
+    </script>
+}

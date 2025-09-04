@@ -12,6 +12,7 @@ public class HomeController(IConfiguration _configuration, BaseDbContext _db) : 
 {
     public IActionResult Index()
     {
+        ViewData["MessageCount"] = _db?.Set<CustomerMessage>()?.Count();
         ViewData["ProductCount"] = _db?.Set<Product>()?.Count();
         return View();
     }

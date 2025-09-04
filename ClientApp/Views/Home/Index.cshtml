@@ -1,5 +1,353 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using Application.Features.AboutUs.Queries.GetData
+@using Application.Features.Services.Queries.GetList
+@using Application.Features.Sliders.Queries.GetList
+@using Core.Application.Responses
 @{
+    List<GetListSliderDto> sliders = ViewData[nameof(IGeneralRepository.GetSliders)] as List<GetListSliderDto> ?? [];
+	GetAboutUsResponse aboutus = ViewData[nameof(IGeneralRepository.GetAboutUs)] as GetAboutUsResponse ?? new();
+    List<GetListServiceResponse> services = ViewData[nameof(IGeneralRepository.GetServices)] as List<GetListServiceResponse> ?? [];
+    // GetListResponse<GetListPopularProductResponse> popularProducts = ViewData[nameof(IGeneralRepository.GetListPopularProduct)] as GetListResponse<GetListPopularProductResponse> ?? new();
+    // GetListResponse<GetListLastProductResponse> lastProducts = ViewData[nameof(IGeneralRepository.GetListLastProduct)] as GetListResponse<GetListLastProductResponse> ?? new();
+    // GetListResponse<GetListDealSliderResponse> dealSliders = ViewData[nameof(IGeneralRepository.GetListDealSlider)] as GetListResponse<GetListDealSliderResponse> ?? new();
+    // var categories = lastProducts.Items.GroupBy(p => p.CategoryId).Select(p => new
+    // {
+    //     Id = p.Key,
+    //     Name = p.FirstOrDefault()?.CategoryName
+    // });
+    Dictionary<string, string> textTranslations = await generalRepository.GetTranslations();
+    TempData["Title"] = textTranslations["home_page_header_title"];
+    TempData["MetaKeywords"] = textTranslations["home_page_keywords_meta"];
+    TempData["MetaDescription"] = textTranslations["home_page_description_meta"];
+
+
 }
+
+
+<section class="banner" id="top">
+	<div class="banner-carousel owl-carousel">
+		<div class="banner-slide">
+			<div class="container">
+				<div class="banner-box">
+					<div class="banner-text">
+						<div class="banner-center">
+							<h2 class="banner-headding">Quality F<span>oo</span>ds</h2>
+							<p class="banner-sub-hed">Healthy Food for healthy body</p>
+						</div>
+					</div>
+					<div class="banner-images">
+						<div class="all-img-banner">
+							<img src="images/banner-bg-1.png" alt="banner" class="pizza-img">
+							<img src="images/banner-bg-2.png" alt="banner" class="pizza-it pizza-1">
+							<img src="images/banner-bg-3.png" alt="banner" class="pizza-it pizza-2">
+							<img src="images/banner-bg-4.png" alt="banner" class="pizza-it pizza-3">
+							<img src="images/banner-bg-5.png" alt="banner" class="pizza-it pizza-4">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="banner-slide-2">
+			<div class="container">
+				<div class="banner-box">
+					<div class="banner-text">
+						<div class="banner-center">
+							<h2 class="banner-headding">Quality F<span>oo</span>ds</h2>
+							<p class="banner-sub-hed">Healthy Food for healthy body</p>
+						</div>
+					</div>
+					<div class="banner-images">
+						<div class="all-img-banner">
+							<img src="images/pizza-banner-1.png" alt="banner" class="pizza-img">
+							<img src="images/pizza-1.png" alt="banner" class="pizza-it pizza-1">
+							<img src="images/pizza-2.png" alt="banner" class="pizza-it pizza-2">
+							<img src="images/pizza-3.png" alt="banner" class="pizza-it pizza-3">
+							<img src="images/pizza-4.png" alt="banner" class="pizza-it pizza-4">
+							<img src="images/pizza-5.png" alt="banner" class="pizza-it pizza-5">
+							<img src="images/pizza-6.png" alt="banner" class="pizza-it pizza-6">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="banner-slide-3">
+			<div class="container">
+				<div class="banner-box">
+					<div class="banner-images">
+						<div class="all-img-banner">
+							<img src="images/pizza-banner-2.png" alt="banner" class="pizza-img">
+							<img src="images/pizza-7.png" alt="banner" class="pizza-it pizza-1">
+							<img src="images/pizza-8.png" alt="banner" class="pizza-it pizza-2">
+							<img src="images/pizza-9.png" alt="banner" class="pizza-it pizza-3">
+							<img src="images/pizza-10.png" alt="banner" class="pizza-it pizza-4">
+							<img src="images/pizza-11.png" alt="banner" class="pizza-it pizza-5">
+							<img src="images/pizza-12.png" alt="banner" class="pizza-it pizza-6">
+						</div>
+					</div>
+					<div class="banner-text">
+						<div class="banner-center">
+							<h2 class="banner-headding">Quality F<span>oo</span>ds</h2>
+							<p class="banner-sub-hed">Healthy Food for healthy body</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="order-section ptb">
+	<div class="container">
+		<div class="row">
+			<div class="order-top"><img src="images/order-top.png" alt="layer"></div>
+			@foreach (GetListServiceResponse service in services)
+			{
+				<div class="col-xl-4 col-lg-4 col-md-4 servose-box text-center padding-lf wow fadeInUp">
+					<img src="@service.Icon" alt="order" class="order-img">
+					<h2 class="order-title text-uppercase">@service.Title</h2>
+					<p class="order-des">@service.Subtitle</p>
+				</div>
+			}
+			<div class="order-bottom"><img src="images/order-bottom.png" alt="layer"></div>
+		</div>
+	</div>
+</section>
+
+<section class="speciality ptb pt-140">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-12 col-lg-12 col-md-12">
+				<div class="headding-part text-center pb-50">
+					<p class="headding-sub wow fadeInUp">Fresh From Pizzon</p>
+					<h2 class="headding-title text-uppercase fw-bold wow fadeInUp">our speciality</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-4 col-lg-4 col-md-4 text-center speciality-box wow fadeInUp">
+				<div class="speciality-img"><a href="shop-detail.html"><img src="images/speciality-1.jpg" alt="speciality" class="spec-image"></a></div>
+				<a href="shop-detail.html" class="ser-title text-uppercase fw-bold">Mexican Green Wave</a>
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-4 text-center speciality-box wow fadeInUp">
+				<div class="speciality-img"><a href="shop-detail.html"><img src="images/speciality-2.jpg" alt="speciality" class="spec-image"></a></div>
+				<a href="shop-detail.html" class="ser-title text-uppercase fw-bold">Double Cheese Pizza</a>
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-4 text-center speciality-box wow fadeInUp">
+				<div class="speciality-img"><a href="shop-detail.html"><img src="images/speciality-3.jpg" alt="speciality" class="spec-image"></a></div>
+				<a href="shop-detail.html" class="ser-title text-uppercase fw-bold wow fadeInUp">margherita pizza</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-12 col-lg-12 col-md-12 text-center">
+				<a href="menu-1.html" class="com-btn">view more</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="special-menu ptb pt-140">
+	<div class="container">
+		<div class="menu-top-bg"><img src="images/menu-top-bg.png" alt="meu-bg"></div>
+		<div class="row">
+			<div class="col-xl-12 col-lg-12 col-md-12">
+				<div class="headding-part text-center pb-50">
+					<p class="headding-sub wow fadeInUp">Fresh From Pizzon</p>
+					<h2 class="headding-title text-uppercase fw-bold wow fadeInUp">Our Special Menu</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-12 col-lg-12 col-md-12">
+				<div class="special-tab text-center wow fadeInUp">
+					<ul id="tabs" class="nav nav-tabs" role="tablist">
+						<li class="text-uppercase fw-bold nav-item current" role="presentation">
+							<a href="#tab-1" class="nav-link active" id="all" data-bs-toggle="tab" data-bs-target="#data_all" role="tab" aria-selected="true"> All</a>
+						</li>
+						<li class="text-uppercase fw-bold nav-item" role="presentation">
+							<a href="#tab-2" class="nav-link" id="drinks" data-bs-toggle="tab" data-bs-target="#data_drinks" role="tab" aria-selected="false"> Drinks</a>
+						</li>
+						<li class="text-uppercase fw-bold nav-item" role="presentation">
+							<a href="#tab-3" class="nav-link" id="salads" data-bs-toggle="tab" data-bs-target="#data_salads" role="tab" aria-selected="false"> Salads</a>
+						</li>
+						<li class="text-uppercase fw-bold nav-item" role="presentation">
+							<a href="#tab-4" class="nav-link" id="pasta" data-bs-toggle="tab" data-bs-target="#data_pasta" role="tab" aria-selected="false"> pasta</a>
+						</li>
+						<li class="text-uppercase fw-bold nav-item" role="presentation">
+							<a href="#tab-5" class="nav-link" id="burgers" data-bs-toggle="tab" data-bs-target="#data_burgers" role="tab" aria-selected="false"> burgers</a>
+						</li>
+						<li class="text-uppercase fw-bold nav-item" role="presentation">
+							<a href="#tab-6" class="nav-link" id="deserts" data-bs-toggle="tab" data-bs-target="#data_deserts" role="tab" aria-selected="false"> deserts</a>
+						</li>
+						<li class="text-uppercase fw-bold nav-item" role="presentation">
+							<a href="#tab-7" class="nav-link" id="pizzas" data-bs-toggle="tab" data-bs-target="#data_pizzas" role="tab" aria-selected="false"> pizzas</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content wow fadeInUp">
+			<div role="tabpanel" class="row our-menu-panel tab-pane fade in active show" role="tabpanel" id="data_all" aria-labelledby="all">
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-1.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">margherita pizza</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-3.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">Rum With Soda</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-7.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">Ceaser Salad</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-8.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">Sea Food Pasta</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-2.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">Chocolate Cookies</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-6.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">Pepperoni Pizza</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-7.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">bismarck pizza</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-1.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">Valdostana pizza</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+			</div>
+			<div role="tabpanel" class="row our-menu-panel tab-pane fade" role="tabpanel" id="data_drinks" aria-labelledby="drinks">
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-3.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">Rum With Soda</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+			</div>
+			<div role="tabpanel" class="row our-menu-panel tab-pane fade" role="tabpanel" id="data_salads" aria-labelledby="salads">
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-7.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">Ceaser Salad</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+			</div>
+			<div role="tabpanel" class="row our-menu-panel tab-pane fade" role="tabpanel" id="data_pasta" aria-labelledby="pasta">
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-8.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">Sea Food Pasta</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+			</div>
+			<div role="tabpanel" class="row our-menu-panel tab-pane fade" role="tabpanel" id="data_burgers" aria-labelledby="burgers">
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-1.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">VALDOSTANA PIZZA</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-2.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">BISMARCK PIZZA</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-3.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">PEPPERONI PIZZA</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-7.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">ORIENTAL PIZZA</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-8.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">BARBECUE PIZZA</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+			</div>
+			<div role="tabpanel" class="row our-menu-panel tab-pane fade" role="tabpanel" id="data_deserts" aria-labelledby="deserts">
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-2.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">Chocolate Cookies</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-3.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">Rum With Soda</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+			</div>
+			<div role="tabpanel" class="row our-menu-panel tab-pane fade" role="tabpanel" id="data_pizzas" aria-labelledby="pizzas">
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-4.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">Vegetarian</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-1.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">margheritapizza</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+					<div class="menu-img"><a href="shop-detail.html"><img src="images/menu-3.png" alt="menu" class="menu-image"></a></div>
+					<a href="shop-detail.html" class="menu-title text-uppercase">Four Cheese</a>
+					<p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+					<span class="menu-price">$20.50</span>
+				</div>
+			</div>
+		</div>
+		<div class="menu-bottom-bg"><img src="images/menu-bottom-bg.png" alt="menu-bg"></div>
+	</div>
+</section>
+
+<section class="about-pizzon relative ptb">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-xl-6 col-lg-6 col-md-6 wow fadeInLeft">
+				<div class="max-w-390">
+					<div class="headding-part">
+						<p class="headding-sub">Delicious Restaurant</p>
+						<h2 class="headding-title text-uppercase fw-bold">about pizzon</h2>
+					</div>
+					<p class="online-des">Sit amet, consectetur adipiscing elit quisque eget maximus velit, non eleifend libero curabitur dapibus mauris sed leo cursus aliquetcras suscipit. Sit amet, consectetur adipiscing elit quisque eget maximus velit, non eleifend libero curabitur Sit amet, consectetur adipiscing elit quisque eget maximus velit, non eleifend libero curabitur dapibus mauris sed leo cursus aliquetcras suscipit. Sit amet, consectetur adipiscing elit quisque eget maximus velit, non eleifend libero curabitur </p>
+					<a href="about.html" class="about-more-z com-btn">view more</a>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 wow fadeInRight">
+				<div class="about-pizzon-img">
+					<img src="images/about-pizzon.png" alt="about" class="pizzon-ab">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
