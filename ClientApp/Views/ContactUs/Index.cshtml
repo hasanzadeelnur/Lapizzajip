@@ -2,7 +2,7 @@
 @using Infrastructure.Dtos.Messages
 @model CreateMessageDto
 @{
-    GetContactUsResponse contactUs = ViewData[nameof(IGeneralRepository.GetContactUs)] as GetContactUsResponse ?? new();
+    GetContactUsResponse contactUs = await generalRepository.GetContactUs() as GetContactUsResponse ?? new();
     Dictionary<string, string> textTranslations = await generalRepository.GetTranslations();
     Dictionary<string, string> settings = await generalRepository.GetSettings();
     TempData["Title"] = textTranslations["contact_us_header_title"];
