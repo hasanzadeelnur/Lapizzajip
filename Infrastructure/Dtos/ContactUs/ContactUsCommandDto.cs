@@ -2,16 +2,16 @@
 public class ContactUsCommandDto
 {
     public Guid? Id { get; set; }
-    public string MapX { get; set; }
-    public string MapY { get; set; }
-    public string Phones { get; set; }
-    public string Emails { get; set; }
-    public string TikTokAddress { get; set; }
-    public string FacebookAddress { get; set; }
-    public string LinkedinAddress { get; set; }
-    public string InstagramAddress { get; set; }
-    public string WhatsappNumber { get; set; }
-    public string KakaoTalk { get; set; }
+    public string? MapX { get; set; }
+    public string? MapY { get; set; }
+    public string? Phones { get; set; }
+    public string? Emails { get; set; }
+    public string? TikTokAddress { get; set; }
+    public string? FacebookAddress { get; set; }
+    public string? LinkedinAddress { get; set; }
+    public string? InstagramAddress { get; set; }
+    public string? WhatsappNumber { get; set; }
+    public string? KakaoTalk { get; set; }
 
     public virtual ICollection<ContactUsTranslationCommandDto> Translations { get; set; }
 
