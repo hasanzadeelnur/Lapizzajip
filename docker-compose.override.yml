@@ -14,7 +14,7 @@ services:
       - "ASPNETCORE_ENVIRONMENT=PRODUCTION"
       - "ASPNETCORE_HTTP_PORTS=8080"
       - "ASPNETCORE_URLS=http://+:8080"
-      - "WebAppUri:http://localhost:5120/"
+      - "WebAppUri:lapizzajip-client-app:8080"
       - "ConnectionStrings:BaseDbContext=Server=172.17.0.1; Port=5432; Database=LapizzajipDb; User Id=postgres; Password=12345678;"
       - "ConnectionStrings:IdentityContext=Server=172.17.0.1; Port=5432; Database=LapizzajipAdminDb; User Id=postgres; Password=12345678;"
   lapizzajip-client-app:
@@ -31,6 +31,5 @@ services:
       - "ASPNETCORE_ENVIRONMENT=PRODUCTION"
       - "ASPNETCORE_HTTP_PORTS=8080"
       - "ASPNETCORE_URLS=http://+:8080"
-      - "WebAppUri:http://localhost:5120/"
       - "ConnectionStrings:BaseDbContext=Server=172.17.0.1; Port=5432; Database=LapizzajipDb; User Id=postgres; Password=12345678;"
       - "ConnectionStrings:IdentityContext=Server=172.17.0.1; Port=5432; Database=LapizzajipAdminDb; User Id=postgres; Password=12345678;"
