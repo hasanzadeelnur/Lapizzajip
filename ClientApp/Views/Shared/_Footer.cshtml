@@ -3,7 +3,7 @@
 @using Application.Features.ContactUs.Queries.GetData
 
 @{
-    Dictionary<string, string> textTranslations = await generalRepository.GetTranslations();
+   // Dictionary<string, string> textTranslations = await generalRepository.GetTranslations();
     Dictionary<string, string> settings = await generalRepository.GetSettings();
     GetContactUsResponse contactUs = await generalRepository.GetContactUs() as GetContactUsResponse ?? new();
     GetAboutUsResponse aboutus = await generalRepository.GetAboutUs() as GetAboutUsResponse ?? new();
