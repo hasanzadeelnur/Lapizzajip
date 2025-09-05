@@ -3,6 +3,7 @@ public class ProductCommandDto
 {
     public Guid? Id { get; set; }
     public Guid CategoryId { get; set; }
+    public string SpecialImagePath { get; set; }
     public string ImagePath { get; set; }
     public double? Price { get; set; }
     public int Order { get; set; }
@@ -14,15 +15,17 @@ public class ProductCommandDto
     public ProductCommandDto()
     {
         Id = null!;
+        SpecialImagePath = string.Empty;
         ImagePath = string.Empty;
         Price = null!;
         Translations = [];
     }
 
-    public ProductCommandDto(Guid? id, Guid categoryId, string imagePath, double? price, int order, int specialOrder, bool status) : this()
+    public ProductCommandDto(Guid? id, Guid categoryId, string specialImagePath, string imagePath, double? price, int order, int specialOrder, bool status) : this()
     {
         Id = id;
         CategoryId = categoryId;
+        SpecialImagePath = specialImagePath;
         ImagePath = imagePath;
         Price = price;
         Order = order;

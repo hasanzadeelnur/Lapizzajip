@@ -6,6 +6,7 @@ public class Product : Entity<Guid>
 {
     public Guid CategoryId { get; set; }
     public string ImagePath { get; set; }
+    public string SpecialImagePath { get; set; }
     public double Price { get; set; }
     public int Order { get; set; }
     public int SpecialOrder { get; set; }
@@ -17,14 +18,16 @@ public class Product : Entity<Guid>
     public Product()
     {
         ImagePath = string.Empty;
+        SpecialImagePath = string.Empty;
         Category = null!;
         Translations = [];
     }
 
-    public Product(Guid categoryId, string imagePath, double price, int order, int specialOrder, bool status) : this()
+    public Product(Guid categoryId, string imagePath, string specialImagePath, double price, int order, int specialOrder, bool status) : this()
     {
         CategoryId = categoryId;
         ImagePath = imagePath;
+        SpecialImagePath = specialImagePath;
         Price = price;
         Order = order;
         SpecialOrder = specialOrder;

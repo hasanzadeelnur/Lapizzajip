@@ -3,6 +3,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
+
 namespace Persistence.Migrations
 {
     /// <inheritdoc />
@@ -48,6 +49,7 @@ namespace Persistence.Migrations
                     LinkedinAddress = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false),
                     InstagramAddress = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false),
                     WhatsappNumber = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false),
+                    KakaoTalk = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
                     DeletedDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: true)
@@ -226,6 +228,7 @@ namespace Persistence.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     CategoryId = table.Column<Guid>(type: "uuid", nullable: false),
                     ImagePath = table.Column<string>(type: "character varying(1000)", maxLength: 1000, nullable: false),
+                    SpecialImagePath = table.Column<string>(type: "character varying(1000)", maxLength: 1000, nullable: false),
                     Price = table.Column<double>(type: "double precision", nullable: false),
                     Order = table.Column<int>(type: "integer", nullable: false),
                     SpecialOrder = table.Column<int>(type: "integer", nullable: false),
@@ -331,8 +334,8 @@ namespace Persistence.Migrations
 
             migrationBuilder.InsertData(
                 table: "ContactUs",
-                columns: new[] { "Id", "CreatedDate", "DeletedDate", "Email", "FacebookAddress", "InstagramAddress", "LinkedinAddress", "MapX", "MapY", "Phone", "TikTokAddress", "UpdatedDate", "WhatsappNumber" },
-                values: new object[] { new Guid("2be6044a-deea-4b46-a7a6-4beef40db34e"), new DateTime(2025, 2, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "noreply@carlog.com", "https://www.facebook.com/", "https://www.instagram.com/", "https://linkedin.com/", "40.409264", "49.867092", "+99 (0) 101 0000 888", "https://tiktok.com", null, "" });
+                columns: new[] { "Id", "CreatedDate", "DeletedDate", "Email", "FacebookAddress", "InstagramAddress", "KakaoTalk", "LinkedinAddress", "MapX", "MapY", "Phone", "TikTokAddress", "UpdatedDate", "WhatsappNumber" },
+                values: new object[] { new Guid("2be6044a-deea-4b46-a7a6-4beef40db34e"), new DateTime(2025, 2, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "noreply@carlog.com", "https://www.facebook.com/", "https://www.instagram.com/", "", "https://linkedin.com/", "40.409264", "49.867092", "+99 (0) 101 0000 888", "https://tiktok.com", null, "" });
 
             migrationBuilder.InsertData(
                 table: "Settings",

@@ -72,7 +72,7 @@
                     <ul>
                         @if (!string.IsNullOrEmpty(contactUs?.FacebookAddress))
                         {
-                            <li><a href="@contactUs.FacebookAddress"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="@contactUs.FacebookAddress"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
                         }
                         @if (!string.IsNullOrEmpty(contactUs?.TikTokAddress))
                         {
@@ -80,15 +80,19 @@
                         }
                         @if (!string.IsNullOrEmpty(contactUs?.LinkedinAddress))
                         {
-                            <li><a href="@contactUs?.LinkedinAddress"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="@contactUs?.LinkedinAddress"><i class="fa-brands fa-linkedin-in"></i></a></li>
                         }
                         @if (!string.IsNullOrEmpty(contactUs?.InstagramAddress))
                         {
-                            <li><a href="@contactUs?.InstagramAddress"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="@contactUs?.InstagramAddress"><i class="fa-brands fa-instagram"></i></a></li>
                         }
                         @if (!string.IsNullOrEmpty(contactUs?.WhatsappNumber))
                         {
-                            <li><a href="@contactUs?.WhatsappNumber"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                            <li><a href="@contactUs?.WhatsappNumber"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        }
+                        @if (!string.IsNullOrEmpty(contactUs?.KakaoTalk))
+                        {
+                            <li><a href="@contactUs?.KakaoTalk"><i class="fa-brands fa-kakao-talk"></i></a></li>
                         }
                     </ul>
                 </div>

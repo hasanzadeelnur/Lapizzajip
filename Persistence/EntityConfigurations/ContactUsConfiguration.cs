@@ -20,6 +20,7 @@ internal class ContactUsConfiguration : BaseEntityTypeConfiguration<ContactUs, G
         builder.Property(cu => cu.LinkedinAddress).HasColumnName("LinkedinAddress").HasMaxLength(500);
         builder.Property(cu => cu.InstagramAddress).HasColumnName("InstagramAddress").HasMaxLength(500);
         builder.Property(cu => cu.WhatsappNumber).HasColumnName("WhatsappNumber").HasMaxLength(500);
+        builder.Property(cu => cu.KakaoTalk).HasColumnName("KakaoTalk").HasMaxLength(500);
 
         builder.Navigation(b => b.Translations).AutoInclude();
 

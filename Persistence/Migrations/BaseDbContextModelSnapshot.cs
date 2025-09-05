@@ -205,6 +205,12 @@ namespace Persistence.Migrations
                         .HasColumnType("character varying(500)")
                         .HasColumnName("InstagramAddress");
 
+                    b.Property<string>("KakaoTalk")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)")
+                        .HasColumnName("KakaoTalk");
+
                     b.Property<string>("LinkedinAddress")
                         .IsRequired()
                         .HasMaxLength(500)
@@ -257,6 +263,7 @@ namespace Persistence.Migrations
                             Emails = "noreply@carlog.com",
                             FacebookAddress = "https://www.facebook.com/",
                             InstagramAddress = "https://www.instagram.com/",
+                            KakaoTalk = "",
                             LinkedinAddress = "https://linkedin.com/",
                             MapX = "40.409264",
                             MapY = "49.867092",
@@ -352,6 +359,12 @@ namespace Persistence.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("double precision")
                         .HasColumnName("Price");
+
+                    b.Property<string>("SpecialImagePath")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("character varying(1000)")
+                        .HasColumnName("SpecialImagePath");
 
                     b.Property<int>("SpecialOrder")
                         .HasColumnType("integer")

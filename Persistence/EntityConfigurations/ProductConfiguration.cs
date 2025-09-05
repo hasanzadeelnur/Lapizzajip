@@ -12,6 +12,7 @@ internal class ProductConfiguration : BaseEntityTypeConfiguration<Product, Guid>
 
         builder.Property(c => c.CategoryId).HasColumnName("CategoryId");
         builder.Property(c => c.ImagePath).HasColumnName("ImagePath").HasMaxLength(1000);
+        builder.Property(c => c.SpecialImagePath).HasColumnName("SpecialImagePath").HasMaxLength(1000);
         builder.Property(c => c.Price).HasColumnName("Price");
         builder.Property(c => c.Order).HasColumnName("Order");
         builder.Property(c => c.SpecialOrder).HasColumnName("SpecialOrder");

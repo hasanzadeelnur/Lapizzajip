@@ -139,7 +139,7 @@
     <script>
             var map = L.map('map', {
             // Set latitude and longitude of the map center (required)
-            center: [@contactUs?.OfficeMapX, @contactUs?.OfficeMapY],
+            center: [@contactUs?.MapX, @contactUs?.MapY],
             // Set the initial zoom level, values 0-18, where 0 is most zoomed-out (required)
             zoom: 11
         });
@@ -152,7 +152,7 @@
         }).addTo(map);
 
         var marker = L.marker(
-            [@contactUs?.OfficeMapX, @contactUs?.OfficeMapY],
+            [@contactUs?.MapX, @contactUs?.MapY],
             {
                 draggable: true,
                 title: "",

@@ -11,6 +11,7 @@ public class ContactUsCommandDto
     public string LinkedinAddress { get; set; }
     public string InstagramAddress { get; set; }
     public string WhatsappNumber { get; set; }
+    public string KakaoTalk { get; set; }
 
     public virtual ICollection<ContactUsTranslationCommandDto> Translations { get; set; }
 
@@ -25,6 +26,7 @@ public class ContactUsCommandDto
         LinkedinAddress = string.Empty;
         InstagramAddress = string.Empty;
         WhatsappNumber = string.Empty;
+        KakaoTalk = string.Empty;
         Translations = [];
     }
 
@@ -39,6 +41,7 @@ public class ContactUsCommandDto
         string linkedinAddress,
         string instagramAddress,
         string whatsappNumber,
+        string kakaoTalk,
         ICollection<ContactUsTranslationCommandDto> translations)
     {
         Id = id;
@@ -51,6 +54,7 @@ public class ContactUsCommandDto
         LinkedinAddress = linkedinAddress;
         InstagramAddress = instagramAddress;
         WhatsappNumber = whatsappNumber;
+        KakaoTalk = kakaoTalk;
         Translations = translations;
     }
 }

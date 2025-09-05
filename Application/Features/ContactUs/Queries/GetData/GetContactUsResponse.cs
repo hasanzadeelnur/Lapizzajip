@@ -3,8 +3,8 @@
 public class GetContactUsResponse
 {
     public Guid Id { get; set; }
-    public string OfficeMapX { get; set; }
-    public string OfficeMapY { get; set; }
+    public string MapX { get; set; }
+    public string MapY { get; set; }
     public string Address { get; set; }
     public string Phones { get; set; }
     public string Emails { get; set; }
@@ -18,11 +18,12 @@ public class GetContactUsResponse
     public string LinkedinAddress { get; set; }
     public string InstagramAddress { get; set; }
     public string WhatsappNumber { get; set; }
+    public string KakaoTalk { get; set; }
 
     public GetContactUsResponse()
     {
-        OfficeMapX = string.Empty;
-        OfficeMapY = string.Empty;
+        MapX = string.Empty;
+        MapY = string.Empty;
         Address = string.Empty;
         Phones = string.Empty;
         Emails = string.Empty;
@@ -32,13 +33,14 @@ public class GetContactUsResponse
         LinkedinAddress = string.Empty;
         InstagramAddress = string.Empty;
         WhatsappNumber = string.Empty;
+        KakaoTalk = string.Empty;
     }
 
-    public GetContactUsResponse(Guid id, string officeMapX, string officeMapY, string address, string phones, string emails, string workingHours, string tikTokAddress, string facebookAddress, string linkedinAddress, string instagramAddress, string whatsappNumber)
+    public GetContactUsResponse(Guid id, string mapX, string mapY, string address, string phones, string emails, string workingHours, string tikTokAddress, string facebookAddress, string linkedinAddress, string instagramAddress, string whatsappNumber, string kakaoTalk)
     {
         Id = id;
-        OfficeMapX = officeMapX;
-        OfficeMapY = officeMapY;
+        MapX = mapX;
+        MapY = mapY;
         Address = address;
         Phones = phones;
         Emails = emails;
@@ -48,5 +50,6 @@ public class GetContactUsResponse
         LinkedinAddress = linkedinAddress;
         InstagramAddress = instagramAddress;
         WhatsappNumber = whatsappNumber;
+        KakaoTalk = kakaoTalk;
     }
 }

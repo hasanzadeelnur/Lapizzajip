@@ -103,27 +103,19 @@
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <input type="hidden" asp-for="Id" />
                     <input type="hidden" asp-for="MapX" id="mapXId" />
-                    <input type="hidden" asp-for="MapY" id="mapYId"/>
+                    <input type="hidden" asp-for="MapY" id="mapYId" />
                     <div class="form-group">
                         <div class="form-line">
                             <label asp-for="Phones" class="control-label"></label>
-                            <input asp-for="Phones" class="form-control" data-role="tagsinput"></input>
+                            <input asp-for="Phones" class="form-control" data-role="tagsinput" />
                             <span asp-validation-for="Phones" class="text-danger"></span>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="form-line">
-                            <label asp-for="WhatsappNumber" class="control-label"></label>
-                            <input asp-for="WhatsappNumber" class="form-control"></input>
-                            <span asp-validation-for="WhatsappNumber" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="form-line">
                             <label asp-for="Emails" class="control-label"></label>
-                            <input asp-for="Emails" class="form-control" data-role="tagsinput"/>
+                            <input asp-for="Emails" class="form-control" data-role="tagsinput" />
                             <span asp-validation-for="Emails" class="text-danger"></span>
                         </div>
                     </div>
@@ -163,6 +155,14 @@
                             <label asp-for="WhatsappNumber" class="control-label"></label>
                             <input asp-for="WhatsappNumber" class="form-control" />
                             <span asp-validation-for="WhatsappNumber" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-line">
+                            <label asp-for="KakaoTalk" class="control-label"></label>
+                            <input asp-for="KakaoTalk" class="form-control" />
+                            <span asp-validation-for="KakaoTalk" class="text-danger"></span>
                         </div>
                     </div>
 

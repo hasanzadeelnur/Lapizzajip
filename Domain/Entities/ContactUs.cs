@@ -13,6 +13,7 @@ public class ContactUs : Entity<Guid>
     public string LinkedinAddress { get; set; }
     public string InstagramAddress { get; set; }
     public string WhatsappNumber { get; set; }
+    public string KakaoTalk { get; set; }
 
     public virtual ICollection<ContactUsTranslation> Translations { get; set; }
 
@@ -27,10 +28,22 @@ public class ContactUs : Entity<Guid>
         LinkedinAddress = string.Empty;
         InstagramAddress = string.Empty;
         WhatsappNumber = string.Empty;
+        KakaoTalk = string.Empty;
         Translations = [];
     }
 
-    public ContactUs(Guid id, string officeMapX, string officeMapY, string phones, string emails, string tikTokAddress, string facebookAddress, string linkedinAddress, string instagramAddress, string whatsappNumber) : this()
+    public ContactUs(
+        Guid id, 
+        string officeMapX, 
+        string officeMapY, 
+        string phones, 
+        string emails, 
+        string tikTokAddress, 
+        string facebookAddress, 
+        string linkedinAddress, 
+        string instagramAddress, 
+        string whatsappNumber,
+        string kakaoTalk) : this()
     {
         Id = id;
         MapX = officeMapX;
@@ -42,5 +55,6 @@ public class ContactUs : Entity<Guid>
         LinkedinAddress = linkedinAddress;
         InstagramAddress = instagramAddress;
         WhatsappNumber = whatsappNumber;
+        KakaoTalk = kakaoTalk;
     }
 }

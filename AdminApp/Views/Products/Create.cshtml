@@ -95,6 +95,22 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <label asp-for="SpecialImagePath" class="control-label"></label>
+                                    <input asp-for="SpecialImagePath" class="form-control" />
+                                    <span asp-validation-for="SpecialImagePath" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-default waves-effect m-r-20" onclick='defineParameterName("SpecialImagePath")' data-toggle="modal" data-target="#file-manager-popup">Select Image</button>
+                            </div>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <div class="form-line">
                             <label asp-for="Order" class="control-label"></label>
