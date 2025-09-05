@@ -15,9 +15,9 @@
     //     Name = p.FirstOrDefault()?.CategoryName
     // });
     Dictionary<string, string> textTranslations = await generalRepository.GetTranslations();
-    // TempData["Title"] = textTranslations["home_page_header_title"];
-    //TempData["MetaKeywords"] = textTranslations["home_page_keywords_meta"];
-    //TempData["MetaDescription"] = textTranslations["home_page_description_meta"];
+    TempData["Title"] = textTranslations["home_page_header_title"];
+    TempData["MetaKeywords"] = textTranslations["home_page_keywords_meta"];
+    TempData["MetaDescription"] = textTranslations["home_page_description_meta"];
     int sliderImageCount = 1;
 
 }
@@ -52,6 +52,7 @@
                 sliderImageCount = 1;
             }
         }
+    
     </div>
 </section>
 
@@ -62,7 +63,7 @@
             @foreach (GetListServiceResponse service in services)
             {
                 <div class="col-xl-4 col-lg-4 col-md-4 servose-box text-center padding-lf wow fadeInUp">
-                    <img src="@service.Icon" alt="order" class="order-img">
+                    <img src="@service.ImagePath" alt="order" class="order-img">
                     <h2 class="order-title text-uppercase">@service.Title</h2>
                     <p class="order-des">@service.Subtitle</p>
                 </div>
@@ -77,8 +78,8 @@
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="headding-part text-center pb-50">
-                    <p class="headding-sub wow fadeInUp">Fresh From Pizzon</p>
-                    <h2 class="headding-title text-uppercase fw-bold wow fadeInUp">our speciality</h2>
+                    <p class="headding-sub wow fadeInUp">@textTranslations["home_our_speciality_title"]</p>
+                    <h2 class="headding-title text-uppercase fw-bold wow fadeInUp">@textTranslations["home_our_speciality_subtitle"]</h2>
                 </div>
             </div>
         </div>
@@ -98,7 +99,7 @@
         </div>
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 text-center">
-                <a href="menu-1.html" class="com-btn">view more</a>
+                <a asp-controller="Menu" asp-action="Index" class="com-btn">@textTranslations["view_more_button"]</a>
             </div>
         </div>
     </div>
@@ -110,8 +111,8 @@
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="headding-part text-center pb-50">
-                    <p class="headding-sub wow fadeInUp">Fresh From Pizzon</p>
-                    <h2 class="headding-title text-uppercase fw-bold wow fadeInUp">Our Special Menu</h2>
+                    <p class="headding-sub wow fadeInUp">@textTranslations["home_our_speciality_menu_title"]</p>
+                    <h2 class="headding-title text-uppercase fw-bold wow fadeInUp">@textTranslations["home_our_speciality_menu_subtitle"]</h2>
                 </div>
             </div>
         </div>
@@ -120,7 +121,7 @@
                 <div class="special-tab text-center wow fadeInUp">
                     <ul id="tabs" class="nav nav-tabs" role="tablist">
                         <li class="text-uppercase fw-bold nav-item current" role="presentation">
-                            <a href="#tab-1" class="nav-link active" id="all" data-bs-toggle="tab" data-bs-target="#data_all" role="tab" aria-selected="true"> All</a>
+                            <a href="#tab-1" class="nav-link active" id="all" data-bs-toggle="tab" data-bs-target="#data_all" role="tab" aria-selected="true"> @textTranslations["all_category_title"]</a>
                         </li>
                         <li class="text-uppercase fw-bold nav-item" role="presentation">
                             <a href="#tab-2" class="nav-link" id="drinks" data-bs-toggle="tab" data-bs-target="#data_drinks" role="tab" aria-selected="false"> Drinks</a>
@@ -295,17 +296,12 @@
         <div class="row align-items-center">
             <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInLeft">
                 <div class="max-w-390">
-                    <div class="headding-part">
-                        <p class="headding-sub">Delicious Restaurant</p>
-                        <h2 class="headding-title text-uppercase fw-bold">about pizzon</h2>
-                    </div>
-                    <p class="online-des">Sit amet, consectetur adipiscing elit quisque eget maximus velit, non eleifend libero curabitur dapibus mauris sed leo cursus aliquetcras suscipit. Sit amet, consectetur adipiscing elit quisque eget maximus velit, non eleifend libero curabitur Sit amet, consectetur adipiscing elit quisque eget maximus velit, non eleifend libero curabitur dapibus mauris sed leo cursus aliquetcras suscipit. Sit amet, consectetur adipiscing elit quisque eget maximus velit, non eleifend libero curabitur </p>
-                    <a href="about.html" class="about-more-z com-btn">view more</a>
+                    @Html.Raw(aboutus.FirstBody)
                 </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInRight">
                 <div class="about-pizzon-img">
-                    <img src="images/about-pizzon.png" alt="about" class="pizzon-ab">
+                    <img src="@aboutus.FirstImagePath" alt="@textTranslations["about_us_page_title"]" class="pizzon-ab">
                 </div>
             </div>
         </div>

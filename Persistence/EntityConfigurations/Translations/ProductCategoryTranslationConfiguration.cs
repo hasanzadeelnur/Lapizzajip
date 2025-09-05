@@ -15,7 +15,7 @@ internal class ProductCategoryTranslationConfiguration : BaseEntityTypeConfigura
         builder.Property(c => c.Name).HasColumnName("Name").HasMaxLength(1000);
         builder.Property(c => c.LanguageKey).HasColumnName("LanguageKey").HasMaxLength(2);
 
-        builder.HasIndex(c => new { c.CategoryId, c.LanguageKey }).HasDatabaseName("IX_ProductCategoryTranslations_CategoryId_LanguageKey").IsUnique();
+        builder.HasIndex(c => new { c.CategoryId, c.LanguageKey, c.DeletedDate }).HasDatabaseName("IX_ProductCategoryTranslations_CategoryId_LanguageKey").IsUnique();
 
         builder.HasOne(c => c.Category).WithMany(c => c.Translations).HasForeignKey(c => c.CategoryId);
 

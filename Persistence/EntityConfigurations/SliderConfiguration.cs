@@ -12,6 +12,7 @@ internal class SliderConfiguration : BaseEntityTypeConfiguration<Slider, Guid>
         builder.ToTable("Sliders");
 
         builder.Property(b => b.ImagePath).HasColumnName("ImagePath").HasMaxLength(1000);
+        builder.Property(b => b.Type).HasColumnName("Type");
         builder.Property(b => b.Order).HasColumnName("Order").HasDefaultValue(1);
         builder.Property(b => b.Status).HasColumnName("Status");
 

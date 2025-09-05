@@ -6,6 +6,7 @@ public class ProductCommandDto
     public string ImagePath { get; set; }
     public double? Price { get; set; }
     public int Order { get; set; }
+    public int SpecialOrder { get; set; }
     public bool Status { get; set; }
 
     public ICollection<ProductTranslationCommandDto> Translations { get; set; }
@@ -18,13 +19,14 @@ public class ProductCommandDto
         Translations = [];
     }
 
-    public ProductCommandDto(Guid? id, Guid categoryId, string imagePath, double? price, int order, bool status) : this()
+    public ProductCommandDto(Guid? id, Guid categoryId, string imagePath, double? price, int order, int specialOrder, bool status) : this()
     {
         Id = id;
         CategoryId = categoryId;
         ImagePath = imagePath;
         Price = price;
         Order = order;
+        SpecialOrder = specialOrder;
         Status = status;
     }
 }

@@ -9,15 +9,15 @@
     TempData["MetaKeywords"] = textTranslations["contact_us_keywords_meta"];
     TempData["MetaDescription"] = textTranslations["contact_us_description_meta"];
 }
-<section id="top" class="page-banner" style="background: #121619 url(images/blog-8.jpg) no-repeat center / cover;">
+<section id="top" class="page-banner" style="background: var(--theme-color) url(@settings["contact_us_cover_image"]) no-repeat center / cover;">
     <div class="container">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="page-title">
-                    <h1 class="page-headding wow fadeInUp">contact Us</h1>
+                    <h1 class="page-headding wow fadeInUp">@textTranslations["contact_us_page_title"]</h1>
                     <ul class="wow fadeInUp">
-                        <li><a href="index.html" class="page-name">Home</a></li>
-                        <li>Contact Us</li>
+                        <li><a asp-controller="Home" asp-action="Index" class="page-name">@textTranslations["home_page_title"]</a></li>
+                        <li>@textTranslations["contact_us_page_title"]</li>
                     </ul>
                 </div>
             </div>
@@ -30,8 +30,8 @@
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="headding-part text-center">
-                    <p class="headding-sub wow fadeInUp">Get in touch</p>
-                    <h2 class="headding-title text-uppercase fw-bold wow fadeInUp">contact us</h2>
+                    <p class="headding-sub wow fadeInUp">@textTranslations["contact_us_get_in_touch_title"]</p>
+                    <h2 class="headding-title text-uppercase fw-bold wow fadeInUp">@textTranslations["contact_us_get_in_touch_subtitle"]</h2>
                 </div>
             </div>
         </div>
@@ -41,10 +41,10 @@
                     <div class="contact-detail">
                         @Html.Raw(contactUs.Description)
                         <ul>
-                            <li><i class="fa fa-home" aria-hidden="true"></i><div class="con-list">@contactUs.Address</div></li>
+                            <li><i class="fa fa-home" aria-hidden="true"></i><div class="con-list">@contactUs?.Address</div></li>
                             <li>
                                 <i class="fa fa-phone" aria-hidden="true"></i><div class="con-list">
-                                    @foreach (string phone in contactUs.Phones.Split(',') ?? [])
+                                    @foreach (string phone in contactUs?.Phones?.Split(',') ?? [])
                                     {
                                         <a href="tel:@phone">@phone</a>
                                     }
@@ -52,7 +52,7 @@
                             </li>
                             <li>
                                 <i class="fa fa-envelope" aria-hidden="true"></i><div class="con-list">
-                                    @foreach (string email in contactUs.Emails.Split(',') ?? [])
+                                    @foreach (string email in contactUs?.Emails?.Split(',') ?? [])
                                     {
                                         <a href="mailto:@email">@email</a>
                                     }
@@ -61,7 +61,7 @@
                             <li>
                                 <i class="fa fa-clock-o" aria-hidden="true"></i>
                                 <div class="con-list">
-                                    @foreach (string workingHour in contactUs.WorkingHours.Split(',') ?? [])
+                                    @foreach (string workingHour in contactUs?.WorkingHours?.Split(',') ?? [])
                                     {
                                         <span>@workingHour</span>
                                     }
@@ -107,7 +107,7 @@
                                     data-action='submit'>
                                 @textTranslations["contact_us_get_in_touch_button"] <i class="far fa-paper-plane"></i>
                             </button>
-                            <input type="submit" name="submit" value="Send Message" class="post-com text-success"></input>
+                            <input type="submit" name="submit" value="@textTranslations["contact_us_get_in_touch_button"]" class="post-com text-success" />
                         </form>
                     </div>
                 </div>
@@ -117,19 +117,50 @@
 </section>
 
 <section class="contact-map wow fadeInUp">
-    <iframe class="map-pizzon" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2293.1228588802205!2d-2.940742383978084!3d54.918316163505814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487d1a03882d54af%3A0xa4639d28db5b99d9!2s55%20Drumburgh%20Ave%2C%20Carlisle%20CA3%200PD%2C%20UK!5e0!3m2!1sen!2sin!4v1599636489278!5m2!1sen!2sin" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <div id="map"></div>
 </section>
 
 @section Styles
 {
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin="" />
+    <style>
+        #map {
+            height: 480px;
+            z-index: -1;
+        }
+    </style>
 }
 
 @section Scripts
 {
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
-            function getIPAddress() {
+            var map = L.map('map', {
+            // Set latitude and longitude of the map center (required)
+            center: [@contactUs?.OfficeMapX, @contactUs?.OfficeMapY],
+            // Set the initial zoom level, values 0-18, where 0 is most zoomed-out (required)
+            zoom: 11
+        });
+
+
+        // Create a Tile Layer and add it to the map
+        var tiles = new L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            minZoom: '15'
+        }).addTo(map);
+
+        var marker = L.marker(
+            [@contactUs?.OfficeMapX, @contactUs?.OfficeMapY],
+            {
+                draggable: true,
+                title: "",
+                opacity: 0.75
+            });
+        marker.addTo(map);
+
+        function getIPAddress() {
             // Fetch the IP address from the API
             fetch("https://api.ipify.org?format=json")
                 .then(response => response.json())

@@ -5,20 +5,20 @@
     List<GetListServiceResponse> services = ViewData[nameof(IGeneralRepository.GetServices)] as List<GetListServiceResponse> ?? [];
     Dictionary<string, string> textTranslations = await generalRepository.GetTranslations();
     Dictionary<string, string> settings = await generalRepository.GetSettings();
-    TempData["Title"] = textTranslations["about_us_header_title"];
-    TempData["MetaKeywords"] = textTranslations["about_us_keywords_meta"];
-    TempData["MetaDescription"] = textTranslations["about_us_description_meta"];
+    TempData["Title"] = aboutus.MetaTitle;
+    TempData["MetaKeywords"] = aboutus.MetaKeys;
+    TempData["MetaDescription"] = aboutus.MetaDescription;
 }
 
-<section id="top" class="page-banner" style="background: #121619 url(images/blog-7.jpg) no-repeat center / cover;">
+<section id="top" class="page-banner" style="background: var(--theme-color) url(@settings["about_us_cover_image"]) no-repeat center / cover;">
     <div class="container">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="page-title">
-                    <h1 class="page-headding wow fadeInUp">About Us</h1>
+                    <h1 class="page-headding wow fadeInUp">@textTranslations["about_us_page_title"]</h1>
                     <ul class="wow fadeInUp">
-                        <li><a href="index.html" class="page-name">Home</a></li>
-                        <li>About Us</li>
+                        <li><a asp-controller="Home" asp-action="Index" class="page-name">@textTranslations["home_page_title"]</a></li>
+                        <li>@textTranslations["about_us_page_title"]</li>
                     </ul>
                 </div>
             </div>
@@ -30,7 +30,7 @@
     <div class="container">
         <div class="row flex-center">
             <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInLeft">
-                <div class="about-img"><img src="@aboutus.FirstImagePath" alt="about"></div>
+                <div class="about-img"><img src="@aboutus.FirstImagePath" alt="@textTranslations["about_us_page_title"]"></div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInRight">
                 <div class="about-text">
@@ -51,7 +51,7 @@
     <div class="container">
         <div class="row flex-center">
             <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInLeft">
-                <div class="about-img"><img src="@aboutus.SecondImagePath" alt="about"></div>
+                <div class="about-img"><img src="@aboutus.SecondImagePath" alt="@textTranslations["about_us_page_title"]"></div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInRight">
                 <div class="about-text">

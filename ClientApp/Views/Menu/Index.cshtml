@@ -4,16 +4,21 @@
 @{
     GetListResponse<GetListProductCategoryDto> categories = ViewData[nameof(GetListProductCategoryQuery)] as GetListResponse<GetListProductCategoryDto> ?? new();
     GetListResponse<GetListProductDto> products = ViewData[nameof(GetListProductQuery)] as GetListResponse<GetListProductDto> ?? new();
+    Dictionary<string, string> textTranslations = await generalRepository.GetTranslations();
+    Dictionary<string, string> settings = await generalRepository.GetSettings();
+    TempData["Title"] = textTranslations["menu_header_title"];
+    TempData["MetaKeywords"] = textTranslations["menu_keywords_meta"];
+    TempData["MetaDescription"] = textTranslations["menu_description_meta"];
 }
-<section id="top" class="page-banner" style="background: #121619 url(images/menu-banner-1.png) no-repeat center / cover;">
+<section id="top" class="page-banner" style="background: var(--theme-color) url(@settings["menu_cover_image"]) no-repeat center / cover;">
     <div class="container">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="page-title">
-                    <h1 class="page-headding wow fadeInUp">Food Menus</h1>
+                    <h1 class="page-headding wow fadeInUp">@textTranslations["menu_page_title"]</h1>
                     <ul class="wow fadeInUp">
-                        <li><a href="index.html" class="page-name">Home</a></li>
-                        <li>Menu 1</li>
+                        <li><a asp-controller="Home" asp-action="Index" class="page-name">@textTranslations["home_page_title"]</a></li>
+                        <li>@textTranslations["menu_page_title"]</li>
                     </ul>
                 </div>
             </div>
@@ -32,7 +37,7 @@
                 <div class="menu-tabbing wow fadeInUp">
                     <ul id="tabs" class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="tab-link current" data-tab="tab-1">
-                            <a href="#tab-1" class="nav-link active" id="all" data-bs-toggle="tab" data-bs-target="#data_all" role="tab" aria-selected="true">all</a>
+                            <a href="#tab-1" class="nav-link active" id="all" data-bs-toggle="tab" data-bs-target="#data_all" role="tab" aria-selected="true">@textTranslations["all_category_title"]</a>
                         </li>
 
                         @foreach (GetListProductCategoryDto category in categories.Items)

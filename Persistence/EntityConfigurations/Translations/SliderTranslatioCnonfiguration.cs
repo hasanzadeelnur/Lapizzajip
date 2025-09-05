@@ -16,7 +16,7 @@ internal class SliderTranslatioCnonfiguration : BaseEntityTypeConfiguration<Slid
         builder.Property(c => c.Subtitle).HasColumnName("Subtitle").HasMaxLength(1000);
         builder.Property(c => c.LanguageKey).HasColumnName("LanguageKey").HasMaxLength(2);
 
-        builder.HasIndex(c => new { c.SliderId, c.LanguageKey }).HasDatabaseName("IX_SliderTranslations_SliderId_LanguageKey").IsUnique();
+        builder.HasIndex(c => new { c.SliderId, c.LanguageKey, c.DeletedDate }).HasDatabaseName("IX_SliderTranslations_SliderId_LanguageKey").IsUnique();
 
         builder.HasOne(c => c.Slider).WithMany(c => c.Translations).HasForeignKey(c => c.SliderId);
 

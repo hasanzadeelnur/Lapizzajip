@@ -18,7 +18,7 @@ internal class ContactUsTranslationConfiguration : BaseEntityTypeConfiguration<C
         builder.Property(bc => bc.MetaKeys).HasColumnName("MetaKeys").HasMaxLength(400);
         builder.Property(b => b.LanguageKey).HasColumnName("LanguageKey").HasMaxLength(2);
 
-        builder.HasIndex(bct => new { bct.ContactUsId, bct.LanguageKey }).HasDatabaseName("IX_ContactUsTranslations_ContactUsId_LanguageKey").IsUnique();
+        builder.HasIndex(bct => new { bct.ContactUsId, bct.LanguageKey, bct.DeletedDate }).HasDatabaseName("IX_ContactUsTranslations_ContactUsId_LanguageKey").IsUnique();
 
         builder.HasOne(bc => bc.ContactUs).WithMany(bc => bc.Translations).HasForeignKey(bc => bc.ContactUsId);
 

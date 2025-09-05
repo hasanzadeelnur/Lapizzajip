@@ -3,7 +3,7 @@
 @using Application.Features.ContactUs.Queries.GetData
 
 @{
-   // Dictionary<string, string> textTranslations = await generalRepository.GetTranslations();
+    Dictionary<string, string> textTranslations = await generalRepository.GetTranslations();
     Dictionary<string, string> settings = await generalRepository.GetSettings();
     GetContactUsResponse contactUs = await generalRepository.GetContactUs() as GetContactUsResponse ?? new();
     GetAboutUsResponse aboutus = await generalRepository.GetAboutUs() as GetAboutUsResponse ?? new();
@@ -14,21 +14,21 @@
             <div class="row">
                 <div class="col-xl-4 col-lg-4 col-md-4 footer-box">
                     <div class="footer-logo">
-                        <a href="index.html">
+                        <a asp-controller="Home" asp-action="Index">
                             <img style="width:@settings["footer_logo_width"]%; height:@settings["footer_logo_height"]%;" alt="lapizzajip" src="@settings["footer_logo"]">
                         </a>
-                        <p class="footer-des">20 Carrochan Rd, Balloch, Alexandria G83 8EG, UK 69QJ+2F Alexandria, United Kingdom</p>
+                        <p class="footer-des">@textTranslations["footer_title"]</p>
                         <ul>
                             <li>
-                                phone  -
-                                @foreach (string phone in contactUs.Phones.Split(',') ?? [])
+                                @textTranslations["contact_us_call_us_title"]
+                                @foreach (string phone in contactUs?.Phones?.Split(',') ?? [])
                                 {
                                     <a href="tel:@phone">@phone</a>
                                 }
                             </li>
                             <li>
-                                email  -
-                                @foreach (string email in contactUs.Emails.Split(',') ?? [])
+                                @textTranslations["contact_us_email_us_title"]
+                                @foreach (string email in contactUs?.Emails?.Split(',') ?? [])
                                 {
                                     <a href="mailto:@email">@email</a>
                                 }
@@ -39,9 +39,9 @@
 
                 <div class="col-xl-4 col-lg-4 col-md-4 footer-box">
                     <div class="opening-hours">
-                        <h2>Opening Hours</h2>
+                        <h2>@textTranslations["contact_us_open_time_title"]</h2>
                         <ul>
-                            @foreach (string workingHour in contactUs.WorkingHours.Split(',') ?? [])
+                            @foreach (string workingHour in contactUs?.WorkingHours?.Split(',') ?? [])
                             {
                                 <li>@workingHour</li>
                             }
@@ -51,14 +51,12 @@
 
                 <div class="col-xl-4 col-lg-4 col-md-4 footer-box">
                     <div class="useful-links">
-                        <h2>useful links</h2>
+                        <h2>@textTranslations["footer_link_list"]</h2>
                         <ul>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Order Tracking</a></li>
-                            <li><a href="#">Warranty and Services</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                            <li><a href="#">Wishlist</a></li>
+                            <li> <a asp-controller="Home" asp-action="Index">@textTranslations["home_page_title"]</a></li>
+                            <li> <a asp-controller="Menu" asp-action="Index">@textTranslations["menu_page_title"]</a></li>
+                            <li><a asp-controller="ContactUs" asp-action="Index">@textTranslations["contact_us_page_title"]</a></li>
+                            <li><a asp-controller="AboutUs" asp-action="Index">@textTranslations["about_us_page_title"]</a></li>
                         </ul>
                     </div>
                 </div>
@@ -67,30 +65,30 @@
         <div class="copyright">
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6 col-md-6 copyright-box">
-                    <p class="copy-text">© Pizzon all Rights Reserved. Designed by <a href="#" target="_blank">TemplatesCoder</a></p>
+                    <p class="copy-text">@textTranslations["footer_copyright"]</p>
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-6 copyright-box">
                     <ul>
-                        @if (!string.IsNullOrEmpty(contactUs.FacebookAddress))
+                        @if (!string.IsNullOrEmpty(contactUs?.FacebookAddress))
                         {
                             <li><a href="@contactUs.FacebookAddress"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         }
-                        @if (!string.IsNullOrEmpty(contactUs.TikTokAddress))
+                        @if (!string.IsNullOrEmpty(contactUs?.TikTokAddress))
                         {
-                            <li><a href="@contactUs.TikTokAddress"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a></li>
+                            <li><a href="@contactUs?.TikTokAddress"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a></li>
                         }
-                        @if (!string.IsNullOrEmpty(contactUs.LinkedinAddress))
+                        @if (!string.IsNullOrEmpty(contactUs?.LinkedinAddress))
                         {
-                            <li><a href="@contactUs.LinkedinAddress"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="@contactUs?.LinkedinAddress"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                         }
-                        @if (!string.IsNullOrEmpty(contactUs.InstagramAddress))
+                        @if (!string.IsNullOrEmpty(contactUs?.InstagramAddress))
                         {
-                            <li><a href="@contactUs.InstagramAddress"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="@contactUs?.InstagramAddress"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                         }
-                        @if (!string.IsNullOrEmpty(contactUs.WhatsappNumber))
+                        @if (!string.IsNullOrEmpty(contactUs?.WhatsappNumber))
                         {
-                            <li><a href="@contactUs.WhatsappNumber"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                            <li><a href="@contactUs?.WhatsappNumber"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
                         }
                     </ul>
                 </div>

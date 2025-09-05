@@ -21,7 +21,7 @@ public class ProductCategoriesController(BaseDbContext db) : BaseController<Prod
         return Ok(await DataSourceLoader.LoadAsync(_db!.Set<ProductCategory>().Select(c => new
         {
             c.Id,
-            CreatedDate = DateTime.Now,
+            c.CreatedDate,
             c.Status,
             c.Order,
             c.Translations.FirstOrDefault(s => s.LanguageKey == "en")!.Name

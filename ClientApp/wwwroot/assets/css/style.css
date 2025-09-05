@@ -81,7 +81,7 @@ a {
 
     a:hover {
         text-decoration: none;
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 p {
@@ -156,7 +156,7 @@ img {
 
 .headding-part .headding-sub {
     font-size: 30px;
-    color: #fd9d3e;
+    color: var(--theme-color2);
     font-family: 'Pacifico', cursive;
     padding-bottom: 10px;
 }
@@ -228,8 +228,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* -------------// Button Style //------------- */
 .com-btn {
-    background: #fd9d3e;
-    border: 1px solid #fd9d3e;
+    background: var(--theme-color2);
+    border: 1px solid var(--theme-color2);
     color: #ffffff;
     font-weight: 700;
     padding: 17px 41px;
@@ -242,7 +242,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .com-btn:hover {
         background: #fefefe;
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 .btn, button {
@@ -265,15 +265,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-color {
     color: #fff !important;
-    background: #fd9d3e;
+    background: var(--theme-color2);
     border: none;
-    border: 1px solid #fd9d3e;
+    border: 1px solid var(--theme-color2);
 }
 
     .btn-color:hover {
-        color: #fd9d3e !important;
+        color: var(--theme-color2) !important;
         background: transparent;
-        border: 1px solid #fd9d3e;
+        border: 1px solid var(--theme-color2);
     }
 
 .btn-green {
@@ -288,7 +288,7 @@ button:focus {
 
 .btn-green:hover {
     color: #fff !important;
-    background: #fd9d3e;
+    background: var(--theme-color2);
 }
 
 button.owl-prev {
@@ -337,7 +337,7 @@ a.btn.btn-green {
 }
 
 .form-control:focus {
-    border-color: #fd9d3e;
+    border-color: var(--theme-color2);
 }
 
 .relative {
@@ -360,7 +360,7 @@ a.btn.btn-green {
 }
 
     .form-control:focus {
-        border: 1px solid #fd9d3e;
+        border: 1px solid var(--theme-color2);
     }
 
 .custom-select.sources.form-control {
@@ -370,7 +370,7 @@ a.btn.btn-green {
 }
 
     .custom-select.sources.form-control.opened {
-        border: 1px solid #fd9d3e;
+        border: 1px solid var(--theme-color2);
     }
 
 .custom-select-trigger {
@@ -585,7 +585,7 @@ textarea.form-control {
         height: 40px;
         line-height: 36px;
         text-align: center;
-        background: #fd9d3e;
+        background: var(--theme-color2);
         border-radius: 100%;
         color: #fff;
         font-size: 30px;
@@ -615,7 +615,7 @@ header#header {
 }
 
     header#header.sticky {
-        background: #121619;
+        background: var(--theme-color);
         box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.1);
         padding: 0px 0;
     }
@@ -674,7 +674,7 @@ li.order-online {
 }
 
     .navbar-nav .megamenu a span {
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 .navbar-nav > li:last-child > a {
@@ -682,7 +682,7 @@ li.order-online {
 }
 
 .navbar-nav > li:hover > a, .navbar-nav > li:focus > a {
-    color: #eb974b;
+    color: var(--theme-color2);
 }
 
 #menu {
@@ -748,7 +748,7 @@ li.order-online {
 /* megamenu start */
 .megamenu {
     background: #fff;
-    border-top: 3px solid #fd9d3e;
+    border-top: 3px solid var(--theme-color2);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     color: #a4a4a4;
     display: none;
@@ -805,7 +805,7 @@ li.order-online {
         margin-top: 11px;
         width: 5px;
         height: 5px;
-        background: #fd9d3e;
+        background: var(--theme-color2);
     }
 
 .megamenu-inner-top .left-p {
@@ -930,7 +930,7 @@ li.order-online {
 
 .header-link-dropdown {
     background: #fff;
-    border-top: 3px solid #fd9d3e;
+    border-top: 3px solid var(--theme-color2);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     position: absolute;
     width: 290px;
@@ -1098,7 +1098,7 @@ li.order-online {
 }
 
 .menu-list-d .mega-menu-item a:hover {
-    color: #fd9d3e;
+    color: var(--theme-color2);
 }
 
 .menu-list-d .mega-menu-promotion:hover img {
@@ -1163,7 +1163,7 @@ li.order-online {
 
     .megamenu-big .pizza-det .pizza-price-1 {
         font-size: 16px;
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 .megamenu-big .menu-list-d ul {
@@ -1181,7 +1181,7 @@ li.order-online {
             left: 0;
             width: 5px;
             height: 5px;
-            background: #fd9d3e;
+            background: var(--theme-color2);
         }
 
         .megamenu-big .menu-list-d ul li a {
@@ -1196,7 +1196,7 @@ li.order-online {
         }
 
             .megamenu-big .menu-list-d ul li a:hover {
-                color: #fd9d3e !important;
+                color: var(--theme-color2) !important;
             }
 
 
@@ -1206,7 +1206,7 @@ _______________________________________________________*/
 
 /* -------------// Banner Style //------------- */
 .banner {
-    background-color: #121619;
+    background-color: var(--theme-color);
     position: relative;
     min-height: 800px;
 }
@@ -1247,12 +1247,12 @@ _______________________________________________________*/
 }
 
     .banner-headding span {
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 .banner-sub-hed {
     font-size: 24px;
-    color: #fd9d3e;
+    color: var(--theme-color2);
     text-transform: uppercase;
     letter-spacing: 9px;
 }
@@ -1665,13 +1665,13 @@ _______________________________________________________*/
 }
 
     .banner .owl-nav button:hover {
-        color: #fd9d3e !important;
+        color: var(--theme-color2) !important;
     }
 
 
 /* -------------// Site Services Features Block css Start //------------- */
 .order-section {
-    background: #fd9d3e;
+    background: var(--theme-color2);
     position: relative;
 }
 
@@ -1687,14 +1687,14 @@ _______________________________________________________*/
     .order-section .order-title {
         font-size: 30px;
         font-weight: 700;
-        color: #121619;
+        color: var(--theme-color);
         padding-top: 10px;
         padding-bottom: 8px;
     }
 
     .order-section .order-des {
         font-size: 14px;
-        color: #121619;
+        color: var(--theme-color);
     }
 
 .order-top {
@@ -1753,13 +1753,13 @@ _______________________________________________________*/
 }
 
     .ser-title:hover {
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 
 /* -------------// Special Menu Block css start //------------- */
 .special-menu {
-    background: #121619;
+    background: var(--theme-color);
     position: relative;
     padding-bottom: 120px;
 }
@@ -1795,7 +1795,7 @@ _______________________________________________________*/
 }
 
     .special-tab .nav-tabs li a.active {
-        background: #fd9d3e;
+        background: var(--theme-color2);
         border-radius: 50px;
         color: #fff;
     }
@@ -1830,7 +1830,7 @@ _______________________________________________________*/
 }
 
     .menu-title:hover {
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 .menu-des {
@@ -1842,7 +1842,7 @@ _______________________________________________________*/
 
 .menu-price {
     font-size: 18px;
-    color: #fd9d3e;
+    color: var(--theme-color2);
     letter-spacing: 1px;
 }
 
@@ -1892,14 +1892,14 @@ _______________________________________________________*/
 
 .online-des {
     font-size: 14px;
-    color: #121619;
+    color: var(--theme-color);
     padding-top: 20px;
 }
 
 .online-call {
-    background: #121619;
+    background: var(--theme-color);
     color: #fff;
-    border: 10px solid #fd9d3e;
+    border: 10px solid var(--theme-color2);
     display: inline-block;
     font-size: 38px;
     font-weight: 700;
@@ -1925,7 +1925,7 @@ _______________________________________________________*/
 
     .online-call:hover {
         background-color: #fff;
-        color: #121619;
+        color: var(--theme-color);
         background-image: unset;
     }
 
@@ -1939,7 +1939,7 @@ _______________________________________________________*/
 
 .book-table {
     font-size: 30px;
-    color: #121619;
+    color: var(--theme-color);
     font-weight: 700;
     letter-spacing: 2px;
     padding-bottom: 20px;
@@ -1948,8 +1948,8 @@ _______________________________________________________*/
 .more-table-v {
     color: #fff;
     font-weight: 700;
-    background: #121619;
-    border: 1px solid #121619;
+    background: var(--theme-color);
+    border: 1px solid var(--theme-color);
     padding: 17px 41px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1958,13 +1958,13 @@ _______________________________________________________*/
 
     .more-table-v:hover {
         background: #fff;
-        color: #121619;
+        color: var(--theme-color);
     }
 
 
 /* -------------// Chef Block css start //------------- */
 .chef {
-    background-color: #121619;
+    background-color: var(--theme-color);
     position: relative;
     overflow: hidden;
 }
@@ -2006,7 +2006,7 @@ _______________________________________________________*/
     }
 
     .chef-box:hover .chef-name {
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
     .chef-box .chef-ct {
@@ -2016,7 +2016,7 @@ _______________________________________________________*/
     }
 
     .chef-box:hover .chef-ct {
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 .chef-top-bg {
@@ -2073,7 +2073,7 @@ _______________________________________________________*/
 .chef .owl-nav button {
     position: absolute;
     z-index: 2;
-    color: #fd9d3e !important;
+    color: var(--theme-color2) !important;
     font-size: 0px !important;
     top: 50%;
     transform: translateY(-50%);
@@ -2132,7 +2132,7 @@ _______________________________________________________*/
     }
 
     .news-img .news-date {
-        background: #fd9d3e;
+        background: var(--theme-color2);
         width: 68px;
         height: 68px;
         border-radius: 100%;
@@ -2185,11 +2185,11 @@ _______________________________________________________*/
 }
 
 .news-headline:hover {
-    color: #fd9d3e;
+    color: var(--theme-color2);
 }
 
 .new-box .news-more {
-    color: #fd9d3e;
+    color: var(--theme-color2);
     text-transform: uppercase;
     text-decoration: underline;
     margin-top: 20px;
@@ -2214,7 +2214,7 @@ button.news-more {
 
 /* -------------// Customer reviews Block css start //------------- */
 .customer {
-    background: #121619;
+    background: var(--theme-color);
     position: relative;
     overflow: hidden;
 }
@@ -2236,13 +2236,13 @@ button.news-more {
 .customer-img .customer-image {
     width: 135px;
     height: 135px;
-    border: 5px solid #fd9d3e;
+    border: 5px solid var(--theme-color2);
     border-radius: 100%;
 }
 
 .customer-img .customer-name {
     font-size: 20px;
-    color: #fd9d3e;
+    color: var(--theme-color2);
     text-transform: uppercase;
     padding-top: 10px;
 }
@@ -2263,7 +2263,7 @@ button.news-more {
     }
 
     .customer-reviews .post-name {
-        color: #fd9d3e;
+        color: var(--theme-color2);
         text-transform: uppercase;
     }
 
@@ -2330,7 +2330,7 @@ button.news-more {
         .customer-slide ul li button {
             font-size: 0;
             background: transparent;
-            border: 2px solid #fd9d3e;
+            border: 2px solid var(--theme-color2);
             padding: 0;
             width: 12px;
             height: 12px;
@@ -2338,7 +2338,7 @@ button.news-more {
         }
 
         .customer-slide ul li.slick-active button {
-            background: #fd9d3e;
+            background: var(--theme-color2);
         }
 
 .customer .owl-dots {
@@ -2348,14 +2348,14 @@ button.news-more {
 .customer button.owl-dot {
     width: 12px;
     height: 12px;
-    border: 2px solid #fd9d3e;
+    border: 2px solid var(--theme-color2);
     border-radius: 100%;
     margin: 0px 5px;
     transition: all 400ms ease;
 }
 
     .customer button.owl-dot.active {
-        background: #fd9d3e;
+        background: var(--theme-color2);
     }
 
 
@@ -2402,7 +2402,7 @@ button.news-more {
     left: 0px;
     width: 100%;
     height: 100%;
-    background: #121619;
+    background: var(--theme-color);
     opacity: 0.8;
 }
 
@@ -2414,7 +2414,7 @@ button.news-more {
 }
 
 .page-name:hover {
-    color: #fd9d3e;
+    color: var(--theme-color2);
 }
 
 .page-title ul li {
@@ -2465,7 +2465,7 @@ button.news-more {
 
     .menu-tabbing .nav-tabs li a {
         font-size: 14px;
-        color: #121619;
+        color: var(--theme-color);
         font-weight: 700;
         padding: 15px 28px;
         display: block;
@@ -2475,7 +2475,7 @@ button.news-more {
     }
 
         .menu-tabbing .nav-tabs li a.active {
-            background: #fd9d3e;
+            background: var(--theme-color2);
             border-radius: 50px;
             color: #fff;
         }
@@ -2496,7 +2496,7 @@ button.news-more {
 
 .iteam-name {
     font-size: 20px;
-    color: #121619;
+    color: var(--theme-color);
     font-weight: 700;
     text-transform: uppercase;
     padding-bottom: 4px;
@@ -2505,7 +2505,7 @@ button.news-more {
 }
 
     .iteam-name:hover {
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 .list-img-2 img:hover {
@@ -2544,14 +2544,14 @@ button.news-more {
 
 .iteam-order {
     font-size: 16px;
-    color: #fd9d3e;
+    color: var(--theme-color2);
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: underline;
 }
 
     .iteam-order:hover {
-        color: #121619;
+        color: var(--theme-color);
         text-decoration: underline;
     }
 
@@ -2623,7 +2623,7 @@ button.news-more {
 .iteam-srice {
     font-size: 20px;
     font-weight: 700;
-    color: #fd9d3e;
+    color: var(--theme-color2);
     float: right;
 }
 
@@ -2668,7 +2668,7 @@ button.news-more {
         }
 
             .blog-box ul li a:hover {
-                color: #fd9d3e;
+                color: var(--theme-color2);
             }
 
 .blog-headding, .blog-detail h2 {
@@ -2689,7 +2689,7 @@ button.news-more {
 
 .blog-btn {
     font-size: 16px;
-    color: #fd9d3e;
+    color: var(--theme-color2);
     text-transform: uppercase;
     text-decoration: underline;
 }
@@ -2720,12 +2720,12 @@ button.news-more {
     }
 
         .blog-pagination ul li a:hover {
-            border: 1px solid #121619;
-            color: #121619;
+            border: 1px solid var(--theme-color);
+            color: var(--theme-color);
         }
 
     .blog-pagination ul li.active a {
-        background: #121619;
+        background: var(--theme-color);
         color: #fff;
     }
 
@@ -2771,7 +2771,7 @@ button.news-more {
 
 .categorie-head {
     font-size: 24px;
-    color: #121619;
+    color: var(--theme-color);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -2797,7 +2797,7 @@ button.news-more {
     }
 
     .categories ul li a:hover {
-        color: #eb974b;
+        color: var(--theme-color2);
     }
 
 .recent-post {
@@ -2839,7 +2839,7 @@ button.news-more {
 
 .recent-sub {
     font-size: 14px;
-    color: #fd9d3e;
+    color: var(--theme-color2);
     text-transform: uppercase;
     letter-spacing: 1px;
     padding-bottom: 4px;
@@ -2876,9 +2876,9 @@ button.news-more {
         }
 
             .tage-part ul li a:hover {
-                background: #fd9d3e;
+                background: var(--theme-color2);
                 color: #fff;
-                border: 1px solid #fd9d3e;
+                border: 1px solid var(--theme-color2);
             }
 
 .blog-detail .blog-img img:hover {
@@ -2899,7 +2899,7 @@ blockquote {
 
     blockquote p {
         font-size: 20px !important;
-        color: #121619 !important;
+        color: var(--theme-color) !important;
         max-width: 800px !important;
         margin: 0 auto;
     }
@@ -2920,7 +2920,7 @@ blockquote {
 
     .detail-tag .teg-title {
         font-size: 16px;
-        color: #121619;
+        color: var(--theme-color);
         font-weight: 700;
         text-transform: uppercase;
         width: 55px;
@@ -2939,7 +2939,7 @@ blockquote {
 
     .blog-detail ol li:first-child {
         font-size: 16px;
-        color: #121619;
+        color: var(--theme-color);
         font-weight: 700;
     }
 
@@ -2960,7 +2960,7 @@ blockquote {
         }
 
             .blog-detail ol li a:hover {
-                background: #fd9d3e;
+                background: var(--theme-color2);
                 color: #fff;
             }
 
@@ -2991,7 +2991,7 @@ blockquote {
 
 .det-title {
     font-size: 18px;
-    color: #121619;
+    color: var(--theme-color);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -3004,7 +3004,7 @@ blockquote {
 
 .title-com {
     font-size: 24px;
-    color: #121619;
+    color: var(--theme-color);
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
@@ -3044,7 +3044,7 @@ blockquote {
 
 .name-com {
     font-size: 18px;
-    color: #121619;
+    color: var(--theme-color);
     font-weight: 700;
     text-transform: uppercase;
     margin: 0;
@@ -3062,19 +3062,19 @@ blockquote {
 }
 
 .reply-com {
-    background: #fd9d3e;
+    background: var(--theme-color2);
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 8px 25px;
     display: inline-block;
-    border: 1px solid #fd9d3e;
+    border: 1px solid var(--theme-color2);
     border-radius: 30px;
 }
 
     .reply-com:hover {
         background: transparent;
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 .comments {
@@ -3090,19 +3090,19 @@ blockquote {
 }
 
 .post-com {
-    background: #fd9d3e;
+    background: var(--theme-color2);
     color: #fff;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
-    border: 1px solid #fd9d3e;
+    border: 1px solid var(--theme-color2);
     border-radius: 50px;
     padding: 17px 35px;
 }
 
     .post-com:hover {
         background: transparent;
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 .blog-detail .blog-box {
@@ -3213,7 +3213,7 @@ blockquote {
     }
 
     .post-comm:hover {
-        background: #fd9d3e;
+        background: var(--theme-color2);
         color: #fff;
     }
 
@@ -3236,7 +3236,7 @@ blockquote {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: #fd9d3e;
+    background: var(--theme-color2);
     width: 0%;
     height: 2px;
 }
@@ -3283,18 +3283,18 @@ blockquote {
 .table-book {
     font-size: 24px;
     color: #fff;
-    background: #fd9d3e;
+    background: var(--theme-color2);
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
-    border: 1px solid #fd9d3e;
+    border: 1px solid var(--theme-color2);
     padding: 11px 170px;
     border-radius: 50px;
 }
 
     .table-book:hover {
         background: transparent;
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 
@@ -3346,7 +3346,7 @@ blockquote {
 
 .desc-about {
     font-size: 14px;
-    color: #121619;
+    color: var(--theme-color);
     padding-bottom: 20px;
 }
 
@@ -3387,14 +3387,14 @@ blockquote {
 }
 
     .play-icon span {
-        border: 8px solid #fd9d3e;
+        border: 8px solid var(--theme-color2);
         border-radius: 100%;
         width: 90px;
         height: 90px;
         line-height: 75px;
         text-align: center;
         font-size: 40px;
-        color: #fd9d3e;
+        color: var(--theme-color2);
         padding-left: 9px;
         display: block;
         transition: all 400ms ease;
@@ -3429,7 +3429,7 @@ blockquote {
     }
 
         .modal-content button.close:hover {
-            color: #fd9d3e;
+            color: var(--theme-color2);
         }
 
 .about-pizzon {
@@ -3470,7 +3470,7 @@ blockquote {
 
 .contact-head {
     font-size: 35px;
-    color: #121619;
+    color: var(--theme-color);
     font-weight: 700;
     letter-spacing: 1px;
     padding-bottom: 15px;
@@ -3483,7 +3483,7 @@ blockquote {
 }
 
 .contact-detail ul li {
-    color: #fd9d3e;
+    color: var(--theme-color2);
     font-size: 28px;
     padding: 10px 0px;
     display: flex;
@@ -3496,12 +3496,12 @@ blockquote {
 
     .contact-detail ul li a {
         font-size: 14px;
-        color: #121619;
+        color: var(--theme-color);
     }
 
     .contact-detail ul li .con-list {
         font-size: 14px;
-        color: #121619;
+        color: var(--theme-color);
         margin-left: 15px;
     }
 
@@ -3510,7 +3510,7 @@ blockquote {
         }
 
     .contact-detail ul li a:hover {
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 .contact-in .post-com {
@@ -3541,7 +3541,7 @@ blockquote {
         left: 0px;
         width: 100%;
         height: 100%;
-        background: #121619;
+        background: var(--theme-color);
         opacity: 0.8;
     }
 
@@ -3560,7 +3560,7 @@ blockquote {
 }
 
     .crust-title span {
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 .crust-sub {
@@ -3582,7 +3582,7 @@ blockquote {
 
         .filter-part .filter-line li {
             font-size: 18px;
-            color: #121619;
+            color: var(--theme-color);
             font-weight: 700;
             display: inline-block;
             padding: 16px 35px;
@@ -3634,8 +3634,8 @@ blockquote {
 
     .filter-part .custom-select.opened .custom-select-trigger:after {
         margin-top: 0px;
-        border-bottom: 1px solid #fd9d3e;
-        border-right: 1px solid #fd9d3e;
+        border-bottom: 1px solid var(--theme-color2);
+        border-right: 1px solid var(--theme-color2);
     }
 
     .filter-part .custom-options {
@@ -3650,15 +3650,15 @@ blockquote {
     }
 
     .filter-part .custom-select-trigger:hover {
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
         .filter-part .custom-select-trigger:hover:after {
-            border-color: #fd9d3e;
+            border-color: var(--theme-color2);
         }
 
     .filter-part .opened .custom-select-trigger {
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 .active-filter {
@@ -3675,7 +3675,7 @@ blockquote {
 
 .filter-name {
     font-size: 18px;
-    color: #121619;
+    color: var(--theme-color);
     text-transform: uppercase;
     padding-top: 10px;
     margin-bottom: 5px;
@@ -3683,7 +3683,7 @@ blockquote {
 }
 
     .filter-name:hover {
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 .filter-sub {
@@ -3694,20 +3694,20 @@ blockquote {
 
 .filter-price {
     font-size: 18px;
-    color: #fd9d3e;
+    color: var(--theme-color2);
     font-weight: 700;
     display: block;
     padding-bottom: 15px;
 }
 
 .order-filter {
-    background: #121619;
+    background: var(--theme-color);
     color: #fff;
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border: 1px solid #121619;
+    border: 1px solid var(--theme-color);
     border-radius: 50px;
     display: inline-block;
     padding: 11px 40px;
@@ -3725,7 +3725,7 @@ blockquote {
 
 .order-filter:hover {
     background: transparent;
-    color: #121619;
+    color: var(--theme-color);
 }
 
 
@@ -3777,7 +3777,7 @@ blockquote {
         }
 
             .filter-order ul li a:hover {
-                color: #121619;
+                color: var(--theme-color);
                 background: transparent;
             }
 
@@ -3875,7 +3875,7 @@ blockquote {
 }
 
 .gc-icon:hover {
-    background: #fd9d3e;
+    background: var(--theme-color2);
 }
 
 .gc-icon-next::before, .gc-icon-prev::before {
@@ -3911,7 +3911,7 @@ blockquote {
 }
 
     .gc-overlay-area [class*="gc-icon-"]:hover {
-        background: #fd9d3e;
+        background: var(--theme-color2);
     }
 
 .gc-overlay-area .gc-overlay-top-icons [class*="gc-icon-"]:hover {
@@ -3962,7 +3962,7 @@ blockquote {
 
 .title-shop {
     font-size: 28px;
-    color: #121619;
+    color: var(--theme-color);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -3989,7 +3989,7 @@ blockquote {
 }
 
 .title-crust {
-    color: #121619;
+    color: var(--theme-color);
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -4009,8 +4009,8 @@ blockquote {
     }
 
     .crust-choose ul li.current a {
-        background: #fd9d3e;
-        border-color: #fd9d3e;
+        background: var(--theme-color2);
+        border-color: var(--theme-color2);
         color: #fff;
     }
 
@@ -4022,7 +4022,7 @@ blockquote {
 
 .quantity {
     font-size: 20px;
-    color: #121619;
+    color: var(--theme-color);
     font-weight: 700;
     letter-spacing: 1px;
     padding-right: 10px;
@@ -4053,9 +4053,9 @@ blockquote {
     }
 
 .add-cart {
-    background: #fd9d3e;
+    background: var(--theme-color2);
     color: #fff;
-    border: 1px solid #fd9d3e;
+    border: 1px solid var(--theme-color2);
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -4065,7 +4065,7 @@ blockquote {
 }
 
     .add-cart:hover {
-        color: #fd9d3e;
+        color: var(--theme-color2);
         background: transparent;
     }
 
@@ -4094,11 +4094,11 @@ ul.compare {
         }
 
         ul.compare li a {
-            color: #121619;
+            color: var(--theme-color);
         }
 
             ul.compare li a:hover {
-                color: #fd9d3e;
+                color: var(--theme-color2);
             }
 
             ul.compare li a i {
@@ -4113,7 +4113,7 @@ ul.share {
 
 .share-title {
     font-size: 20px;
-    color: #121619;
+    color: var(--theme-color);
     font-weight: 700;
 }
 
@@ -4128,7 +4128,7 @@ ul.share li {
     }
 
         ul.share li a:hover {
-            color: #fd9d3e;
+            color: var(--theme-color2);
         }
 
 .border-tab {
@@ -4179,11 +4179,11 @@ ul.share li {
 }
 
 .border-tab ul li.current a, .border-tab ul li a:hover {
-    color: #fd9d3e;
+    color: var(--theme-color2);
 }
 
 .releted-product .menu-title {
-    color: #121619;
+    color: var(--theme-color);
     display: block;
 }
 
@@ -4200,7 +4200,7 @@ ul.share li {
     }
 
     .releted-product .menu-title:hover {
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 .comment-detail .commenter {
@@ -4252,7 +4252,7 @@ ul.share li {
 }
 
 .shopping-cart .price-box .price {
-    color: #fd9d3e;
+    color: var(--theme-color2);
     font-size: 18px;
     font-weight: 600;
 }
@@ -4297,7 +4297,7 @@ ul.share li {
 }
 
 .checkout-part .form-group label {
-    color: #121619;
+    color: var(--theme-color);
     font-weight: 500;
     display: inline-block;
     margin-bottom: .5rem;
@@ -4337,7 +4337,7 @@ ul.share li {
     }
 
 .checkout-part .pro-detail-info .product-title {
-    color: #121619;
+    color: var(--theme-color);
     font-weight: 600;
     overflow: hidden;
     white-space: nowrap;
@@ -4347,11 +4347,11 @@ ul.share li {
 }
 
     .checkout-part .pro-detail-info .product-title:hover {
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 .checkout-part .price-box .price {
-    color: #fd9d3e;
+    color: var(--theme-color2);
     font-size: 18px;
     font-weight: 600;
 }
@@ -4381,8 +4381,8 @@ ul.share li {
 }
 
 .checkout-part .checkbox:checked + label::before, .checkout-part .radio-button:checked + label::before {
-    background: #fd9d3e none repeat scroll 0 0;
-    border-color: #fd9d3e;
+    background: var(--theme-color2) none repeat scroll 0 0;
+    border-color: var(--theme-color2);
 }
 
 .checkout-part .checkbox + label::before, .checkout-part .radio-button + label::before, .checkout-part .checkbox + label::after {
@@ -4444,13 +4444,13 @@ ul.share li {
 }
 
 section.page-banner.page-not-found {
-    background: #121619;
+    background: var(--theme-color);
 }
 
 
 /* -------------// 404 Page //------------- */
 .error-part {
-    background: #121619;
+    background: var(--theme-color);
     border-bottom: 1px solid #202529;
 }
 
@@ -4520,7 +4520,7 @@ section.page-banner.page-not-found {
 // FOOTER  //----------------------------
 _______________________________________________________*/
 footer {
-    background: #121619;
+    background: var(--theme-color);
     padding-top: 100px;
 }
 
@@ -4552,7 +4552,7 @@ footer {
     }
 
         .footer-logo ul li a:hover {
-            color: #fd9d3e;
+            color: var(--theme-color2);
         }
 
 .footer h2 {
@@ -4581,7 +4581,7 @@ footer {
         }
 
 span.footer-close {
-    background: #fd9d3e;
+    background: var(--theme-color2);
     padding: 2px 16px;
 }
 
@@ -4600,7 +4600,7 @@ span.footer-close {
         }
 
             .useful-links ul li a:hover {
-                color: #fd9d3e;
+                color: var(--theme-color2);
             }
 
 .copyright {
@@ -4614,7 +4614,7 @@ span.footer-close {
     }
 
         .copyright .copy-text a {
-            color: #fd9d3e;
+            color: var(--theme-color2);
         }
 
             .copyright .copy-text a:hover {
@@ -4641,7 +4641,7 @@ span.footer-close {
             }
 
                 .copyright ul li a:hover {
-                    background: #fd9d3e;
+                    background: var(--theme-color2);
                 }
 
 
@@ -4652,12 +4652,12 @@ span.footer-close {
 }
 
     .navbar-nav .langmenu a span {
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 .langmenu {
     background: #fff;
-    border-top: 3px solid #fd9d3e;
+    border-top: 3px solid var(--theme-color2);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     color: #a4a4a4;
     display: none;
@@ -4714,7 +4714,7 @@ span.footer-close {
         margin-top: 11px;
         width: 5px;
         height: 5px;
-        background: #fd9d3e;
+        background: var(--theme-color2);
     }
 
 .langmenu-inner-top .left-p {
@@ -4831,7 +4831,7 @@ span.footer-close {
 
     .langmenu-big .pizza-det .pizza-price-1 {
         font-size: 16px;
-        color: #fd9d3e;
+        color: var(--theme-color2);
     }
 
 .langmenu-big .menu-list-d ul {
@@ -4849,7 +4849,7 @@ span.footer-close {
             left: 0;
             width: 5px;
             height: 5px;
-            background: #fd9d3e;
+            background: var(--theme-color2);
         }
 
         .langmenu-big .menu-list-d ul li a {
@@ -4864,7 +4864,7 @@ span.footer-close {
         }
 
             .langmenu-big .menu-list-d ul li a:hover {
-                color: #fd9d3e !important;
+                color: var(--theme-color2) !important;
             }
 
 /* langmenu end */
