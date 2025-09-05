@@ -81,9 +81,6 @@ internal class TextTranslationConfiguration : BaseEntityTypeConfiguration<TextTr
             new(++id,"about_us_our_team_title","about_us_our_team_title",language.Key,SettingType.Text),
             new(++id,"about_us_our_team_subtitle","about_us_our_team_subtitle",language.Key,SettingType.Text),
             new(++id,"about_us_partners_title","about_us_partners_title",language.Key,SettingType.Text),
-            new(++id,"about_us_description_meta","about_us_description_meta",language.Key,SettingType.Text),
-            new(++id,"about_us_header_title","about_us_header_title",language.Key,SettingType.Text),
-            new(++id,"about_us_keywords_meta","about_us_keywords_meta",language.Key,SettingType.Text),
 
             new(++id,"our_blogs_page_title","our_blogs_page_title",language.Key,SettingType.Text),
             new(++id,"our_blogs_title","our_blogs_title",language.Key,SettingType.Text),
@@ -108,9 +105,6 @@ internal class TextTranslationConfiguration : BaseEntityTypeConfiguration<TextTr
             new(++id,"contact_us_get_in_touch_your_phone_placeholder","contact_us_get_in_touch_your_phone_placeholder",language.Key,SettingType.Text),
             new(++id,"contact_us_get_in_touch_your_subject_placeholder","contact_us_get_in_touch_your_subject_placeholder",language.Key,SettingType.Text),
             new(++id,"contact_us_get_in_touch_your_message_placeholder","contact_us_get_in_touch_your_message_placeholder",language.Key,SettingType.Text),
-            new(++id,"contact_us_description_meta","contact_us_description_meta",language.Key,SettingType.Text),
-            new(++id,"contact_us_header_title","contact_us_header_title",language.Key,SettingType.Text),
-            new(++id,"contact_us_keywords_meta","contact_us_keywords_meta",language.Key,SettingType.Text),
 
             new(++id,"faq_page_title","faq_page_title",language.Key,SettingType.Text),
             new(++id,"faq_page_description_meta","faq_page_description_meta",language.Key,SettingType.Text),

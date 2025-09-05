@@ -5,9 +5,9 @@
     GetContactUsResponse contactUs = await generalRepository.GetContactUs() as GetContactUsResponse ?? new();
     Dictionary<string, string> textTranslations = await generalRepository.GetTranslations();
     Dictionary<string, string> settings = await generalRepository.GetSettings();
-    TempData["Title"] = textTranslations["contact_us_header_title"];
-    TempData["MetaKeywords"] = textTranslations["contact_us_keywords_meta"];
-    TempData["MetaDescription"] = textTranslations["contact_us_description_meta"];
+    TempData["Title"] = contactUs.MetaTitle;
+    TempData["MetaKeywords"] = contactUs.MetaKeys;
+    TempData["MetaDescription"] = contactUs.MetaDescription;
 }
 <section id="top" class="page-banner" style="background: var(--theme-color) url(@settings["contact_us_cover_image"]) no-repeat center / cover;">
     <div class="container">

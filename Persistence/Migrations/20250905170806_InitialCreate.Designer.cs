@@ -12,7 +12,7 @@ using Persistence.Contexts;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(BaseDbContext))]
-    [Migration("20250905163707_InitialCreate")]
+    [Migration("20250905170806_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -521,9 +521,18 @@ namespace Persistence.Migrations
                             Id = new Guid("2b0a5d20-acff-4a78-a80b-ab7e0f61ba1d"),
                             Comment = "",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_cover_image",
+                            Key = "home_slider_top_image",
                             Type = 4,
-                            Value = "/assets/img/hero/h1_hero.jpg"
+                            Value = "/assets/images/order-top.png"
+                        },
+                        new
+                        {
+                            Id = new Guid("9affa871-30f4-4ad9-8e04-3fd9d8823617"),
+                            Comment = "",
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Key = "home_slider_bottom_image",
+                            Type = 4,
+                            Value = "/assets/images/order-bottom.png"
                         },
                         new
                         {
@@ -1183,3291 +1192,3129 @@ namespace Persistence.Migrations
                         {
                             Id = 41,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_description_meta",
+                            Key = "our_blogs_page_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "about_us_description_meta"
+                            Value = "our_blogs_page_title"
                         },
                         new
                         {
                             Id = 42,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_header_title",
+                            Key = "our_blogs_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "about_us_header_title"
+                            Value = "our_blogs_title"
                         },
                         new
                         {
                             Id = 43,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_keywords_meta",
+                            Key = "our_blogs_subtitle",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "about_us_keywords_meta"
+                            Value = "our_blogs_subtitle"
                         },
                         new
                         {
                             Id = 44,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_page_title",
+                            Key = "our_blogs_read_more_button",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "our_blogs_page_title"
+                            Value = "our_blogs_read_more_button"
                         },
                         new
                         {
                             Id = 45,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_title",
+                            Key = "our_blogs_description_meta",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "our_blogs_title"
+                            Value = "our_blogs_description_meta"
                         },
                         new
                         {
                             Id = 46,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_subtitle",
+                            Key = "our_blogs_header_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "our_blogs_subtitle"
+                            Value = "our_blogs_header_title"
                         },
                         new
                         {
                             Id = 47,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_read_more_button",
+                            Key = "our_blogs_keywords_meta",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "our_blogs_read_more_button"
+                            Value = "our_blogs_keywords_meta"
                         },
                         new
                         {
                             Id = 48,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_description_meta",
+                            Key = "single_blog_tags",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "our_blogs_description_meta"
+                            Value = "single_blog_tags"
                         },
                         new
                         {
                             Id = 49,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_header_title",
+                            Key = "contact_us_page_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "our_blogs_header_title"
+                            Value = "contact_us_page_title"
                         },
                         new
                         {
                             Id = 50,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_keywords_meta",
+                            Key = "contact_us_address_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "our_blogs_keywords_meta"
+                            Value = "contact_us_address_title"
                         },
                         new
                         {
                             Id = 51,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_blog_tags",
+                            Key = "contact_us_call_us_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "single_blog_tags"
+                            Value = "contact_us_call_us_title"
                         },
                         new
                         {
                             Id = 52,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_page_title",
+                            Key = "contact_us_email_us_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "contact_us_page_title"
+                            Value = "contact_us_email_us_title"
                         },
                         new
                         {
                             Id = 53,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_address_title",
+                            Key = "contact_us_open_time_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "contact_us_address_title"
+                            Value = "contact_us_open_time_title"
                         },
                         new
                         {
                             Id = 54,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_call_us_title",
+                            Key = "contact_us_get_in_touch_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "contact_us_call_us_title"
+                            Value = "contact_us_get_in_touch_title"
                         },
                         new
                         {
                             Id = 55,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_email_us_title",
+                            Key = "contact_us_get_in_touch_subtitle",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "contact_us_email_us_title"
+                            Value = "contact_us_get_in_touch_subtitle"
                         },
                         new
                         {
                             Id = 56,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_open_time_title",
+                            Key = "contact_us_get_in_touch_button",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "contact_us_open_time_title"
+                            Value = "contact_us_get_in_touch_button"
                         },
                         new
                         {
                             Id = 57,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_title",
+                            Key = "contact_us_get_in_touch_your_name_placeholder",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_title"
+                            Value = "contact_us_get_in_touch_your_name_placeholder"
                         },
                         new
                         {
                             Id = 58,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_subtitle",
+                            Key = "contact_us_get_in_touch_your_email_placeholder",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_subtitle"
+                            Value = "contact_us_get_in_touch_your_email_placeholder"
                         },
                         new
                         {
                             Id = 59,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_button",
+                            Key = "contact_us_get_in_touch_your_phone_placeholder",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_button"
+                            Value = "contact_us_get_in_touch_your_phone_placeholder"
                         },
                         new
                         {
                             Id = 60,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_your_name_placeholder",
+                            Key = "contact_us_get_in_touch_your_subject_placeholder",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_your_name_placeholder"
+                            Value = "contact_us_get_in_touch_your_subject_placeholder"
                         },
                         new
                         {
                             Id = 61,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_your_email_placeholder",
+                            Key = "contact_us_get_in_touch_your_message_placeholder",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_your_email_placeholder"
+                            Value = "contact_us_get_in_touch_your_message_placeholder"
                         },
                         new
                         {
                             Id = 62,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_your_phone_placeholder",
+                            Key = "faq_page_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_your_phone_placeholder"
+                            Value = "faq_page_title"
                         },
                         new
                         {
                             Id = 63,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_your_subject_placeholder",
+                            Key = "faq_page_description_meta",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_your_subject_placeholder"
+                            Value = "faq_page_description_meta"
                         },
                         new
                         {
                             Id = 64,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_your_message_placeholder",
+                            Key = "faq_page_header_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_your_message_placeholder"
+                            Value = "faq_page_header_title"
                         },
                         new
                         {
                             Id = 65,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_description_meta",
+                            Key = "faq_page_keywords_meta",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "contact_us_description_meta"
+                            Value = "faq_page_keywords_meta"
                         },
                         new
                         {
                             Id = 66,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_header_title",
+                            Key = "products_page_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "contact_us_header_title"
+                            Value = "products_page_title"
                         },
                         new
                         {
                             Id = 67,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_keywords_meta",
+                            Key = "products_filter_category_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "contact_us_keywords_meta"
+                            Value = "products_filter_category_title"
                         },
                         new
                         {
                             Id = 68,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "faq_page_title",
+                            Key = "products_filter_brands_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "faq_page_title"
+                            Value = "products_filter_brands_title"
                         },
                         new
                         {
                             Id = 69,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "faq_page_description_meta",
+                            Key = "products_filter_price_range_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "faq_page_description_meta"
+                            Value = "products_filter_price_range_title"
                         },
                         new
                         {
                             Id = 70,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "faq_page_header_title",
+                            Key = "products_filter_search_button",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "faq_page_header_title"
+                            Value = "products_filter_search_button"
                         },
                         new
                         {
                             Id = 71,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "faq_page_keywords_meta",
+                            Key = "products_sort_by_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "faq_page_keywords_meta"
+                            Value = "products_sort_by_title"
                         },
                         new
                         {
                             Id = 72,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_page_title",
+                            Key = "products_sort_by_latest_items_option",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "products_page_title"
+                            Value = "products_sort_by_latest_items_option"
                         },
                         new
                         {
                             Id = 73,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_filter_category_title",
+                            Key = "products_sort_by_best_seller_items_option",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "products_filter_category_title"
+                            Value = "products_sort_by_best_seller_items_option"
                         },
                         new
                         {
                             Id = 74,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_filter_brands_title",
+                            Key = "products_sort_by_price_low_to_high_option",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "products_filter_brands_title"
+                            Value = "products_sort_by_price_low_to_high_option"
                         },
                         new
                         {
                             Id = 75,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_filter_price_range_title",
+                            Key = "products_sort_by_price_high_to_low_option",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "products_filter_price_range_title"
+                            Value = "products_sort_by_price_high_to_low_option"
                         },
                         new
                         {
                             Id = 76,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_filter_search_button",
+                            Key = "products_page_description_meta",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "products_filter_search_button"
+                            Value = "products_page_description_meta"
                         },
                         new
                         {
                             Id = 77,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_sort_by_title",
+                            Key = "products_page_header_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "products_sort_by_title"
+                            Value = "products_page_header_title"
                         },
                         new
                         {
                             Id = 78,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_sort_by_latest_items_option",
+                            Key = "products_page_keywords_meta",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "products_sort_by_latest_items_option"
+                            Value = "products_page_keywords_meta"
                         },
                         new
                         {
                             Id = 79,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_sort_by_best_seller_items_option",
+                            Key = "single_product_quantity_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "products_sort_by_best_seller_items_option"
+                            Value = "single_product_quantity_title"
                         },
                         new
                         {
                             Id = 80,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_sort_by_price_low_to_high_option",
+                            Key = "single_product_sku_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "products_sort_by_price_low_to_high_option"
+                            Value = "single_product_sku_title"
                         },
                         new
                         {
                             Id = 81,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_sort_by_price_high_to_low_option",
+                            Key = "single_product_category_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "products_sort_by_price_high_to_low_option"
+                            Value = "single_product_category_title"
                         },
                         new
                         {
                             Id = 82,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_page_description_meta",
+                            Key = "single_product_brand_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "products_page_description_meta"
+                            Value = "single_product_brand_title"
                         },
                         new
                         {
                             Id = 83,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_page_header_title",
+                            Key = "single_product_tags_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "products_page_header_title"
+                            Value = "single_product_tags_title"
                         },
                         new
                         {
                             Id = 84,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_page_keywords_meta",
+                            Key = "single_product_description_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "products_page_keywords_meta"
+                            Value = "single_product_description_title"
                         },
                         new
                         {
                             Id = 85,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_quantity_title",
+                            Key = "single_product_additional_info_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "single_product_quantity_title"
+                            Value = "single_product_additional_info_title"
                         },
                         new
                         {
                             Id = 86,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_sku_title",
+                            Key = "single_product_documents_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "single_product_sku_title"
+                            Value = "single_product_documents_title"
                         },
                         new
                         {
                             Id = 87,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_category_title",
+                            Key = "single_product_related_items_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "single_product_category_title"
+                            Value = "single_product_related_items_title"
                         },
                         new
                         {
                             Id = 88,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_brand_title",
+                            Key = "orders_page_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "single_product_brand_title"
+                            Value = "orders_page_title"
                         },
                         new
                         {
                             Id = 89,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_tags_title",
+                            Key = "orders_page_your_orders_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "single_product_tags_title"
+                            Value = "orders_page_your_orders_title"
                         },
                         new
                         {
                             Id = 90,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_description_title",
+                            Key = "orders_page_your_informations_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "single_product_description_title"
+                            Value = "orders_page_your_informations_title"
                         },
                         new
                         {
                             Id = 91,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_additional_info_title",
+                            Key = "orders_page_your_orders_image_th",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "single_product_additional_info_title"
+                            Value = "orders_page_your_orders_image_th"
                         },
                         new
                         {
                             Id = 92,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_documents_title",
+                            Key = "orders_page_your_orders_name_th",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "single_product_documents_title"
+                            Value = "orders_page_your_orders_name_th"
                         },
                         new
                         {
                             Id = 93,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_related_items_title",
+                            Key = "orders_page_your_orders_price_th",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "single_product_related_items_title"
+                            Value = "orders_page_your_orders_price_th"
                         },
                         new
                         {
                             Id = 94,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_title",
+                            Key = "orders_page_your_orders_quantity_th",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_title"
+                            Value = "orders_page_your_orders_quantity_th"
                         },
                         new
                         {
                             Id = 95,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_orders_title",
+                            Key = "orders_page_your_orders_subtotal_th",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_orders_title"
+                            Value = "orders_page_your_orders_subtotal_th"
                         },
                         new
                         {
                             Id = 96,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_title",
+                            Key = "orders_page_your_products_category",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_informations_title"
+                            Value = "orders_page_your_products_category"
                         },
                         new
                         {
                             Id = 97,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_orders_image_th",
+                            Key = "orders_page_your_products_brand",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_orders_image_th"
+                            Value = "orders_page_your_products_brand"
                         },
                         new
                         {
                             Id = 98,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_orders_name_th",
+                            Key = "orders_page_your_informations_first_name_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_orders_name_th"
+                            Value = "orders_page_your_informations_first_name_title"
                         },
                         new
                         {
                             Id = 99,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_orders_price_th",
+                            Key = "orders_page_your_informations_first_name_placeholder",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_orders_price_th"
+                            Value = "orders_page_your_informations_first_name_placeholder"
                         },
                         new
                         {
                             Id = 100,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_orders_quantity_th",
+                            Key = "orders_page_your_informations_last_name_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_orders_quantity_th"
+                            Value = "orders_page_your_informations_last_name_title"
                         },
                         new
                         {
                             Id = 101,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_orders_subtotal_th",
+                            Key = "orders_page_your_informations_last_name_placeholder",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_orders_subtotal_th"
+                            Value = "orders_page_your_informations_last_name_placeholder"
                         },
                         new
                         {
                             Id = 102,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_products_category",
+                            Key = "orders_page_your_informations_email_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_products_category"
+                            Value = "orders_page_your_informations_email_title"
                         },
                         new
                         {
                             Id = 103,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_products_brand",
+                            Key = "orders_page_your_informations_email_placeholder",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_products_brand"
+                            Value = "orders_page_your_informations_email_placeholder"
                         },
                         new
                         {
                             Id = 104,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_first_name_title",
+                            Key = "orders_page_your_informations_phone_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_informations_first_name_title"
+                            Value = "orders_page_your_informations_phone_title"
                         },
                         new
                         {
                             Id = 105,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_first_name_placeholder",
+                            Key = "orders_page_your_informations_phone_placeholder",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_informations_first_name_placeholder"
+                            Value = "orders_page_your_informations_phone_placeholder"
                         },
                         new
                         {
                             Id = 106,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_last_name_title",
+                            Key = "orders_page_your_informations_address_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_informations_last_name_title"
+                            Value = "orders_page_your_informations_address_title"
                         },
                         new
                         {
                             Id = 107,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_last_name_placeholder",
+                            Key = "orders_page_your_informations_address_placeholder",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_informations_last_name_placeholder"
+                            Value = "orders_page_your_informations_address_placeholder"
                         },
                         new
                         {
                             Id = 108,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_email_title",
+                            Key = "orders_page_your_informations_description_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_informations_email_title"
+                            Value = "orders_page_your_informations_description_title"
                         },
                         new
                         {
                             Id = 109,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_email_placeholder",
+                            Key = "orders_page_your_cart_summary_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_informations_email_placeholder"
+                            Value = "orders_page_your_cart_summary_title"
                         },
                         new
                         {
                             Id = 110,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_phone_title",
+                            Key = "orders_page_your_cart_summary_subtotal",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_informations_phone_title"
+                            Value = "orders_page_your_cart_summary_subtotal"
                         },
                         new
                         {
                             Id = 111,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_phone_placeholder",
+                            Key = "orders_page_your_cart_summary_discount",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_informations_phone_placeholder"
+                            Value = "orders_page_your_cart_summary_discount"
                         },
                         new
                         {
                             Id = 112,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_address_title",
+                            Key = "orders_page_your_cart_summary_totalPrice",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_informations_address_title"
+                            Value = "orders_page_your_cart_summary_totalPrice"
                         },
                         new
                         {
                             Id = 113,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_address_placeholder",
+                            Key = "orders_page_your_cart_summary_checkout_now",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_informations_address_placeholder"
+                            Value = "orders_page_your_cart_summary_checkout_now"
                         },
                         new
                         {
                             Id = 114,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_description_title",
+                            Key = "orders_page_your_cart_is_empty_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_informations_description_title"
+                            Value = "orders_page_your_cart_is_empty_title"
                         },
                         new
                         {
                             Id = 115,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_summary_title",
+                            Key = "orders_page_your_cart_is_empty_subtitle",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_cart_summary_title"
+                            Value = "orders_page_your_cart_is_empty_subtitle"
                         },
                         new
                         {
                             Id = 116,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_summary_subtotal",
+                            Key = "orders_page_your_cart_is_empty_go_back_home_button",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_cart_summary_subtotal"
+                            Value = "orders_page_your_cart_is_empty_go_back_home_button"
                         },
                         new
                         {
                             Id = 117,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_summary_discount",
+                            Key = "success_message_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_cart_summary_discount"
+                            Value = "success_message_title"
                         },
                         new
                         {
                             Id = 118,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_summary_totalPrice",
+                            Key = "success_message",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_cart_summary_totalPrice"
+                            Value = "success_message"
                         },
                         new
                         {
                             Id = 119,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_summary_checkout_now",
+                            Key = "error_message_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_cart_summary_checkout_now"
+                            Value = "error_message_title"
                         },
                         new
                         {
                             Id = 120,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_is_empty_title",
+                            Key = "error_message",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_cart_is_empty_title"
+                            Value = "error_message"
                         },
                         new
                         {
                             Id = 121,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_is_empty_subtitle",
+                            Key = "add_in_cart_message",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_cart_is_empty_subtitle"
+                            Value = "add_in_cart_message"
                         },
                         new
                         {
                             Id = 122,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_is_empty_go_back_home_button",
+                            Key = "success_order_message_title",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "orders_page_your_cart_is_empty_go_back_home_button"
+                            Value = "success_order_message_title"
                         },
                         new
                         {
                             Id = 123,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "success_message_title",
+                            Key = "success_order_message",
                             LanguageKey = "ko",
                             Type = 2,
-                            Value = "success_message_title"
+                            Value = "success_order_message"
                         },
                         new
                         {
                             Id = 124,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "success_message",
-                            LanguageKey = "ko",
+                            Key = "add_to_cart",
+                            LanguageKey = "en",
                             Type = 2,
-                            Value = "success_message"
+                            Value = "add_to_cart"
                         },
                         new
                         {
                             Id = 125,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "error_message_title",
-                            LanguageKey = "ko",
+                            Key = "loading_title",
+                            LanguageKey = "en",
                             Type = 2,
-                            Value = "error_message_title"
+                            Value = "loading_title"
                         },
                         new
                         {
                             Id = 126,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "error_message",
-                            LanguageKey = "ko",
+                            Key = "view_more_button",
+                            LanguageKey = "en",
                             Type = 2,
-                            Value = "error_message"
+                            Value = "view_more_button"
                         },
                         new
                         {
                             Id = 127,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "add_in_cart_message",
-                            LanguageKey = "ko",
+                            Key = "follow_us_title",
+                            LanguageKey = "en",
                             Type = 2,
-                            Value = "add_in_cart_message"
+                            Value = "header_follow_us_title"
                         },
                         new
                         {
                             Id = 128,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "success_order_message_title",
-                            LanguageKey = "ko",
+                            Key = "header_whatsapp_title",
+                            LanguageKey = "en",
                             Type = 2,
-                            Value = "success_order_message_title"
+                            Value = "header_whatsapp_title"
                         },
                         new
                         {
                             Id = 129,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "success_order_message",
-                            LanguageKey = "ko",
+                            Key = "header_whatsapp_sub_title",
+                            LanguageKey = "en",
                             Type = 2,
-                            Value = "success_order_message"
+                            Value = "header_whatsapp_sub_title"
                         },
                         new
                         {
                             Id = 130,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "add_to_cart",
+                            Key = "header_my_cart_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "add_to_cart"
+                            Value = "header_my_cart_title"
                         },
                         new
                         {
                             Id = 131,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "loading_title",
+                            Key = "header_cart_is_empty",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "loading_title"
+                            Value = "header_cart_is_empty"
                         },
                         new
                         {
                             Id = 132,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "view_more_button",
+                            Key = "header_cart_total",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "view_more_button"
+                            Value = "header_cart_total"
                         },
                         new
                         {
                             Id = 133,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "follow_us_title",
+                            Key = "header_cart_checkout_button",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "header_follow_us_title"
+                            Value = "header_cart_checkout_button"
                         },
                         new
                         {
                             Id = 134,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_whatsapp_title",
+                            Key = "header_all_categories",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "header_whatsapp_title"
+                            Value = "header_all_categories"
                         },
                         new
                         {
                             Id = 135,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_whatsapp_sub_title",
+                            Key = "header_search_here",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "header_whatsapp_sub_title"
+                            Value = "header_search_here"
                         },
                         new
                         {
                             Id = 136,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_my_cart_title",
+                            Key = "header_cart_search_here",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "header_my_cart_title"
+                            Value = "header_cart_search_here"
                         },
                         new
                         {
                             Id = 137,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_cart_is_empty",
+                            Key = "header_extra_pages",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "header_cart_is_empty"
+                            Value = "header_extra_pages"
                         },
                         new
                         {
                             Id = 138,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_cart_total",
+                            Key = "footer_title",
                             LanguageKey = "en",
-                            Type = 2,
-                            Value = "header_cart_total"
+                            Type = 3,
+                            Value = "footer_title"
                         },
                         new
                         {
                             Id = 139,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_cart_checkout_button",
+                            Key = "footer_copyright",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "header_cart_checkout_button"
+                            Value = "footer_copyright"
                         },
                         new
                         {
                             Id = 140,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_all_categories",
+                            Key = "footer_link_list",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "header_all_categories"
+                            Value = "footer_link_list"
                         },
                         new
                         {
                             Id = 141,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_search_here",
+                            Key = "footer_category_list",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "header_search_here"
+                            Value = "footer_category_list"
                         },
                         new
                         {
                             Id = 142,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_cart_search_here",
+                            Key = "footer_extra_page_list",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "header_cart_search_here"
+                            Value = "footer_extra_page_list"
                         },
                         new
                         {
                             Id = 143,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_extra_pages",
+                            Key = "added_cart_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "header_extra_pages"
+                            Value = "added_cart_title"
                         },
                         new
                         {
                             Id = 144,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "footer_title",
+                            Key = "home_page_title",
                             LanguageKey = "en",
-                            Type = 3,
-                            Value = "footer_title"
+                            Type = 2,
+                            Value = "home_page_title"
                         },
                         new
                         {
                             Id = 145,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "footer_copyright",
+                            Key = "home_our_speciality_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "footer_copyright"
+                            Value = "home_our_speciality_title"
                         },
                         new
                         {
                             Id = 146,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "footer_link_list",
+                            Key = "home_our_speciality_subtitle",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "footer_link_list"
+                            Value = "home_our_speciality_subtitle"
                         },
                         new
                         {
                             Id = 147,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "footer_category_list",
+                            Key = "home_our_speciality_menu_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "footer_category_list"
+                            Value = "home_our_speciality_menu_title"
                         },
                         new
                         {
                             Id = 148,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "footer_extra_page_list",
+                            Key = "home_our_speciality_menu_subtitle",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "footer_extra_page_list"
+                            Value = "home_our_speciality_menu_subtitle"
                         },
                         new
                         {
                             Id = 149,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "added_cart_title",
+                            Key = "home_latest_products_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "added_cart_title"
+                            Value = "home_latest_products_title"
                         },
                         new
                         {
                             Id = 150,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_page_title",
+                            Key = "home_our_blogs_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "home_page_title"
+                            Value = "home_our_blogs_title"
                         },
                         new
                         {
                             Id = 151,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_our_speciality_title",
+                            Key = "home_our_blogs_subtitle",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "home_our_speciality_title"
+                            Value = "home_our_blogs_subtitle"
                         },
                         new
                         {
                             Id = 152,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_our_speciality_subtitle",
+                            Key = "home_page_description_meta",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "home_our_speciality_subtitle"
+                            Value = "home_page_description_meta"
                         },
                         new
                         {
                             Id = 153,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_our_speciality_menu_title",
+                            Key = "home_page_header_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "home_our_speciality_menu_title"
+                            Value = "home_page_header_title"
                         },
                         new
                         {
                             Id = 154,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_our_speciality_menu_subtitle",
+                            Key = "home_page_keywords_meta",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "home_our_speciality_menu_subtitle"
+                            Value = "home_page_keywords_meta"
                         },
                         new
                         {
                             Id = 155,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_latest_products_title",
+                            Key = "menu_page_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "home_latest_products_title"
+                            Value = "menu_page_title"
                         },
                         new
                         {
                             Id = 156,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_our_blogs_title",
+                            Key = "all_category_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "home_our_blogs_title"
+                            Value = "all_category_title"
                         },
                         new
                         {
                             Id = 157,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_our_blogs_subtitle",
+                            Key = "menu_description_meta",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "home_our_blogs_subtitle"
+                            Value = "menu_description_meta"
                         },
                         new
                         {
                             Id = 158,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_page_description_meta",
+                            Key = "menu_header_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "home_page_description_meta"
+                            Value = "menu_header_title"
                         },
                         new
                         {
                             Id = 159,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_page_header_title",
+                            Key = "menu_keywords_meta",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "home_page_header_title"
+                            Value = "menu_keywords_meta"
                         },
                         new
                         {
                             Id = 160,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_page_keywords_meta",
+                            Key = "about_us_page_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "home_page_keywords_meta"
+                            Value = "about_us_page_title"
                         },
                         new
                         {
                             Id = 161,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "menu_page_title",
+                            Key = "about_us_our_team_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "menu_page_title"
+                            Value = "about_us_our_team_title"
                         },
                         new
                         {
                             Id = 162,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "all_category_title",
+                            Key = "about_us_our_team_subtitle",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "all_category_title"
+                            Value = "about_us_our_team_subtitle"
                         },
                         new
                         {
                             Id = 163,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "menu_description_meta",
+                            Key = "about_us_partners_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "menu_description_meta"
+                            Value = "about_us_partners_title"
                         },
                         new
                         {
                             Id = 164,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "menu_header_title",
+                            Key = "our_blogs_page_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "menu_header_title"
+                            Value = "our_blogs_page_title"
                         },
                         new
                         {
                             Id = 165,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "menu_keywords_meta",
+                            Key = "our_blogs_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "menu_keywords_meta"
+                            Value = "our_blogs_title"
                         },
                         new
                         {
                             Id = 166,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_page_title",
+                            Key = "our_blogs_subtitle",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "about_us_page_title"
+                            Value = "our_blogs_subtitle"
                         },
                         new
                         {
                             Id = 167,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_our_team_title",
+                            Key = "our_blogs_read_more_button",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "about_us_our_team_title"
+                            Value = "our_blogs_read_more_button"
                         },
                         new
                         {
                             Id = 168,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_our_team_subtitle",
+                            Key = "our_blogs_description_meta",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "about_us_our_team_subtitle"
+                            Value = "our_blogs_description_meta"
                         },
                         new
                         {
                             Id = 169,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_partners_title",
+                            Key = "our_blogs_header_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "about_us_partners_title"
+                            Value = "our_blogs_header_title"
                         },
                         new
                         {
                             Id = 170,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_description_meta",
+                            Key = "our_blogs_keywords_meta",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "about_us_description_meta"
+                            Value = "our_blogs_keywords_meta"
                         },
                         new
                         {
                             Id = 171,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_header_title",
+                            Key = "single_blog_tags",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "about_us_header_title"
+                            Value = "single_blog_tags"
                         },
                         new
                         {
                             Id = 172,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_keywords_meta",
+                            Key = "contact_us_page_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "about_us_keywords_meta"
+                            Value = "contact_us_page_title"
                         },
                         new
                         {
                             Id = 173,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_page_title",
+                            Key = "contact_us_address_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "our_blogs_page_title"
+                            Value = "contact_us_address_title"
                         },
                         new
                         {
                             Id = 174,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_title",
+                            Key = "contact_us_call_us_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "our_blogs_title"
+                            Value = "contact_us_call_us_title"
                         },
                         new
                         {
                             Id = 175,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_subtitle",
+                            Key = "contact_us_email_us_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "our_blogs_subtitle"
+                            Value = "contact_us_email_us_title"
                         },
                         new
                         {
                             Id = 176,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_read_more_button",
+                            Key = "contact_us_open_time_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "our_blogs_read_more_button"
+                            Value = "contact_us_open_time_title"
                         },
                         new
                         {
                             Id = 177,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_description_meta",
+                            Key = "contact_us_get_in_touch_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "our_blogs_description_meta"
+                            Value = "contact_us_get_in_touch_title"
                         },
                         new
                         {
                             Id = 178,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_header_title",
+                            Key = "contact_us_get_in_touch_subtitle",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "our_blogs_header_title"
+                            Value = "contact_us_get_in_touch_subtitle"
                         },
                         new
                         {
                             Id = 179,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_keywords_meta",
+                            Key = "contact_us_get_in_touch_button",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "our_blogs_keywords_meta"
+                            Value = "contact_us_get_in_touch_button"
                         },
                         new
                         {
                             Id = 180,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_blog_tags",
+                            Key = "contact_us_get_in_touch_your_name_placeholder",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "single_blog_tags"
+                            Value = "contact_us_get_in_touch_your_name_placeholder"
                         },
                         new
                         {
                             Id = 181,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_page_title",
+                            Key = "contact_us_get_in_touch_your_email_placeholder",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "contact_us_page_title"
+                            Value = "contact_us_get_in_touch_your_email_placeholder"
                         },
                         new
                         {
                             Id = 182,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_address_title",
+                            Key = "contact_us_get_in_touch_your_phone_placeholder",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "contact_us_address_title"
+                            Value = "contact_us_get_in_touch_your_phone_placeholder"
                         },
                         new
                         {
                             Id = 183,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_call_us_title",
+                            Key = "contact_us_get_in_touch_your_subject_placeholder",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "contact_us_call_us_title"
+                            Value = "contact_us_get_in_touch_your_subject_placeholder"
                         },
                         new
                         {
                             Id = 184,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_email_us_title",
+                            Key = "contact_us_get_in_touch_your_message_placeholder",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "contact_us_email_us_title"
+                            Value = "contact_us_get_in_touch_your_message_placeholder"
                         },
                         new
                         {
                             Id = 185,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_open_time_title",
+                            Key = "faq_page_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "contact_us_open_time_title"
+                            Value = "faq_page_title"
                         },
                         new
                         {
                             Id = 186,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_title",
+                            Key = "faq_page_description_meta",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_title"
+                            Value = "faq_page_description_meta"
                         },
                         new
                         {
                             Id = 187,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_subtitle",
+                            Key = "faq_page_header_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_subtitle"
+                            Value = "faq_page_header_title"
                         },
                         new
                         {
                             Id = 188,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_button",
+                            Key = "faq_page_keywords_meta",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_button"
+                            Value = "faq_page_keywords_meta"
                         },
                         new
                         {
                             Id = 189,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_your_name_placeholder",
+                            Key = "products_page_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_your_name_placeholder"
+                            Value = "products_page_title"
                         },
                         new
                         {
                             Id = 190,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_your_email_placeholder",
+                            Key = "products_filter_category_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_your_email_placeholder"
+                            Value = "products_filter_category_title"
                         },
                         new
                         {
                             Id = 191,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_your_phone_placeholder",
+                            Key = "products_filter_brands_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_your_phone_placeholder"
+                            Value = "products_filter_brands_title"
                         },
                         new
                         {
                             Id = 192,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_your_subject_placeholder",
+                            Key = "products_filter_price_range_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_your_subject_placeholder"
+                            Value = "products_filter_price_range_title"
                         },
                         new
                         {
                             Id = 193,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_your_message_placeholder",
+                            Key = "products_filter_search_button",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_your_message_placeholder"
+                            Value = "products_filter_search_button"
                         },
                         new
                         {
                             Id = 194,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_description_meta",
+                            Key = "products_sort_by_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "contact_us_description_meta"
+                            Value = "products_sort_by_title"
                         },
                         new
                         {
                             Id = 195,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_header_title",
+                            Key = "products_sort_by_latest_items_option",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "contact_us_header_title"
+                            Value = "products_sort_by_latest_items_option"
                         },
                         new
                         {
                             Id = 196,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_keywords_meta",
+                            Key = "products_sort_by_best_seller_items_option",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "contact_us_keywords_meta"
+                            Value = "products_sort_by_best_seller_items_option"
                         },
                         new
                         {
                             Id = 197,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "faq_page_title",
+                            Key = "products_sort_by_price_low_to_high_option",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "faq_page_title"
+                            Value = "products_sort_by_price_low_to_high_option"
                         },
                         new
                         {
                             Id = 198,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "faq_page_description_meta",
+                            Key = "products_sort_by_price_high_to_low_option",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "faq_page_description_meta"
+                            Value = "products_sort_by_price_high_to_low_option"
                         },
                         new
                         {
                             Id = 199,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "faq_page_header_title",
+                            Key = "products_page_description_meta",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "faq_page_header_title"
+                            Value = "products_page_description_meta"
                         },
                         new
                         {
                             Id = 200,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "faq_page_keywords_meta",
+                            Key = "products_page_header_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "faq_page_keywords_meta"
+                            Value = "products_page_header_title"
                         },
                         new
                         {
                             Id = 201,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_page_title",
+                            Key = "products_page_keywords_meta",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "products_page_title"
+                            Value = "products_page_keywords_meta"
                         },
                         new
                         {
                             Id = 202,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_filter_category_title",
+                            Key = "single_product_quantity_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "products_filter_category_title"
+                            Value = "single_product_quantity_title"
                         },
                         new
                         {
                             Id = 203,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_filter_brands_title",
+                            Key = "single_product_sku_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "products_filter_brands_title"
+                            Value = "single_product_sku_title"
                         },
                         new
                         {
                             Id = 204,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_filter_price_range_title",
+                            Key = "single_product_category_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "products_filter_price_range_title"
+                            Value = "single_product_category_title"
                         },
                         new
                         {
                             Id = 205,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_filter_search_button",
+                            Key = "single_product_brand_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "products_filter_search_button"
+                            Value = "single_product_brand_title"
                         },
                         new
                         {
                             Id = 206,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_sort_by_title",
+                            Key = "single_product_tags_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "products_sort_by_title"
+                            Value = "single_product_tags_title"
                         },
                         new
                         {
                             Id = 207,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_sort_by_latest_items_option",
+                            Key = "single_product_description_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "products_sort_by_latest_items_option"
+                            Value = "single_product_description_title"
                         },
                         new
                         {
                             Id = 208,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_sort_by_best_seller_items_option",
+                            Key = "single_product_additional_info_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "products_sort_by_best_seller_items_option"
+                            Value = "single_product_additional_info_title"
                         },
                         new
                         {
                             Id = 209,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_sort_by_price_low_to_high_option",
+                            Key = "single_product_documents_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "products_sort_by_price_low_to_high_option"
+                            Value = "single_product_documents_title"
                         },
                         new
                         {
                             Id = 210,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_sort_by_price_high_to_low_option",
+                            Key = "single_product_related_items_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "products_sort_by_price_high_to_low_option"
+                            Value = "single_product_related_items_title"
                         },
                         new
                         {
                             Id = 211,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_page_description_meta",
+                            Key = "orders_page_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "products_page_description_meta"
+                            Value = "orders_page_title"
                         },
                         new
                         {
                             Id = 212,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_page_header_title",
+                            Key = "orders_page_your_orders_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "products_page_header_title"
+                            Value = "orders_page_your_orders_title"
                         },
                         new
                         {
                             Id = 213,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_page_keywords_meta",
+                            Key = "orders_page_your_informations_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "products_page_keywords_meta"
+                            Value = "orders_page_your_informations_title"
                         },
                         new
                         {
                             Id = 214,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_quantity_title",
+                            Key = "orders_page_your_orders_image_th",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "single_product_quantity_title"
+                            Value = "orders_page_your_orders_image_th"
                         },
                         new
                         {
                             Id = 215,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_sku_title",
+                            Key = "orders_page_your_orders_name_th",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "single_product_sku_title"
+                            Value = "orders_page_your_orders_name_th"
                         },
                         new
                         {
                             Id = 216,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_category_title",
+                            Key = "orders_page_your_orders_price_th",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "single_product_category_title"
+                            Value = "orders_page_your_orders_price_th"
                         },
                         new
                         {
                             Id = 217,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_brand_title",
+                            Key = "orders_page_your_orders_quantity_th",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "single_product_brand_title"
+                            Value = "orders_page_your_orders_quantity_th"
                         },
                         new
                         {
                             Id = 218,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_tags_title",
+                            Key = "orders_page_your_orders_subtotal_th",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "single_product_tags_title"
+                            Value = "orders_page_your_orders_subtotal_th"
                         },
                         new
                         {
                             Id = 219,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_description_title",
+                            Key = "orders_page_your_products_category",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "single_product_description_title"
+                            Value = "orders_page_your_products_category"
                         },
                         new
                         {
                             Id = 220,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_additional_info_title",
+                            Key = "orders_page_your_products_brand",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "single_product_additional_info_title"
+                            Value = "orders_page_your_products_brand"
                         },
                         new
                         {
                             Id = 221,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_documents_title",
+                            Key = "orders_page_your_informations_first_name_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "single_product_documents_title"
+                            Value = "orders_page_your_informations_first_name_title"
                         },
                         new
                         {
                             Id = 222,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_related_items_title",
+                            Key = "orders_page_your_informations_first_name_placeholder",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "single_product_related_items_title"
+                            Value = "orders_page_your_informations_first_name_placeholder"
                         },
                         new
                         {
                             Id = 223,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_title",
+                            Key = "orders_page_your_informations_last_name_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_title"
+                            Value = "orders_page_your_informations_last_name_title"
                         },
                         new
                         {
                             Id = 224,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_orders_title",
+                            Key = "orders_page_your_informations_last_name_placeholder",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_orders_title"
+                            Value = "orders_page_your_informations_last_name_placeholder"
                         },
                         new
                         {
                             Id = 225,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_title",
+                            Key = "orders_page_your_informations_email_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_informations_title"
+                            Value = "orders_page_your_informations_email_title"
                         },
                         new
                         {
                             Id = 226,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_orders_image_th",
+                            Key = "orders_page_your_informations_email_placeholder",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_orders_image_th"
+                            Value = "orders_page_your_informations_email_placeholder"
                         },
                         new
                         {
                             Id = 227,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_orders_name_th",
+                            Key = "orders_page_your_informations_phone_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_orders_name_th"
+                            Value = "orders_page_your_informations_phone_title"
                         },
                         new
                         {
                             Id = 228,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_orders_price_th",
+                            Key = "orders_page_your_informations_phone_placeholder",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_orders_price_th"
+                            Value = "orders_page_your_informations_phone_placeholder"
                         },
                         new
                         {
                             Id = 229,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_orders_quantity_th",
+                            Key = "orders_page_your_informations_address_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_orders_quantity_th"
+                            Value = "orders_page_your_informations_address_title"
                         },
                         new
                         {
                             Id = 230,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_orders_subtotal_th",
+                            Key = "orders_page_your_informations_address_placeholder",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_orders_subtotal_th"
+                            Value = "orders_page_your_informations_address_placeholder"
                         },
                         new
                         {
                             Id = 231,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_products_category",
+                            Key = "orders_page_your_informations_description_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_products_category"
+                            Value = "orders_page_your_informations_description_title"
                         },
                         new
                         {
                             Id = 232,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_products_brand",
+                            Key = "orders_page_your_cart_summary_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_products_brand"
+                            Value = "orders_page_your_cart_summary_title"
                         },
                         new
                         {
                             Id = 233,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_first_name_title",
+                            Key = "orders_page_your_cart_summary_subtotal",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_informations_first_name_title"
+                            Value = "orders_page_your_cart_summary_subtotal"
                         },
                         new
                         {
                             Id = 234,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_first_name_placeholder",
+                            Key = "orders_page_your_cart_summary_discount",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_informations_first_name_placeholder"
+                            Value = "orders_page_your_cart_summary_discount"
                         },
                         new
                         {
                             Id = 235,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_last_name_title",
+                            Key = "orders_page_your_cart_summary_totalPrice",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_informations_last_name_title"
+                            Value = "orders_page_your_cart_summary_totalPrice"
                         },
                         new
                         {
                             Id = 236,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_last_name_placeholder",
+                            Key = "orders_page_your_cart_summary_checkout_now",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_informations_last_name_placeholder"
+                            Value = "orders_page_your_cart_summary_checkout_now"
                         },
                         new
                         {
                             Id = 237,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_email_title",
+                            Key = "orders_page_your_cart_is_empty_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_informations_email_title"
+                            Value = "orders_page_your_cart_is_empty_title"
                         },
                         new
                         {
                             Id = 238,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_email_placeholder",
+                            Key = "orders_page_your_cart_is_empty_subtitle",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_informations_email_placeholder"
+                            Value = "orders_page_your_cart_is_empty_subtitle"
                         },
                         new
                         {
                             Id = 239,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_phone_title",
+                            Key = "orders_page_your_cart_is_empty_go_back_home_button",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_informations_phone_title"
+                            Value = "orders_page_your_cart_is_empty_go_back_home_button"
                         },
                         new
                         {
                             Id = 240,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_phone_placeholder",
+                            Key = "success_message_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_informations_phone_placeholder"
+                            Value = "success_message_title"
                         },
                         new
                         {
                             Id = 241,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_address_title",
+                            Key = "success_message",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_informations_address_title"
+                            Value = "success_message"
                         },
                         new
                         {
                             Id = 242,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_address_placeholder",
+                            Key = "error_message_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_informations_address_placeholder"
+                            Value = "error_message_title"
                         },
                         new
                         {
                             Id = 243,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_description_title",
+                            Key = "error_message",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_informations_description_title"
+                            Value = "error_message"
                         },
                         new
                         {
                             Id = 244,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_summary_title",
+                            Key = "add_in_cart_message",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_cart_summary_title"
+                            Value = "add_in_cart_message"
                         },
                         new
                         {
                             Id = 245,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_summary_subtotal",
+                            Key = "success_order_message_title",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_cart_summary_subtotal"
+                            Value = "success_order_message_title"
                         },
                         new
                         {
                             Id = 246,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_summary_discount",
+                            Key = "success_order_message",
                             LanguageKey = "en",
                             Type = 2,
-                            Value = "orders_page_your_cart_summary_discount"
+                            Value = "success_order_message"
                         },
                         new
                         {
                             Id = 247,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_summary_totalPrice",
-                            LanguageKey = "en",
+                            Key = "add_to_cart",
+                            LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_cart_summary_totalPrice"
+                            Value = "add_to_cart"
                         },
                         new
                         {
                             Id = 248,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_summary_checkout_now",
-                            LanguageKey = "en",
+                            Key = "loading_title",
+                            LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_cart_summary_checkout_now"
+                            Value = "loading_title"
                         },
                         new
                         {
                             Id = 249,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_is_empty_title",
-                            LanguageKey = "en",
+                            Key = "view_more_button",
+                            LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_cart_is_empty_title"
+                            Value = "view_more_button"
                         },
                         new
                         {
                             Id = 250,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_is_empty_subtitle",
-                            LanguageKey = "en",
+                            Key = "follow_us_title",
+                            LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_cart_is_empty_subtitle"
+                            Value = "header_follow_us_title"
                         },
                         new
                         {
                             Id = 251,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_is_empty_go_back_home_button",
-                            LanguageKey = "en",
+                            Key = "header_whatsapp_title",
+                            LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_cart_is_empty_go_back_home_button"
+                            Value = "header_whatsapp_title"
                         },
                         new
                         {
                             Id = 252,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "success_message_title",
-                            LanguageKey = "en",
+                            Key = "header_whatsapp_sub_title",
+                            LanguageKey = "az",
                             Type = 2,
-                            Value = "success_message_title"
+                            Value = "header_whatsapp_sub_title"
                         },
                         new
                         {
                             Id = 253,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "success_message",
-                            LanguageKey = "en",
+                            Key = "header_my_cart_title",
+                            LanguageKey = "az",
                             Type = 2,
-                            Value = "success_message"
+                            Value = "header_my_cart_title"
                         },
                         new
                         {
                             Id = 254,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "error_message_title",
-                            LanguageKey = "en",
+                            Key = "header_cart_is_empty",
+                            LanguageKey = "az",
                             Type = 2,
-                            Value = "error_message_title"
+                            Value = "header_cart_is_empty"
                         },
                         new
                         {
                             Id = 255,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "error_message",
-                            LanguageKey = "en",
+                            Key = "header_cart_total",
+                            LanguageKey = "az",
                             Type = 2,
-                            Value = "error_message"
+                            Value = "header_cart_total"
                         },
                         new
                         {
                             Id = 256,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "add_in_cart_message",
-                            LanguageKey = "en",
+                            Key = "header_cart_checkout_button",
+                            LanguageKey = "az",
                             Type = 2,
-                            Value = "add_in_cart_message"
+                            Value = "header_cart_checkout_button"
                         },
                         new
                         {
                             Id = 257,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "success_order_message_title",
-                            LanguageKey = "en",
+                            Key = "header_all_categories",
+                            LanguageKey = "az",
                             Type = 2,
-                            Value = "success_order_message_title"
+                            Value = "header_all_categories"
                         },
                         new
                         {
                             Id = 258,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "success_order_message",
-                            LanguageKey = "en",
+                            Key = "header_search_here",
+                            LanguageKey = "az",
                             Type = 2,
-                            Value = "success_order_message"
+                            Value = "header_search_here"
                         },
                         new
                         {
                             Id = 259,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "add_to_cart",
+                            Key = "header_cart_search_here",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "add_to_cart"
+                            Value = "header_cart_search_here"
                         },
                         new
                         {
                             Id = 260,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "loading_title",
+                            Key = "header_extra_pages",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "loading_title"
+                            Value = "header_extra_pages"
                         },
                         new
                         {
                             Id = 261,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "view_more_button",
+                            Key = "footer_title",
                             LanguageKey = "az",
-                            Type = 2,
-                            Value = "view_more_button"
+                            Type = 3,
+                            Value = "footer_title"
                         },
                         new
                         {
                             Id = 262,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "follow_us_title",
+                            Key = "footer_copyright",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "header_follow_us_title"
+                            Value = "footer_copyright"
                         },
                         new
                         {
                             Id = 263,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_whatsapp_title",
+                            Key = "footer_link_list",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "header_whatsapp_title"
+                            Value = "footer_link_list"
                         },
                         new
                         {
                             Id = 264,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_whatsapp_sub_title",
+                            Key = "footer_category_list",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "header_whatsapp_sub_title"
+                            Value = "footer_category_list"
                         },
                         new
                         {
                             Id = 265,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_my_cart_title",
+                            Key = "footer_extra_page_list",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "header_my_cart_title"
+                            Value = "footer_extra_page_list"
                         },
                         new
                         {
                             Id = 266,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_cart_is_empty",
+                            Key = "added_cart_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "header_cart_is_empty"
+                            Value = "added_cart_title"
                         },
                         new
                         {
                             Id = 267,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_cart_total",
+                            Key = "home_page_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "header_cart_total"
+                            Value = "home_page_title"
                         },
                         new
                         {
                             Id = 268,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_cart_checkout_button",
+                            Key = "home_our_speciality_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "header_cart_checkout_button"
+                            Value = "home_our_speciality_title"
                         },
                         new
                         {
                             Id = 269,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_all_categories",
+                            Key = "home_our_speciality_subtitle",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "header_all_categories"
+                            Value = "home_our_speciality_subtitle"
                         },
                         new
                         {
                             Id = 270,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_search_here",
+                            Key = "home_our_speciality_menu_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "header_search_here"
+                            Value = "home_our_speciality_menu_title"
                         },
                         new
                         {
                             Id = 271,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_cart_search_here",
+                            Key = "home_our_speciality_menu_subtitle",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "header_cart_search_here"
+                            Value = "home_our_speciality_menu_subtitle"
                         },
                         new
                         {
                             Id = 272,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_extra_pages",
+                            Key = "home_latest_products_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "header_extra_pages"
+                            Value = "home_latest_products_title"
                         },
                         new
                         {
                             Id = 273,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "footer_title",
+                            Key = "home_our_blogs_title",
                             LanguageKey = "az",
-                            Type = 3,
-                            Value = "footer_title"
+                            Type = 2,
+                            Value = "home_our_blogs_title"
                         },
                         new
                         {
                             Id = 274,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "footer_copyright",
+                            Key = "home_our_blogs_subtitle",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "footer_copyright"
+                            Value = "home_our_blogs_subtitle"
                         },
                         new
                         {
                             Id = 275,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "footer_link_list",
+                            Key = "home_page_description_meta",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "footer_link_list"
+                            Value = "home_page_description_meta"
                         },
                         new
                         {
                             Id = 276,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "footer_category_list",
+                            Key = "home_page_header_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "footer_category_list"
+                            Value = "home_page_header_title"
                         },
                         new
                         {
                             Id = 277,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "footer_extra_page_list",
+                            Key = "home_page_keywords_meta",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "footer_extra_page_list"
+                            Value = "home_page_keywords_meta"
                         },
                         new
                         {
                             Id = 278,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "added_cart_title",
+                            Key = "menu_page_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "added_cart_title"
+                            Value = "menu_page_title"
                         },
                         new
                         {
                             Id = 279,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_page_title",
+                            Key = "all_category_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "home_page_title"
+                            Value = "all_category_title"
                         },
                         new
                         {
                             Id = 280,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_our_speciality_title",
+                            Key = "menu_description_meta",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "home_our_speciality_title"
+                            Value = "menu_description_meta"
                         },
                         new
                         {
                             Id = 281,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_our_speciality_subtitle",
+                            Key = "menu_header_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "home_our_speciality_subtitle"
+                            Value = "menu_header_title"
                         },
                         new
                         {
                             Id = 282,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_our_speciality_menu_title",
+                            Key = "menu_keywords_meta",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "home_our_speciality_menu_title"
+                            Value = "menu_keywords_meta"
                         },
                         new
                         {
                             Id = 283,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_our_speciality_menu_subtitle",
+                            Key = "about_us_page_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "home_our_speciality_menu_subtitle"
+                            Value = "about_us_page_title"
                         },
                         new
                         {
                             Id = 284,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_latest_products_title",
+                            Key = "about_us_our_team_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "home_latest_products_title"
+                            Value = "about_us_our_team_title"
                         },
                         new
                         {
                             Id = 285,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_our_blogs_title",
+                            Key = "about_us_our_team_subtitle",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "home_our_blogs_title"
+                            Value = "about_us_our_team_subtitle"
                         },
                         new
                         {
                             Id = 286,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_our_blogs_subtitle",
+                            Key = "about_us_partners_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "home_our_blogs_subtitle"
+                            Value = "about_us_partners_title"
                         },
                         new
                         {
                             Id = 287,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_page_description_meta",
+                            Key = "our_blogs_page_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "home_page_description_meta"
+                            Value = "our_blogs_page_title"
                         },
                         new
                         {
                             Id = 288,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_page_header_title",
+                            Key = "our_blogs_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "home_page_header_title"
+                            Value = "our_blogs_title"
                         },
                         new
                         {
                             Id = 289,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "home_page_keywords_meta",
+                            Key = "our_blogs_subtitle",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "home_page_keywords_meta"
+                            Value = "our_blogs_subtitle"
                         },
                         new
                         {
                             Id = 290,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "menu_page_title",
+                            Key = "our_blogs_read_more_button",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "menu_page_title"
+                            Value = "our_blogs_read_more_button"
                         },
                         new
                         {
                             Id = 291,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "all_category_title",
+                            Key = "our_blogs_description_meta",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "all_category_title"
+                            Value = "our_blogs_description_meta"
                         },
                         new
                         {
                             Id = 292,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "menu_description_meta",
+                            Key = "our_blogs_header_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "menu_description_meta"
+                            Value = "our_blogs_header_title"
                         },
                         new
                         {
                             Id = 293,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "menu_header_title",
+                            Key = "our_blogs_keywords_meta",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "menu_header_title"
+                            Value = "our_blogs_keywords_meta"
                         },
                         new
                         {
                             Id = 294,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "menu_keywords_meta",
+                            Key = "single_blog_tags",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "menu_keywords_meta"
+                            Value = "single_blog_tags"
                         },
                         new
                         {
                             Id = 295,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_page_title",
+                            Key = "contact_us_page_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "about_us_page_title"
+                            Value = "contact_us_page_title"
                         },
                         new
                         {
                             Id = 296,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_our_team_title",
+                            Key = "contact_us_address_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "about_us_our_team_title"
+                            Value = "contact_us_address_title"
                         },
                         new
                         {
                             Id = 297,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_our_team_subtitle",
+                            Key = "contact_us_call_us_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "about_us_our_team_subtitle"
+                            Value = "contact_us_call_us_title"
                         },
                         new
                         {
                             Id = 298,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_partners_title",
+                            Key = "contact_us_email_us_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "about_us_partners_title"
+                            Value = "contact_us_email_us_title"
                         },
                         new
                         {
                             Id = 299,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_description_meta",
+                            Key = "contact_us_open_time_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "about_us_description_meta"
+                            Value = "contact_us_open_time_title"
                         },
                         new
                         {
                             Id = 300,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_header_title",
+                            Key = "contact_us_get_in_touch_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "about_us_header_title"
+                            Value = "contact_us_get_in_touch_title"
                         },
                         new
                         {
                             Id = 301,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_keywords_meta",
+                            Key = "contact_us_get_in_touch_subtitle",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "about_us_keywords_meta"
+                            Value = "contact_us_get_in_touch_subtitle"
                         },
                         new
                         {
                             Id = 302,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_page_title",
+                            Key = "contact_us_get_in_touch_button",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "our_blogs_page_title"
+                            Value = "contact_us_get_in_touch_button"
                         },
                         new
                         {
                             Id = 303,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_title",
+                            Key = "contact_us_get_in_touch_your_name_placeholder",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "our_blogs_title"
+                            Value = "contact_us_get_in_touch_your_name_placeholder"
                         },
                         new
                         {
                             Id = 304,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_subtitle",
+                            Key = "contact_us_get_in_touch_your_email_placeholder",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "our_blogs_subtitle"
+                            Value = "contact_us_get_in_touch_your_email_placeholder"
                         },
                         new
                         {
                             Id = 305,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_read_more_button",
+                            Key = "contact_us_get_in_touch_your_phone_placeholder",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "our_blogs_read_more_button"
+                            Value = "contact_us_get_in_touch_your_phone_placeholder"
                         },
                         new
                         {
                             Id = 306,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_description_meta",
+                            Key = "contact_us_get_in_touch_your_subject_placeholder",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "our_blogs_description_meta"
+                            Value = "contact_us_get_in_touch_your_subject_placeholder"
                         },
                         new
                         {
                             Id = 307,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_header_title",
+                            Key = "contact_us_get_in_touch_your_message_placeholder",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "our_blogs_header_title"
+                            Value = "contact_us_get_in_touch_your_message_placeholder"
                         },
                         new
                         {
                             Id = 308,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "our_blogs_keywords_meta",
+                            Key = "faq_page_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "our_blogs_keywords_meta"
+                            Value = "faq_page_title"
                         },
                         new
                         {
                             Id = 309,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_blog_tags",
+                            Key = "faq_page_description_meta",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "single_blog_tags"
+                            Value = "faq_page_description_meta"
                         },
                         new
                         {
                             Id = 310,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_page_title",
+                            Key = "faq_page_header_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "contact_us_page_title"
+                            Value = "faq_page_header_title"
                         },
                         new
                         {
                             Id = 311,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_address_title",
+                            Key = "faq_page_keywords_meta",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "contact_us_address_title"
+                            Value = "faq_page_keywords_meta"
                         },
                         new
                         {
                             Id = 312,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_call_us_title",
+                            Key = "products_page_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "contact_us_call_us_title"
+                            Value = "products_page_title"
                         },
                         new
                         {
                             Id = 313,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_email_us_title",
+                            Key = "products_filter_category_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "contact_us_email_us_title"
+                            Value = "products_filter_category_title"
                         },
                         new
                         {
                             Id = 314,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_open_time_title",
+                            Key = "products_filter_brands_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "contact_us_open_time_title"
+                            Value = "products_filter_brands_title"
                         },
                         new
                         {
                             Id = 315,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_title",
+                            Key = "products_filter_price_range_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_title"
+                            Value = "products_filter_price_range_title"
                         },
                         new
                         {
                             Id = 316,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_subtitle",
+                            Key = "products_filter_search_button",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_subtitle"
+                            Value = "products_filter_search_button"
                         },
                         new
                         {
                             Id = 317,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_button",
+                            Key = "products_sort_by_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_button"
+                            Value = "products_sort_by_title"
                         },
                         new
                         {
                             Id = 318,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_your_name_placeholder",
+                            Key = "products_sort_by_latest_items_option",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_your_name_placeholder"
+                            Value = "products_sort_by_latest_items_option"
                         },
                         new
                         {
                             Id = 319,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_your_email_placeholder",
+                            Key = "products_sort_by_best_seller_items_option",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_your_email_placeholder"
+                            Value = "products_sort_by_best_seller_items_option"
                         },
                         new
                         {
                             Id = 320,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_your_phone_placeholder",
+                            Key = "products_sort_by_price_low_to_high_option",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_your_phone_placeholder"
+                            Value = "products_sort_by_price_low_to_high_option"
                         },
                         new
                         {
                             Id = 321,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_your_subject_placeholder",
+                            Key = "products_sort_by_price_high_to_low_option",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_your_subject_placeholder"
+                            Value = "products_sort_by_price_high_to_low_option"
                         },
                         new
                         {
                             Id = 322,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_get_in_touch_your_message_placeholder",
+                            Key = "products_page_description_meta",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "contact_us_get_in_touch_your_message_placeholder"
+                            Value = "products_page_description_meta"
                         },
                         new
                         {
                             Id = 323,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_description_meta",
+                            Key = "products_page_header_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "contact_us_description_meta"
+                            Value = "products_page_header_title"
                         },
                         new
                         {
                             Id = 324,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_header_title",
+                            Key = "products_page_keywords_meta",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "contact_us_header_title"
+                            Value = "products_page_keywords_meta"
                         },
                         new
                         {
                             Id = 325,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_keywords_meta",
+                            Key = "single_product_quantity_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "contact_us_keywords_meta"
+                            Value = "single_product_quantity_title"
                         },
                         new
                         {
                             Id = 326,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "faq_page_title",
+                            Key = "single_product_sku_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "faq_page_title"
+                            Value = "single_product_sku_title"
                         },
                         new
                         {
                             Id = 327,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "faq_page_description_meta",
+                            Key = "single_product_category_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "faq_page_description_meta"
+                            Value = "single_product_category_title"
                         },
                         new
                         {
                             Id = 328,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "faq_page_header_title",
+                            Key = "single_product_brand_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "faq_page_header_title"
+                            Value = "single_product_brand_title"
                         },
                         new
                         {
                             Id = 329,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "faq_page_keywords_meta",
+                            Key = "single_product_tags_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "faq_page_keywords_meta"
+                            Value = "single_product_tags_title"
                         },
                         new
                         {
                             Id = 330,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_page_title",
+                            Key = "single_product_description_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "products_page_title"
+                            Value = "single_product_description_title"
                         },
                         new
                         {
                             Id = 331,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_filter_category_title",
+                            Key = "single_product_additional_info_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "products_filter_category_title"
+                            Value = "single_product_additional_info_title"
                         },
                         new
                         {
                             Id = 332,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_filter_brands_title",
+                            Key = "single_product_documents_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "products_filter_brands_title"
+                            Value = "single_product_documents_title"
                         },
                         new
                         {
                             Id = 333,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_filter_price_range_title",
+                            Key = "single_product_related_items_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "products_filter_price_range_title"
+                            Value = "single_product_related_items_title"
                         },
                         new
                         {
                             Id = 334,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_filter_search_button",
+                            Key = "orders_page_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "products_filter_search_button"
+                            Value = "orders_page_title"
                         },
                         new
                         {
                             Id = 335,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_sort_by_title",
+                            Key = "orders_page_your_orders_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "products_sort_by_title"
+                            Value = "orders_page_your_orders_title"
                         },
                         new
                         {
                             Id = 336,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_sort_by_latest_items_option",
+                            Key = "orders_page_your_informations_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "products_sort_by_latest_items_option"
+                            Value = "orders_page_your_informations_title"
                         },
                         new
                         {
                             Id = 337,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_sort_by_best_seller_items_option",
+                            Key = "orders_page_your_orders_image_th",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "products_sort_by_best_seller_items_option"
+                            Value = "orders_page_your_orders_image_th"
                         },
                         new
                         {
                             Id = 338,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_sort_by_price_low_to_high_option",
+                            Key = "orders_page_your_orders_name_th",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "products_sort_by_price_low_to_high_option"
+                            Value = "orders_page_your_orders_name_th"
                         },
                         new
                         {
                             Id = 339,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_sort_by_price_high_to_low_option",
+                            Key = "orders_page_your_orders_price_th",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "products_sort_by_price_high_to_low_option"
+                            Value = "orders_page_your_orders_price_th"
                         },
                         new
                         {
                             Id = 340,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_page_description_meta",
+                            Key = "orders_page_your_orders_quantity_th",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "products_page_description_meta"
+                            Value = "orders_page_your_orders_quantity_th"
                         },
                         new
                         {
                             Id = 341,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_page_header_title",
+                            Key = "orders_page_your_orders_subtotal_th",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "products_page_header_title"
+                            Value = "orders_page_your_orders_subtotal_th"
                         },
                         new
                         {
                             Id = 342,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "products_page_keywords_meta",
+                            Key = "orders_page_your_products_category",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "products_page_keywords_meta"
+                            Value = "orders_page_your_products_category"
                         },
                         new
                         {
                             Id = 343,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_quantity_title",
+                            Key = "orders_page_your_products_brand",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "single_product_quantity_title"
+                            Value = "orders_page_your_products_brand"
                         },
                         new
                         {
                             Id = 344,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_sku_title",
+                            Key = "orders_page_your_informations_first_name_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "single_product_sku_title"
+                            Value = "orders_page_your_informations_first_name_title"
                         },
                         new
                         {
                             Id = 345,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_category_title",
+                            Key = "orders_page_your_informations_first_name_placeholder",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "single_product_category_title"
+                            Value = "orders_page_your_informations_first_name_placeholder"
                         },
                         new
                         {
                             Id = 346,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_brand_title",
+                            Key = "orders_page_your_informations_last_name_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "single_product_brand_title"
+                            Value = "orders_page_your_informations_last_name_title"
                         },
                         new
                         {
                             Id = 347,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_tags_title",
+                            Key = "orders_page_your_informations_last_name_placeholder",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "single_product_tags_title"
+                            Value = "orders_page_your_informations_last_name_placeholder"
                         },
                         new
                         {
                             Id = 348,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_description_title",
+                            Key = "orders_page_your_informations_email_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "single_product_description_title"
+                            Value = "orders_page_your_informations_email_title"
                         },
                         new
                         {
                             Id = 349,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_additional_info_title",
+                            Key = "orders_page_your_informations_email_placeholder",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "single_product_additional_info_title"
+                            Value = "orders_page_your_informations_email_placeholder"
                         },
                         new
                         {
                             Id = 350,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_documents_title",
+                            Key = "orders_page_your_informations_phone_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "single_product_documents_title"
+                            Value = "orders_page_your_informations_phone_title"
                         },
                         new
                         {
                             Id = 351,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "single_product_related_items_title",
+                            Key = "orders_page_your_informations_phone_placeholder",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "single_product_related_items_title"
+                            Value = "orders_page_your_informations_phone_placeholder"
                         },
                         new
                         {
                             Id = 352,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_title",
+                            Key = "orders_page_your_informations_address_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_title"
+                            Value = "orders_page_your_informations_address_title"
                         },
                         new
                         {
                             Id = 353,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_orders_title",
+                            Key = "orders_page_your_informations_address_placeholder",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_orders_title"
+                            Value = "orders_page_your_informations_address_placeholder"
                         },
                         new
                         {
                             Id = 354,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_title",
+                            Key = "orders_page_your_informations_description_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_informations_title"
+                            Value = "orders_page_your_informations_description_title"
                         },
                         new
                         {
                             Id = 355,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_orders_image_th",
+                            Key = "orders_page_your_cart_summary_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_orders_image_th"
+                            Value = "orders_page_your_cart_summary_title"
                         },
                         new
                         {
                             Id = 356,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_orders_name_th",
+                            Key = "orders_page_your_cart_summary_subtotal",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_orders_name_th"
+                            Value = "orders_page_your_cart_summary_subtotal"
                         },
                         new
                         {
                             Id = 357,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_orders_price_th",
+                            Key = "orders_page_your_cart_summary_discount",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_orders_price_th"
+                            Value = "orders_page_your_cart_summary_discount"
                         },
                         new
                         {
                             Id = 358,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_orders_quantity_th",
+                            Key = "orders_page_your_cart_summary_totalPrice",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_orders_quantity_th"
+                            Value = "orders_page_your_cart_summary_totalPrice"
                         },
                         new
                         {
                             Id = 359,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_orders_subtotal_th",
+                            Key = "orders_page_your_cart_summary_checkout_now",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_orders_subtotal_th"
+                            Value = "orders_page_your_cart_summary_checkout_now"
                         },
                         new
                         {
                             Id = 360,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_products_category",
+                            Key = "orders_page_your_cart_is_empty_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_products_category"
+                            Value = "orders_page_your_cart_is_empty_title"
                         },
                         new
                         {
                             Id = 361,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_products_brand",
+                            Key = "orders_page_your_cart_is_empty_subtitle",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_products_brand"
+                            Value = "orders_page_your_cart_is_empty_subtitle"
                         },
                         new
                         {
                             Id = 362,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_first_name_title",
+                            Key = "orders_page_your_cart_is_empty_go_back_home_button",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_informations_first_name_title"
+                            Value = "orders_page_your_cart_is_empty_go_back_home_button"
                         },
                         new
                         {
                             Id = 363,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_first_name_placeholder",
+                            Key = "success_message_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_informations_first_name_placeholder"
+                            Value = "success_message_title"
                         },
                         new
                         {
                             Id = 364,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_last_name_title",
+                            Key = "success_message",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_informations_last_name_title"
+                            Value = "success_message"
                         },
                         new
                         {
                             Id = 365,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_last_name_placeholder",
+                            Key = "error_message_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_informations_last_name_placeholder"
+                            Value = "error_message_title"
                         },
                         new
                         {
                             Id = 366,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_email_title",
+                            Key = "error_message",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_informations_email_title"
+                            Value = "error_message"
                         },
                         new
                         {
                             Id = 367,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_email_placeholder",
+                            Key = "add_in_cart_message",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_informations_email_placeholder"
+                            Value = "add_in_cart_message"
                         },
                         new
                         {
                             Id = 368,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_phone_title",
+                            Key = "success_order_message_title",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_informations_phone_title"
+                            Value = "success_order_message_title"
                         },
                         new
                         {
                             Id = 369,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_phone_placeholder",
+                            Key = "success_order_message",
                             LanguageKey = "az",
                             Type = 2,
-                            Value = "orders_page_your_informations_phone_placeholder"
+                            Value = "success_order_message"
                         },
                         new
                         {
                             Id = 370,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_address_title",
-                            LanguageKey = "az",
+                            Key = "add_to_cart",
+                            LanguageKey = "ru",
                             Type = 2,
-                            Value = "orders_page_your_informations_address_title"
+                            Value = "add_to_cart"
                         },
                         new
                         {
                             Id = 371,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_address_placeholder",
-                            LanguageKey = "az",
+                            Key = "loading_title",
+                            LanguageKey = "ru",
                             Type = 2,
-                            Value = "orders_page_your_informations_address_placeholder"
+                            Value = "loading_title"
                         },
                         new
                         {
                             Id = 372,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_informations_description_title",
-                            LanguageKey = "az",
+                            Key = "view_more_button",
+                            LanguageKey = "ru",
                             Type = 2,
-                            Value = "orders_page_your_informations_description_title"
+                            Value = "view_more_button"
                         },
                         new
                         {
                             Id = 373,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_summary_title",
-                            LanguageKey = "az",
+                            Key = "follow_us_title",
+                            LanguageKey = "ru",
                             Type = 2,
-                            Value = "orders_page_your_cart_summary_title"
+                            Value = "header_follow_us_title"
                         },
                         new
                         {
                             Id = 374,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_summary_subtotal",
-                            LanguageKey = "az",
+                            Key = "header_whatsapp_title",
+                            LanguageKey = "ru",
                             Type = 2,
-                            Value = "orders_page_your_cart_summary_subtotal"
+                            Value = "header_whatsapp_title"
                         },
                         new
                         {
                             Id = 375,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_summary_discount",
-                            LanguageKey = "az",
+                            Key = "header_whatsapp_sub_title",
+                            LanguageKey = "ru",
                             Type = 2,
-                            Value = "orders_page_your_cart_summary_discount"
+                            Value = "header_whatsapp_sub_title"
                         },
                         new
                         {
                             Id = 376,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_summary_totalPrice",
-                            LanguageKey = "az",
+                            Key = "header_my_cart_title",
+                            LanguageKey = "ru",
                             Type = 2,
-                            Value = "orders_page_your_cart_summary_totalPrice"
+                            Value = "header_my_cart_title"
                         },
                         new
                         {
                             Id = 377,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_summary_checkout_now",
-                            LanguageKey = "az",
+                            Key = "header_cart_is_empty",
+                            LanguageKey = "ru",
                             Type = 2,
-                            Value = "orders_page_your_cart_summary_checkout_now"
+                            Value = "header_cart_is_empty"
                         },
                         new
                         {
                             Id = 378,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_is_empty_title",
-                            LanguageKey = "az",
+                            Key = "header_cart_total",
+                            LanguageKey = "ru",
                             Type = 2,
-                            Value = "orders_page_your_cart_is_empty_title"
+                            Value = "header_cart_total"
                         },
                         new
                         {
                             Id = 379,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_is_empty_subtitle",
-                            LanguageKey = "az",
+                            Key = "header_cart_checkout_button",
+                            LanguageKey = "ru",
                             Type = 2,
-                            Value = "orders_page_your_cart_is_empty_subtitle"
+                            Value = "header_cart_checkout_button"
                         },
                         new
                         {
                             Id = 380,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "orders_page_your_cart_is_empty_go_back_home_button",
-                            LanguageKey = "az",
+                            Key = "header_all_categories",
+                            LanguageKey = "ru",
                             Type = 2,
-                            Value = "orders_page_your_cart_is_empty_go_back_home_button"
+                            Value = "header_all_categories"
                         },
                         new
                         {
                             Id = 381,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "success_message_title",
-                            LanguageKey = "az",
+                            Key = "header_search_here",
+                            LanguageKey = "ru",
                             Type = 2,
-                            Value = "success_message_title"
+                            Value = "header_search_here"
                         },
                         new
                         {
                             Id = 382,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "success_message",
-                            LanguageKey = "az",
+                            Key = "header_cart_search_here",
+                            LanguageKey = "ru",
                             Type = 2,
-                            Value = "success_message"
+                            Value = "header_cart_search_here"
                         },
                         new
                         {
                             Id = 383,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "error_message_title",
-                            LanguageKey = "az",
+                            Key = "header_extra_pages",
+                            LanguageKey = "ru",
                             Type = 2,
-                            Value = "error_message_title"
+                            Value = "header_extra_pages"
                         },
                         new
                         {
                             Id = 384,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "error_message",
-                            LanguageKey = "az",
-                            Type = 2,
-                            Value = "error_message"
+                            Key = "footer_title",
+                            LanguageKey = "ru",
+                            Type = 3,
+                            Value = "footer_title"
                         },
                         new
                         {
                             Id = 385,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "add_in_cart_message",
-                            LanguageKey = "az",
+                            Key = "footer_copyright",
+                            LanguageKey = "ru",
                             Type = 2,
-                            Value = "add_in_cart_message"
+                            Value = "footer_copyright"
                         },
                         new
                         {
                             Id = 386,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "success_order_message_title",
-                            LanguageKey = "az",
+                            Key = "footer_link_list",
+                            LanguageKey = "ru",
                             Type = 2,
-                            Value = "success_order_message_title"
+                            Value = "footer_link_list"
                         },
                         new
                         {
                             Id = 387,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "success_order_message",
-                            LanguageKey = "az",
+                            Key = "footer_category_list",
+                            LanguageKey = "ru",
                             Type = 2,
-                            Value = "success_order_message"
+                            Value = "footer_category_list"
                         },
                         new
                         {
                             Id = 388,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "add_to_cart",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "add_to_cart"
-                        },
-                        new
-                        {
-                            Id = 389,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "loading_title",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "loading_title"
-                        },
-                        new
-                        {
-                            Id = 390,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "view_more_button",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "view_more_button"
-                        },
-                        new
-                        {
-                            Id = 391,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "follow_us_title",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "header_follow_us_title"
-                        },
-                        new
-                        {
-                            Id = 392,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_whatsapp_title",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "header_whatsapp_title"
-                        },
-                        new
-                        {
-                            Id = 393,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_whatsapp_sub_title",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "header_whatsapp_sub_title"
-                        },
-                        new
-                        {
-                            Id = 394,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_my_cart_title",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "header_my_cart_title"
-                        },
-                        new
-                        {
-                            Id = 395,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_cart_is_empty",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "header_cart_is_empty"
-                        },
-                        new
-                        {
-                            Id = 396,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_cart_total",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "header_cart_total"
-                        },
-                        new
-                        {
-                            Id = 397,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_cart_checkout_button",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "header_cart_checkout_button"
-                        },
-                        new
-                        {
-                            Id = 398,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_all_categories",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "header_all_categories"
-                        },
-                        new
-                        {
-                            Id = 399,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_search_here",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "header_search_here"
-                        },
-                        new
-                        {
-                            Id = 400,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_cart_search_here",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "header_cart_search_here"
-                        },
-                        new
-                        {
-                            Id = 401,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "header_extra_pages",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "header_extra_pages"
-                        },
-                        new
-                        {
-                            Id = 402,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "footer_title",
-                            LanguageKey = "ru",
-                            Type = 3,
-                            Value = "footer_title"
-                        },
-                        new
-                        {
-                            Id = 403,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "footer_copyright",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "footer_copyright"
-                        },
-                        new
-                        {
-                            Id = 404,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "footer_link_list",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "footer_link_list"
-                        },
-                        new
-                        {
-                            Id = 405,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "footer_category_list",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "footer_category_list"
-                        },
-                        new
-                        {
-                            Id = 406,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "footer_extra_page_list",
                             LanguageKey = "ru",
                             Type = 2,
@@ -4475,7 +4322,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 407,
+                            Id = 389,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "added_cart_title",
                             LanguageKey = "ru",
@@ -4484,7 +4331,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 408,
+                            Id = 390,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_page_title",
                             LanguageKey = "ru",
@@ -4493,7 +4340,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 409,
+                            Id = 391,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_our_speciality_title",
                             LanguageKey = "ru",
@@ -4502,7 +4349,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 410,
+                            Id = 392,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_our_speciality_subtitle",
                             LanguageKey = "ru",
@@ -4511,7 +4358,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 411,
+                            Id = 393,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_our_speciality_menu_title",
                             LanguageKey = "ru",
@@ -4520,7 +4367,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 412,
+                            Id = 394,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_our_speciality_menu_subtitle",
                             LanguageKey = "ru",
@@ -4529,7 +4376,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 413,
+                            Id = 395,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_latest_products_title",
                             LanguageKey = "ru",
@@ -4538,7 +4385,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 414,
+                            Id = 396,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_our_blogs_title",
                             LanguageKey = "ru",
@@ -4547,7 +4394,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 415,
+                            Id = 397,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_our_blogs_subtitle",
                             LanguageKey = "ru",
@@ -4556,7 +4403,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 416,
+                            Id = 398,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_page_description_meta",
                             LanguageKey = "ru",
@@ -4565,7 +4412,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 417,
+                            Id = 399,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_page_header_title",
                             LanguageKey = "ru",
@@ -4574,7 +4421,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 418,
+                            Id = 400,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_page_keywords_meta",
                             LanguageKey = "ru",
@@ -4583,7 +4430,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 419,
+                            Id = 401,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "menu_page_title",
                             LanguageKey = "ru",
@@ -4592,7 +4439,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 420,
+                            Id = 402,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "all_category_title",
                             LanguageKey = "ru",
@@ -4601,7 +4448,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 421,
+                            Id = 403,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "menu_description_meta",
                             LanguageKey = "ru",
@@ -4610,7 +4457,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 422,
+                            Id = 404,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "menu_header_title",
                             LanguageKey = "ru",
@@ -4619,7 +4466,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 423,
+                            Id = 405,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "menu_keywords_meta",
                             LanguageKey = "ru",
@@ -4628,7 +4475,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 424,
+                            Id = 406,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "about_us_page_title",
                             LanguageKey = "ru",
@@ -4637,7 +4484,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 425,
+                            Id = 407,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "about_us_our_team_title",
                             LanguageKey = "ru",
@@ -4646,7 +4493,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 426,
+                            Id = 408,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "about_us_our_team_subtitle",
                             LanguageKey = "ru",
@@ -4655,7 +4502,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 427,
+                            Id = 409,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "about_us_partners_title",
                             LanguageKey = "ru",
@@ -4664,34 +4511,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 428,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_description_meta",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "about_us_description_meta"
-                        },
-                        new
-                        {
-                            Id = 429,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_header_title",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "about_us_header_title"
-                        },
-                        new
-                        {
-                            Id = 430,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_keywords_meta",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "about_us_keywords_meta"
-                        },
-                        new
-                        {
-                            Id = 431,
+                            Id = 410,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "our_blogs_page_title",
                             LanguageKey = "ru",
@@ -4700,7 +4520,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 432,
+                            Id = 411,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "our_blogs_title",
                             LanguageKey = "ru",
@@ -4709,7 +4529,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 433,
+                            Id = 412,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "our_blogs_subtitle",
                             LanguageKey = "ru",
@@ -4718,7 +4538,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 434,
+                            Id = 413,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "our_blogs_read_more_button",
                             LanguageKey = "ru",
@@ -4727,7 +4547,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 435,
+                            Id = 414,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "our_blogs_description_meta",
                             LanguageKey = "ru",
@@ -4736,7 +4556,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 436,
+                            Id = 415,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "our_blogs_header_title",
                             LanguageKey = "ru",
@@ -4745,7 +4565,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 437,
+                            Id = 416,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "our_blogs_keywords_meta",
                             LanguageKey = "ru",
@@ -4754,7 +4574,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 438,
+                            Id = 417,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_blog_tags",
                             LanguageKey = "ru",
@@ -4763,7 +4583,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 439,
+                            Id = 418,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_page_title",
                             LanguageKey = "ru",
@@ -4772,7 +4592,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 440,
+                            Id = 419,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_address_title",
                             LanguageKey = "ru",
@@ -4781,7 +4601,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 441,
+                            Id = 420,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_call_us_title",
                             LanguageKey = "ru",
@@ -4790,7 +4610,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 442,
+                            Id = 421,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_email_us_title",
                             LanguageKey = "ru",
@@ -4799,7 +4619,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 443,
+                            Id = 422,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_open_time_title",
                             LanguageKey = "ru",
@@ -4808,7 +4628,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 444,
+                            Id = 423,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_get_in_touch_title",
                             LanguageKey = "ru",
@@ -4817,7 +4637,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 445,
+                            Id = 424,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_get_in_touch_subtitle",
                             LanguageKey = "ru",
@@ -4826,7 +4646,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 446,
+                            Id = 425,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_get_in_touch_button",
                             LanguageKey = "ru",
@@ -4835,7 +4655,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 447,
+                            Id = 426,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_get_in_touch_your_name_placeholder",
                             LanguageKey = "ru",
@@ -4844,7 +4664,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 448,
+                            Id = 427,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_get_in_touch_your_email_placeholder",
                             LanguageKey = "ru",
@@ -4853,7 +4673,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 449,
+                            Id = 428,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_get_in_touch_your_phone_placeholder",
                             LanguageKey = "ru",
@@ -4862,7 +4682,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 450,
+                            Id = 429,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_get_in_touch_your_subject_placeholder",
                             LanguageKey = "ru",
@@ -4871,7 +4691,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 451,
+                            Id = 430,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_get_in_touch_your_message_placeholder",
                             LanguageKey = "ru",
@@ -4880,34 +4700,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 452,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_description_meta",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "contact_us_description_meta"
-                        },
-                        new
-                        {
-                            Id = 453,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_header_title",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "contact_us_header_title"
-                        },
-                        new
-                        {
-                            Id = 454,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_keywords_meta",
-                            LanguageKey = "ru",
-                            Type = 2,
-                            Value = "contact_us_keywords_meta"
-                        },
-                        new
-                        {
-                            Id = 455,
+                            Id = 431,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "faq_page_title",
                             LanguageKey = "ru",
@@ -4916,7 +4709,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 456,
+                            Id = 432,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "faq_page_description_meta",
                             LanguageKey = "ru",
@@ -4925,7 +4718,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 457,
+                            Id = 433,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "faq_page_header_title",
                             LanguageKey = "ru",
@@ -4934,7 +4727,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 458,
+                            Id = 434,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "faq_page_keywords_meta",
                             LanguageKey = "ru",
@@ -4943,7 +4736,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 459,
+                            Id = 435,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_page_title",
                             LanguageKey = "ru",
@@ -4952,7 +4745,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 460,
+                            Id = 436,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_filter_category_title",
                             LanguageKey = "ru",
@@ -4961,7 +4754,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 461,
+                            Id = 437,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_filter_brands_title",
                             LanguageKey = "ru",
@@ -4970,7 +4763,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 462,
+                            Id = 438,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_filter_price_range_title",
                             LanguageKey = "ru",
@@ -4979,7 +4772,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 463,
+                            Id = 439,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_filter_search_button",
                             LanguageKey = "ru",
@@ -4988,7 +4781,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 464,
+                            Id = 440,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_sort_by_title",
                             LanguageKey = "ru",
@@ -4997,7 +4790,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 465,
+                            Id = 441,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_sort_by_latest_items_option",
                             LanguageKey = "ru",
@@ -5006,7 +4799,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 466,
+                            Id = 442,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_sort_by_best_seller_items_option",
                             LanguageKey = "ru",
@@ -5015,7 +4808,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 467,
+                            Id = 443,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_sort_by_price_low_to_high_option",
                             LanguageKey = "ru",
@@ -5024,7 +4817,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 468,
+                            Id = 444,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_sort_by_price_high_to_low_option",
                             LanguageKey = "ru",
@@ -5033,7 +4826,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 469,
+                            Id = 445,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_page_description_meta",
                             LanguageKey = "ru",
@@ -5042,7 +4835,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 470,
+                            Id = 446,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_page_header_title",
                             LanguageKey = "ru",
@@ -5051,7 +4844,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 471,
+                            Id = 447,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_page_keywords_meta",
                             LanguageKey = "ru",
@@ -5060,7 +4853,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 472,
+                            Id = 448,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_product_quantity_title",
                             LanguageKey = "ru",
@@ -5069,7 +4862,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 473,
+                            Id = 449,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_product_sku_title",
                             LanguageKey = "ru",
@@ -5078,7 +4871,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 474,
+                            Id = 450,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_product_category_title",
                             LanguageKey = "ru",
@@ -5087,7 +4880,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 475,
+                            Id = 451,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_product_brand_title",
                             LanguageKey = "ru",
@@ -5096,7 +4889,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 476,
+                            Id = 452,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_product_tags_title",
                             LanguageKey = "ru",
@@ -5105,7 +4898,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 477,
+                            Id = 453,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_product_description_title",
                             LanguageKey = "ru",
@@ -5114,7 +4907,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 478,
+                            Id = 454,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_product_additional_info_title",
                             LanguageKey = "ru",
@@ -5123,7 +4916,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 479,
+                            Id = 455,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_product_documents_title",
                             LanguageKey = "ru",
@@ -5132,7 +4925,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 480,
+                            Id = 456,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_product_related_items_title",
                             LanguageKey = "ru",
@@ -5141,7 +4934,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 481,
+                            Id = 457,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_title",
                             LanguageKey = "ru",
@@ -5150,7 +4943,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 482,
+                            Id = 458,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_orders_title",
                             LanguageKey = "ru",
@@ -5159,7 +4952,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 483,
+                            Id = 459,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_title",
                             LanguageKey = "ru",
@@ -5168,7 +4961,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 484,
+                            Id = 460,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_orders_image_th",
                             LanguageKey = "ru",
@@ -5177,7 +4970,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 485,
+                            Id = 461,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_orders_name_th",
                             LanguageKey = "ru",
@@ -5186,7 +4979,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 486,
+                            Id = 462,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_orders_price_th",
                             LanguageKey = "ru",
@@ -5195,7 +4988,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 487,
+                            Id = 463,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_orders_quantity_th",
                             LanguageKey = "ru",
@@ -5204,7 +4997,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 488,
+                            Id = 464,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_orders_subtotal_th",
                             LanguageKey = "ru",
@@ -5213,7 +5006,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 489,
+                            Id = 465,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_products_category",
                             LanguageKey = "ru",
@@ -5222,7 +5015,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 490,
+                            Id = 466,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_products_brand",
                             LanguageKey = "ru",
@@ -5231,7 +5024,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 491,
+                            Id = 467,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_first_name_title",
                             LanguageKey = "ru",
@@ -5240,7 +5033,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 492,
+                            Id = 468,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_first_name_placeholder",
                             LanguageKey = "ru",
@@ -5249,7 +5042,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 493,
+                            Id = 469,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_last_name_title",
                             LanguageKey = "ru",
@@ -5258,7 +5051,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 494,
+                            Id = 470,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_last_name_placeholder",
                             LanguageKey = "ru",
@@ -5267,7 +5060,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 495,
+                            Id = 471,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_email_title",
                             LanguageKey = "ru",
@@ -5276,7 +5069,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 496,
+                            Id = 472,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_email_placeholder",
                             LanguageKey = "ru",
@@ -5285,7 +5078,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 497,
+                            Id = 473,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_phone_title",
                             LanguageKey = "ru",
@@ -5294,7 +5087,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 498,
+                            Id = 474,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_phone_placeholder",
                             LanguageKey = "ru",
@@ -5303,7 +5096,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 499,
+                            Id = 475,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_address_title",
                             LanguageKey = "ru",
@@ -5312,7 +5105,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 500,
+                            Id = 476,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_address_placeholder",
                             LanguageKey = "ru",
@@ -5321,7 +5114,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 501,
+                            Id = 477,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_description_title",
                             LanguageKey = "ru",
@@ -5330,7 +5123,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 502,
+                            Id = 478,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_cart_summary_title",
                             LanguageKey = "ru",
@@ -5339,7 +5132,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 503,
+                            Id = 479,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_cart_summary_subtotal",
                             LanguageKey = "ru",
@@ -5348,7 +5141,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 504,
+                            Id = 480,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_cart_summary_discount",
                             LanguageKey = "ru",
@@ -5357,7 +5150,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 505,
+                            Id = 481,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_cart_summary_totalPrice",
                             LanguageKey = "ru",
@@ -5366,7 +5159,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 506,
+                            Id = 482,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_cart_summary_checkout_now",
                             LanguageKey = "ru",
@@ -5375,7 +5168,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 507,
+                            Id = 483,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_cart_is_empty_title",
                             LanguageKey = "ru",
@@ -5384,7 +5177,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 508,
+                            Id = 484,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_cart_is_empty_subtitle",
                             LanguageKey = "ru",
@@ -5393,7 +5186,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 509,
+                            Id = 485,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_cart_is_empty_go_back_home_button",
                             LanguageKey = "ru",
@@ -5402,7 +5195,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 510,
+                            Id = 486,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "success_message_title",
                             LanguageKey = "ru",
@@ -5411,7 +5204,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 511,
+                            Id = 487,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "success_message",
                             LanguageKey = "ru",
@@ -5420,7 +5213,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 512,
+                            Id = 488,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "error_message_title",
                             LanguageKey = "ru",
@@ -5429,7 +5222,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 513,
+                            Id = 489,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "error_message",
                             LanguageKey = "ru",
@@ -5438,7 +5231,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 514,
+                            Id = 490,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "add_in_cart_message",
                             LanguageKey = "ru",
@@ -5447,7 +5240,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 515,
+                            Id = 491,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "success_order_message_title",
                             LanguageKey = "ru",
@@ -5456,7 +5249,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 516,
+                            Id = 492,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "success_order_message",
                             LanguageKey = "ru",
@@ -5465,7 +5258,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 517,
+                            Id = 493,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "add_to_cart",
                             LanguageKey = "tr",
@@ -5474,7 +5267,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 518,
+                            Id = 494,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "loading_title",
                             LanguageKey = "tr",
@@ -5483,7 +5276,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 519,
+                            Id = 495,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "view_more_button",
                             LanguageKey = "tr",
@@ -5492,7 +5285,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 520,
+                            Id = 496,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "follow_us_title",
                             LanguageKey = "tr",
@@ -5501,7 +5294,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 521,
+                            Id = 497,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "header_whatsapp_title",
                             LanguageKey = "tr",
@@ -5510,7 +5303,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 522,
+                            Id = 498,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "header_whatsapp_sub_title",
                             LanguageKey = "tr",
@@ -5519,7 +5312,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 523,
+                            Id = 499,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "header_my_cart_title",
                             LanguageKey = "tr",
@@ -5528,7 +5321,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 524,
+                            Id = 500,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "header_cart_is_empty",
                             LanguageKey = "tr",
@@ -5537,7 +5330,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 525,
+                            Id = 501,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "header_cart_total",
                             LanguageKey = "tr",
@@ -5546,7 +5339,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 526,
+                            Id = 502,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "header_cart_checkout_button",
                             LanguageKey = "tr",
@@ -5555,7 +5348,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 527,
+                            Id = 503,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "header_all_categories",
                             LanguageKey = "tr",
@@ -5564,7 +5357,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 528,
+                            Id = 504,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "header_search_here",
                             LanguageKey = "tr",
@@ -5573,7 +5366,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 529,
+                            Id = 505,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "header_cart_search_here",
                             LanguageKey = "tr",
@@ -5582,7 +5375,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 530,
+                            Id = 506,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "header_extra_pages",
                             LanguageKey = "tr",
@@ -5591,7 +5384,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 531,
+                            Id = 507,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "footer_title",
                             LanguageKey = "tr",
@@ -5600,7 +5393,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 532,
+                            Id = 508,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "footer_copyright",
                             LanguageKey = "tr",
@@ -5609,7 +5402,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 533,
+                            Id = 509,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "footer_link_list",
                             LanguageKey = "tr",
@@ -5618,7 +5411,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 534,
+                            Id = 510,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "footer_category_list",
                             LanguageKey = "tr",
@@ -5627,7 +5420,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 535,
+                            Id = 511,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "footer_extra_page_list",
                             LanguageKey = "tr",
@@ -5636,7 +5429,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 536,
+                            Id = 512,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "added_cart_title",
                             LanguageKey = "tr",
@@ -5645,7 +5438,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 537,
+                            Id = 513,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_page_title",
                             LanguageKey = "tr",
@@ -5654,7 +5447,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 538,
+                            Id = 514,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_our_speciality_title",
                             LanguageKey = "tr",
@@ -5663,7 +5456,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 539,
+                            Id = 515,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_our_speciality_subtitle",
                             LanguageKey = "tr",
@@ -5672,7 +5465,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 540,
+                            Id = 516,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_our_speciality_menu_title",
                             LanguageKey = "tr",
@@ -5681,7 +5474,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 541,
+                            Id = 517,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_our_speciality_menu_subtitle",
                             LanguageKey = "tr",
@@ -5690,7 +5483,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 542,
+                            Id = 518,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_latest_products_title",
                             LanguageKey = "tr",
@@ -5699,7 +5492,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 543,
+                            Id = 519,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_our_blogs_title",
                             LanguageKey = "tr",
@@ -5708,7 +5501,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 544,
+                            Id = 520,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_our_blogs_subtitle",
                             LanguageKey = "tr",
@@ -5717,7 +5510,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 545,
+                            Id = 521,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_page_description_meta",
                             LanguageKey = "tr",
@@ -5726,7 +5519,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 546,
+                            Id = 522,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_page_header_title",
                             LanguageKey = "tr",
@@ -5735,7 +5528,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 547,
+                            Id = 523,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "home_page_keywords_meta",
                             LanguageKey = "tr",
@@ -5744,7 +5537,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 548,
+                            Id = 524,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "menu_page_title",
                             LanguageKey = "tr",
@@ -5753,7 +5546,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 549,
+                            Id = 525,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "all_category_title",
                             LanguageKey = "tr",
@@ -5762,7 +5555,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 550,
+                            Id = 526,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "menu_description_meta",
                             LanguageKey = "tr",
@@ -5771,7 +5564,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 551,
+                            Id = 527,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "menu_header_title",
                             LanguageKey = "tr",
@@ -5780,7 +5573,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 552,
+                            Id = 528,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "menu_keywords_meta",
                             LanguageKey = "tr",
@@ -5789,7 +5582,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 553,
+                            Id = 529,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "about_us_page_title",
                             LanguageKey = "tr",
@@ -5798,7 +5591,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 554,
+                            Id = 530,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "about_us_our_team_title",
                             LanguageKey = "tr",
@@ -5807,7 +5600,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 555,
+                            Id = 531,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "about_us_our_team_subtitle",
                             LanguageKey = "tr",
@@ -5816,7 +5609,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 556,
+                            Id = 532,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "about_us_partners_title",
                             LanguageKey = "tr",
@@ -5825,34 +5618,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 557,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_description_meta",
-                            LanguageKey = "tr",
-                            Type = 2,
-                            Value = "about_us_description_meta"
-                        },
-                        new
-                        {
-                            Id = 558,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_header_title",
-                            LanguageKey = "tr",
-                            Type = 2,
-                            Value = "about_us_header_title"
-                        },
-                        new
-                        {
-                            Id = 559,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "about_us_keywords_meta",
-                            LanguageKey = "tr",
-                            Type = 2,
-                            Value = "about_us_keywords_meta"
-                        },
-                        new
-                        {
-                            Id = 560,
+                            Id = 533,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "our_blogs_page_title",
                             LanguageKey = "tr",
@@ -5861,7 +5627,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 561,
+                            Id = 534,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "our_blogs_title",
                             LanguageKey = "tr",
@@ -5870,7 +5636,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 562,
+                            Id = 535,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "our_blogs_subtitle",
                             LanguageKey = "tr",
@@ -5879,7 +5645,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 563,
+                            Id = 536,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "our_blogs_read_more_button",
                             LanguageKey = "tr",
@@ -5888,7 +5654,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 564,
+                            Id = 537,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "our_blogs_description_meta",
                             LanguageKey = "tr",
@@ -5897,7 +5663,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 565,
+                            Id = 538,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "our_blogs_header_title",
                             LanguageKey = "tr",
@@ -5906,7 +5672,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 566,
+                            Id = 539,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "our_blogs_keywords_meta",
                             LanguageKey = "tr",
@@ -5915,7 +5681,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 567,
+                            Id = 540,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_blog_tags",
                             LanguageKey = "tr",
@@ -5924,7 +5690,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 568,
+                            Id = 541,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_page_title",
                             LanguageKey = "tr",
@@ -5933,7 +5699,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 569,
+                            Id = 542,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_address_title",
                             LanguageKey = "tr",
@@ -5942,7 +5708,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 570,
+                            Id = 543,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_call_us_title",
                             LanguageKey = "tr",
@@ -5951,7 +5717,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 571,
+                            Id = 544,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_email_us_title",
                             LanguageKey = "tr",
@@ -5960,7 +5726,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 572,
+                            Id = 545,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_open_time_title",
                             LanguageKey = "tr",
@@ -5969,7 +5735,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 573,
+                            Id = 546,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_get_in_touch_title",
                             LanguageKey = "tr",
@@ -5978,7 +5744,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 574,
+                            Id = 547,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_get_in_touch_subtitle",
                             LanguageKey = "tr",
@@ -5987,7 +5753,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 575,
+                            Id = 548,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_get_in_touch_button",
                             LanguageKey = "tr",
@@ -5996,7 +5762,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 576,
+                            Id = 549,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_get_in_touch_your_name_placeholder",
                             LanguageKey = "tr",
@@ -6005,7 +5771,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 577,
+                            Id = 550,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_get_in_touch_your_email_placeholder",
                             LanguageKey = "tr",
@@ -6014,7 +5780,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 578,
+                            Id = 551,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_get_in_touch_your_phone_placeholder",
                             LanguageKey = "tr",
@@ -6023,7 +5789,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 579,
+                            Id = 552,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_get_in_touch_your_subject_placeholder",
                             LanguageKey = "tr",
@@ -6032,7 +5798,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 580,
+                            Id = 553,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "contact_us_get_in_touch_your_message_placeholder",
                             LanguageKey = "tr",
@@ -6041,34 +5807,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 581,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_description_meta",
-                            LanguageKey = "tr",
-                            Type = 2,
-                            Value = "contact_us_description_meta"
-                        },
-                        new
-                        {
-                            Id = 582,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_header_title",
-                            LanguageKey = "tr",
-                            Type = 2,
-                            Value = "contact_us_header_title"
-                        },
-                        new
-                        {
-                            Id = 583,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Key = "contact_us_keywords_meta",
-                            LanguageKey = "tr",
-                            Type = 2,
-                            Value = "contact_us_keywords_meta"
-                        },
-                        new
-                        {
-                            Id = 584,
+                            Id = 554,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "faq_page_title",
                             LanguageKey = "tr",
@@ -6077,7 +5816,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 585,
+                            Id = 555,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "faq_page_description_meta",
                             LanguageKey = "tr",
@@ -6086,7 +5825,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 586,
+                            Id = 556,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "faq_page_header_title",
                             LanguageKey = "tr",
@@ -6095,7 +5834,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 587,
+                            Id = 557,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "faq_page_keywords_meta",
                             LanguageKey = "tr",
@@ -6104,7 +5843,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 588,
+                            Id = 558,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_page_title",
                             LanguageKey = "tr",
@@ -6113,7 +5852,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 589,
+                            Id = 559,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_filter_category_title",
                             LanguageKey = "tr",
@@ -6122,7 +5861,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 590,
+                            Id = 560,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_filter_brands_title",
                             LanguageKey = "tr",
@@ -6131,7 +5870,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 591,
+                            Id = 561,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_filter_price_range_title",
                             LanguageKey = "tr",
@@ -6140,7 +5879,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 592,
+                            Id = 562,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_filter_search_button",
                             LanguageKey = "tr",
@@ -6149,7 +5888,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 593,
+                            Id = 563,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_sort_by_title",
                             LanguageKey = "tr",
@@ -6158,7 +5897,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 594,
+                            Id = 564,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_sort_by_latest_items_option",
                             LanguageKey = "tr",
@@ -6167,7 +5906,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 595,
+                            Id = 565,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_sort_by_best_seller_items_option",
                             LanguageKey = "tr",
@@ -6176,7 +5915,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 596,
+                            Id = 566,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_sort_by_price_low_to_high_option",
                             LanguageKey = "tr",
@@ -6185,7 +5924,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 597,
+                            Id = 567,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_sort_by_price_high_to_low_option",
                             LanguageKey = "tr",
@@ -6194,7 +5933,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 598,
+                            Id = 568,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_page_description_meta",
                             LanguageKey = "tr",
@@ -6203,7 +5942,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 599,
+                            Id = 569,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_page_header_title",
                             LanguageKey = "tr",
@@ -6212,7 +5951,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 600,
+                            Id = 570,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "products_page_keywords_meta",
                             LanguageKey = "tr",
@@ -6221,7 +5960,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 601,
+                            Id = 571,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_product_quantity_title",
                             LanguageKey = "tr",
@@ -6230,7 +5969,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 602,
+                            Id = 572,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_product_sku_title",
                             LanguageKey = "tr",
@@ -6239,7 +5978,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 603,
+                            Id = 573,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_product_category_title",
                             LanguageKey = "tr",
@@ -6248,7 +5987,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 604,
+                            Id = 574,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_product_brand_title",
                             LanguageKey = "tr",
@@ -6257,7 +5996,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 605,
+                            Id = 575,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_product_tags_title",
                             LanguageKey = "tr",
@@ -6266,7 +6005,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 606,
+                            Id = 576,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_product_description_title",
                             LanguageKey = "tr",
@@ -6275,7 +6014,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 607,
+                            Id = 577,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_product_additional_info_title",
                             LanguageKey = "tr",
@@ -6284,7 +6023,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 608,
+                            Id = 578,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_product_documents_title",
                             LanguageKey = "tr",
@@ -6293,7 +6032,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 609,
+                            Id = 579,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "single_product_related_items_title",
                             LanguageKey = "tr",
@@ -6302,7 +6041,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 610,
+                            Id = 580,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_title",
                             LanguageKey = "tr",
@@ -6311,7 +6050,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 611,
+                            Id = 581,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_orders_title",
                             LanguageKey = "tr",
@@ -6320,7 +6059,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 612,
+                            Id = 582,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_title",
                             LanguageKey = "tr",
@@ -6329,7 +6068,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 613,
+                            Id = 583,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_orders_image_th",
                             LanguageKey = "tr",
@@ -6338,7 +6077,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 614,
+                            Id = 584,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_orders_name_th",
                             LanguageKey = "tr",
@@ -6347,7 +6086,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 615,
+                            Id = 585,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_orders_price_th",
                             LanguageKey = "tr",
@@ -6356,7 +6095,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 616,
+                            Id = 586,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_orders_quantity_th",
                             LanguageKey = "tr",
@@ -6365,7 +6104,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 617,
+                            Id = 587,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_orders_subtotal_th",
                             LanguageKey = "tr",
@@ -6374,7 +6113,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 618,
+                            Id = 588,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_products_category",
                             LanguageKey = "tr",
@@ -6383,7 +6122,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 619,
+                            Id = 589,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_products_brand",
                             LanguageKey = "tr",
@@ -6392,7 +6131,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 620,
+                            Id = 590,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_first_name_title",
                             LanguageKey = "tr",
@@ -6401,7 +6140,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 621,
+                            Id = 591,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_first_name_placeholder",
                             LanguageKey = "tr",
@@ -6410,7 +6149,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 622,
+                            Id = 592,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_last_name_title",
                             LanguageKey = "tr",
@@ -6419,7 +6158,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 623,
+                            Id = 593,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_last_name_placeholder",
                             LanguageKey = "tr",
@@ -6428,7 +6167,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 624,
+                            Id = 594,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_email_title",
                             LanguageKey = "tr",
@@ -6437,7 +6176,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 625,
+                            Id = 595,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_email_placeholder",
                             LanguageKey = "tr",
@@ -6446,7 +6185,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 626,
+                            Id = 596,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_phone_title",
                             LanguageKey = "tr",
@@ -6455,7 +6194,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 627,
+                            Id = 597,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_phone_placeholder",
                             LanguageKey = "tr",
@@ -6464,7 +6203,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 628,
+                            Id = 598,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_address_title",
                             LanguageKey = "tr",
@@ -6473,7 +6212,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 629,
+                            Id = 599,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_address_placeholder",
                             LanguageKey = "tr",
@@ -6482,7 +6221,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 630,
+                            Id = 600,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_informations_description_title",
                             LanguageKey = "tr",
@@ -6491,7 +6230,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 631,
+                            Id = 601,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_cart_summary_title",
                             LanguageKey = "tr",
@@ -6500,7 +6239,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 632,
+                            Id = 602,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_cart_summary_subtotal",
                             LanguageKey = "tr",
@@ -6509,7 +6248,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 633,
+                            Id = 603,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_cart_summary_discount",
                             LanguageKey = "tr",
@@ -6518,7 +6257,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 634,
+                            Id = 604,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_cart_summary_totalPrice",
                             LanguageKey = "tr",
@@ -6527,7 +6266,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 635,
+                            Id = 605,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_cart_summary_checkout_now",
                             LanguageKey = "tr",
@@ -6536,7 +6275,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 636,
+                            Id = 606,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_cart_is_empty_title",
                             LanguageKey = "tr",
@@ -6545,7 +6284,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 637,
+                            Id = 607,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_cart_is_empty_subtitle",
                             LanguageKey = "tr",
@@ -6554,7 +6293,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 638,
+                            Id = 608,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "orders_page_your_cart_is_empty_go_back_home_button",
                             LanguageKey = "tr",
@@ -6563,7 +6302,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 639,
+                            Id = 609,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "success_message_title",
                             LanguageKey = "tr",
@@ -6572,7 +6311,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 640,
+                            Id = 610,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "success_message",
                             LanguageKey = "tr",
@@ -6581,7 +6320,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 641,
+                            Id = 611,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "error_message_title",
                             LanguageKey = "tr",
@@ -6590,7 +6329,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 642,
+                            Id = 612,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "error_message",
                             LanguageKey = "tr",
@@ -6599,7 +6338,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 643,
+                            Id = 613,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "add_in_cart_message",
                             LanguageKey = "tr",
@@ -6608,7 +6347,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 644,
+                            Id = 614,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "success_order_message_title",
                             LanguageKey = "tr",
@@ -6617,7 +6356,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            Id = 645,
+                            Id = 615,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Key = "success_order_message",
                             LanguageKey = "tr",
