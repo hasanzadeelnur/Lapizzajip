@@ -28,6 +28,8 @@ public class GetListProductCategoryQuery : IRequest<GetListResponse<GetListProdu
             Paginate<ProductCategory> productCategories = await _productCategoryRepository.GetListAsync(
                 predicate: p => p.Status,
                 orderBy: o => o.OrderBy(p => p.Order),
+                index: 0,
+                size: 10000,
                 cancellationToken: cancellationToken);
 
             GetListResponse<GetListProductCategoryDto> response = _mapper.Map<GetListResponse<GetListProductCategoryDto>>(productCategories);
