@@ -1,10 +1,13 @@
 ﻿using Application.Features.AboutUs.Queries.GetData;
 using Application.Features.ContactUs.Commands.SendMessage;
 using Application.Features.ContactUs.Queries.GetData;
+using Application.Features.Products.Queries.GetListSpeciality;
+using Application.Features.Products.Queries.GetListSpecialityForCategory;
 using Application.Features.Services.Queries.GetList;
 using Application.Features.Settings.Queries.GetList;
 using Application.Features.Sliders.Queries.GetList;
 using Application.Features.TextTranslations.Queries.GetList;
+using Core.Application.Responses;
 using Infrastructure.Dtos.Messages;
 using Infrastructure.Libs;
 using Mapster;
@@ -18,6 +21,8 @@ public interface IGeneralRepository
 {
     void RemoveCache();
     Task<List<GetListSliderDto>> GetSliders();
+    Task<List<GetListSpecialityProductDto>> GetSpecialityProducts();
+    Task<GetListSpecialityForCategoryProductResponse> GetSpecialityProductsForCategories();
     Task<List<GetListServiceResponse>> GetServices();
     Task<GetAboutUsResponse> GetAboutUs();
     Task<GetContactUsResponse> GetContactUs();
@@ -109,5 +114,26 @@ public class GeneralRepository(IMediator _mediator, IHttpContextAccessor httpCon
             _cache.Set($"{nameof(GetServices)}_{_culture}", services);
         }
         return services ?? [];
+    }
+
+    public async Task<List<GetListSpecialityProductDto>> GetSpecialityProducts()
+    {
+        bool result = _cache.TryGetValue($"{nameof(GetSpecialityProducts)}_{_culture}", out List<GetListSpecialityProductDto>? response);
+        if (!result)
+        {
+            GetListResponse<GetListSpecialityProductDto> getListResponse = await _mediator.Send(new GetListSpecialityProdcutQuery());
+            _cache.Set($"{nameof(GetSpecialityProducts)}_{_culture}", getListResponse.Items);
+        }
+        return response ?? [];
+    }
+    public async Task<GetListSpecialityForCategoryProductResponse> GetSpecialityProductsForCategories()
+    {
+        bool result = _cache.TryGetValue($"{nameof(GetSpecialityProducts)}_{_culture}", out GetListSpecialityForCategoryProductResponse? response);
+        if (!result)
+        {
+            GetListSpecialityForCategoryProductResponse getListResponse = await _mediator.Send(new GetListSpecialityForCategoryProductQuery());
+            _cache.Set($"{nameof(GetSpecialityProducts)}_{_culture}", getListResponse);
+        }
+        return response ?? new();
     }
 }

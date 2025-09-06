@@ -1,9 +1,13 @@
 ﻿@using Application.Features.AboutUs.Queries.GetData
+@using Application.Features.Products.Queries.GetListSpeciality
+@using Application.Features.Products.Queries.GetListSpecialityForCategory
 @using Application.Features.Services.Queries.GetList
 @using Application.Features.Sliders.Queries.GetList
 @using Core.Application.Responses
 @{
     List<GetListSliderDto> sliders = ViewData[nameof(IGeneralRepository.GetSliders)] as List<GetListSliderDto> ?? [];
+    List<GetListSpecialityProductDto> specialityProducts = await generalRepository.GetSpecialityProducts();
+    GetListSpecialityForCategoryProductResponse specialityForCategoryProduct = await generalRepository.GetSpecialityProductsForCategories();
     GetAboutUsResponse aboutus = ViewData[nameof(IGeneralRepository.GetAboutUs)] as GetAboutUsResponse ?? new();
     List<GetListServiceResponse> services = ViewData[nameof(IGeneralRepository.GetServices)] as List<GetListServiceResponse> ?? [];
     // GetListResponse<GetListPopularProductResponse> popularProducts = ViewData[nameof(IGeneralRepository.GetListPopularProduct)] as GetListResponse<GetListPopularProductResponse> ?? new();
@@ -53,7 +57,7 @@
                 sliderImageCount = 1;
             }
         }
-    
+
     </div>
 </section>
 
@@ -85,18 +89,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-4 text-center speciality-box wow fadeInUp">
-                <div class="speciality-img"><a href="shop-detail.html"><img src="images/speciality-1.jpg" alt="speciality" class="spec-image"></a></div>
-                <a href="shop-detail.html" class="ser-title text-uppercase fw-bold">Mexican Green Wave</a>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-4 text-center speciality-box wow fadeInUp">
-                <div class="speciality-img"><a href="shop-detail.html"><img src="images/speciality-2.jpg" alt="speciality" class="spec-image"></a></div>
-                <a href="shop-detail.html" class="ser-title text-uppercase fw-bold">Double Cheese Pizza</a>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-4 text-center speciality-box wow fadeInUp">
-                <div class="speciality-img"><a href="shop-detail.html"><img src="images/speciality-3.jpg" alt="speciality" class="spec-image"></a></div>
-                <a href="shop-detail.html" class="ser-title text-uppercase fw-bold wow fadeInUp">margherita pizza</a>
-            </div>
+            @foreach (var product in specialityProducts)
+            {
+                <div class="col-xl-4 col-lg-4 col-md-4 text-center speciality-box wow fadeInUp">
+                    <div class="speciality-img"><a href="#"><img src="@product.ImagePath" alt="@product.Name" class="spec-image"></a></div>
+                    <a href="#" class="ser-title text-uppercase fw-bold">@product.ShortDescription</a>
+                </div>
+            }
         </div>
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 text-center">
@@ -124,171 +123,45 @@
                         <li class="text-uppercase fw-bold nav-item current" role="presentation">
                             <a href="#tab-1" class="nav-link active" id="all" data-bs-toggle="tab" data-bs-target="#data_all" role="tab" aria-selected="true"> @textTranslations["all_category_title"]</a>
                         </li>
-                        <li class="text-uppercase fw-bold nav-item" role="presentation">
-                            <a href="#tab-2" class="nav-link" id="drinks" data-bs-toggle="tab" data-bs-target="#data_drinks" role="tab" aria-selected="false"> Drinks</a>
-                        </li>
-                        <li class="text-uppercase fw-bold nav-item" role="presentation">
-                            <a href="#tab-3" class="nav-link" id="salads" data-bs-toggle="tab" data-bs-target="#data_salads" role="tab" aria-selected="false"> Salads</a>
-                        </li>
-                        <li class="text-uppercase fw-bold nav-item" role="presentation">
-                            <a href="#tab-4" class="nav-link" id="pasta" data-bs-toggle="tab" data-bs-target="#data_pasta" role="tab" aria-selected="false"> pasta</a>
-                        </li>
-                        <li class="text-uppercase fw-bold nav-item" role="presentation">
-                            <a href="#tab-5" class="nav-link" id="burgers" data-bs-toggle="tab" data-bs-target="#data_burgers" role="tab" aria-selected="false"> burgers</a>
-                        </li>
-                        <li class="text-uppercase fw-bold nav-item" role="presentation">
-                            <a href="#tab-6" class="nav-link" id="deserts" data-bs-toggle="tab" data-bs-target="#data_deserts" role="tab" aria-selected="false"> deserts</a>
-                        </li>
-                        <li class="text-uppercase fw-bold nav-item" role="presentation">
-                            <a href="#tab-7" class="nav-link" id="pizzas" data-bs-toggle="tab" data-bs-target="#data_pizzas" role="tab" aria-selected="false"> pizzas</a>
-                        </li>
+                        @foreach (var category in specialityForCategoryProduct.Categories)
+                        {
+                            <li class="text-uppercase fw-bold nav-item" role="presentation">
+                                <a href="#tab-2" class="nav-link" id="drinks" data-bs-toggle="tab" data-bs-target="#data_drinks" role="tab" aria-selected="false"> Drinks</a>
+                                <a href="#category-@(category.Id)" class="nav-link" id="presentation-category-@(category.Id)" data-bs-toggle="tab" data-bs-target="#category-@(category.Id)" role="tab" aria-selected="false">@category.Name</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
         </div>
         <div class="tab-content wow fadeInUp">
             <div role="tabpanel" class="row our-menu-panel tab-pane fade in active show" role="tabpanel" id="data_all" aria-labelledby="all">
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-1.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">margherita pizza</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-3.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">Rum With Soda</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-7.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">Ceaser Salad</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-8.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">Sea Food Pasta</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-2.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">Chocolate Cookies</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-6.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">Pepperoni Pizza</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-7.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">bismarck pizza</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-1.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">Valdostana pizza</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
+                @foreach (var product in specialityForCategoryProduct.Products)
+                {
+                    <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+                        <div class="menu-img"><a href="#"><img src="@product.SpecialImagePath" alt="menu" class="menu-image"></a></div>
+                        <a href="#" class="menu-title text-uppercase">@product.Name</a>
+                        <p class="menu-des">@product.ShortDescription</p>
+                        <span class="menu-price">@product.Price ₩</span>
+                    </div>
+                }
             </div>
-            <div role="tabpanel" class="row our-menu-panel tab-pane fade" role="tabpanel" id="data_drinks" aria-labelledby="drinks">
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-3.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">Rum With Soda</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
+            @foreach (var category in specialityForCategoryProduct.Categories)
+            {
+                <div role="tabpanel" class="row our-menu-panel tab-pane fade" role="tabpanel" id="category-@(category.Id)" aria-labelledby="category-@(category.Id)">
+                    @foreach (var product in specialityForCategoryProduct.Products)
+                    {
+                        <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
+                            <div class="menu-img"><a href="#"><img src="@product.SpecialImagePath" alt="menu" class="menu-image"></a></div>
+                            <a href="#" class="menu-title text-uppercase">@product.Name</a>
+                            <p class="menu-des">@product.ShortDescription</p>
+                            <span class="menu-price">@product.Price ₩</span>
+                        </div>
+                    }
                 </div>
-            </div>
-            <div role="tabpanel" class="row our-menu-panel tab-pane fade" role="tabpanel" id="data_salads" aria-labelledby="salads">
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-7.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">Ceaser Salad</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-            </div>
-            <div role="tabpanel" class="row our-menu-panel tab-pane fade" role="tabpanel" id="data_pasta" aria-labelledby="pasta">
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-8.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">Sea Food Pasta</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-            </div>
-            <div role="tabpanel" class="row our-menu-panel tab-pane fade" role="tabpanel" id="data_burgers" aria-labelledby="burgers">
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-1.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">VALDOSTANA PIZZA</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-2.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">BISMARCK PIZZA</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-3.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">PEPPERONI PIZZA</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-7.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">ORIENTAL PIZZA</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-8.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">BARBECUE PIZZA</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-            </div>
-            <div role="tabpanel" class="row our-menu-panel tab-pane fade" role="tabpanel" id="data_deserts" aria-labelledby="deserts">
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-2.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">Chocolate Cookies</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-3.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">Rum With Soda</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-            </div>
-            <div role="tabpanel" class="row our-menu-panel tab-pane fade" role="tabpanel" id="data_pizzas" aria-labelledby="pizzas">
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-4.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">Vegetarian</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-1.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">margheritapizza</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
-                    <div class="menu-img"><a href="shop-detail.html"><img src="images/menu-3.png" alt="menu" class="menu-image"></a></div>
-                    <a href="shop-detail.html" class="menu-title text-uppercase">Four Cheese</a>
-                    <p class="menu-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                    <span class="menu-price">$20.50</span>
-                </div>
-            </div>
+            }
         </div>
-        <div class="menu-bottom-bg"><img src="images/menu-bottom-bg.png" alt="menu-bg"></div>
+        <div class="menu-bottom-bg"><img src="~/assets/images/menu-bottom-bg.png" alt="menu-bg"></div>
     </div>
 </section>
 

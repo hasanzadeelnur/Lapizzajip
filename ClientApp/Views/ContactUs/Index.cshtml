@@ -101,13 +101,12 @@
                                           placeholder="@textTranslations["contact_us_get_in_touch_your_message_placeholder"]" required></textarea>
                                 <span asp-validation-for="Message" class="text-danger"></span>
                             </div>
-                            <button type="submit" class="theme-btn g-recaptcha"
+                            <button type="submit" class="post-com text-success g-recaptcha"
                                     data-sitekey="@(_configuration["ReCaptchaClientSide"])"
                                     data-callback='onSubmit'
                                     data-action='submit'>
-                                @textTranslations["contact_us_get_in_touch_button"] <i class="far fa-paper-plane"></i>
+                                @textTranslations["contact_us_get_in_touch_button"]
                             </button>
-                            <input type="submit" name="submit" value="@textTranslations["contact_us_get_in_touch_button"]" class="post-com text-success" />
                         </form>
                     </div>
                 </div>
@@ -136,8 +135,11 @@
 @section Scripts
 {
     <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="~/jquery-validate/jquery.validate.min.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
     <script>
-            var map = L.map('map', {
+        var map = L.map('map', {
             // Set latitude and longitude of the map center (required)
             center: [@contactUs?.MapX, @contactUs?.MapY],
             // Set the initial zoom level, values 0-18, where 0 is most zoomed-out (required)
