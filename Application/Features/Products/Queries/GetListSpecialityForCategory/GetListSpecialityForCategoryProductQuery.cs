@@ -25,9 +25,8 @@ public class GetListSpecialityForCategoryProductQuery : IRequest<GetListSpeciali
 
             foreach (ProductCategory productCategory in productCategories.Items)
             {
-                GetListSpecialityForCategoryProductResponse getListSpecialityForCategoryProduct = _mapper.Map<GetListSpecialityForCategoryProductResponse>(productCategory);
                 List<Product> products = await _productRepository.Query().Skip(0).Take(9).Where(p => p.Status && p.CategoryId == productCategory.Id).OrderBy(o => o.SpecialOrder).ThenByDescending(o => o.UpdatedDate).ToListAsync(cancellationToken: cancellationToken);
-                getListSpecialityForCategoryProduct.Products.AddRange(_mapper.Map<List<GetListSpecialityForCategoryProductDto>>(products));
+                response.Products.AddRange(_mapper.Map<List<GetListSpecialityForCategoryProductDto>>(products));
             }
 
             return response;

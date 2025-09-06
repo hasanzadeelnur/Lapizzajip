@@ -17,7 +17,7 @@
                         <a asp-controller="Home" asp-action="Index">
                             <img style="width:@settings["footer_logo_width"]%; height:@settings["footer_logo_height"]%;" alt="lapizzajip" src="@settings["footer_logo"]">
                         </a>
-                        <p class="footer-des">@textTranslations["footer_title"]</p>
+                        <p class="footer-des">@Html.Raw(textTranslations["footer_title"])</p>
                         <ul>
                             <li>
                                 @textTranslations["contact_us_call_us_title"]
