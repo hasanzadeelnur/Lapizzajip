@@ -122,7 +122,8 @@ public class GeneralRepository(IMediator _mediator, IHttpContextAccessor httpCon
         if (!result)
         {
             GetListResponse<GetListSpecialityProductDto> getListResponse = await _mediator.Send(new GetListSpecialityProdcutQuery());
-            _cache.Set($"{nameof(GetSpecialityProducts)}_{_culture}", getListResponse.Items);
+            response = [.. getListResponse.Items];
+            _cache.Set($"{nameof(GetSpecialityProducts)}_{_culture}", response);
         }
         return response ?? [];
     }
@@ -132,7 +133,8 @@ public class GeneralRepository(IMediator _mediator, IHttpContextAccessor httpCon
         if (!result)
         {
             GetListSpecialityForCategoryProductResponse getListResponse = await _mediator.Send(new GetListSpecialityForCategoryProductQuery());
-            _cache.Set($"{nameof(GetSpecialityProducts)}_{_culture}", getListResponse);
+            response = getListResponse;
+            _cache.Set($"{nameof(GetSpecialityProducts)}_{_culture}", response);
         }
         return response ?? new();
     }
