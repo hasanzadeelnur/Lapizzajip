@@ -27,7 +27,11 @@ public class GetContactUsResponse
         Address = string.Empty;
         Phones = string.Empty;
         Emails = string.Empty;
+        Description = string.Empty;
         WorkingHours = string.Empty;
+        MetaTitle = string.Empty;
+        MetaDescription = string.Empty;
+        MetaKeys = string.Empty;
         TikTokAddress = string.Empty;
         FacebookAddress = string.Empty;
         LinkedinAddress = string.Empty;
@@ -36,7 +40,19 @@ public class GetContactUsResponse
         KakaoTalk = string.Empty;
     }
 
-    public GetContactUsResponse(Guid id, string mapX, string mapY, string address, string phones, string emails, string workingHours, string tikTokAddress, string facebookAddress, string linkedinAddress, string instagramAddress, string whatsappNumber, string kakaoTalk)
+    public GetContactUsResponse(
+        Guid id,
+        string mapX, 
+        string mapY, 
+        string address, 
+        string phones, 
+        string emails, 
+        string description, 
+        string workingHours, 
+        string metaTitle,
+        string metaDescription,
+        string metaKeys, 
+        string tikTokAddress, string facebookAddress, string linkedinAddress, string instagramAddress, string whatsappNumber, string kakaoTalk)
     {
         Id = id;
         MapX = mapX;
@@ -44,7 +60,11 @@ public class GetContactUsResponse
         Address = address;
         Phones = phones;
         Emails = emails;
+        Description = description;
         WorkingHours = workingHours;
+        MetaTitle = metaTitle;
+        MetaDescription = metaDescription;
+        MetaKeys = metaKeys;
         TikTokAddress = tikTokAddress;
         FacebookAddress = facebookAddress;
         LinkedinAddress = linkedinAddress;

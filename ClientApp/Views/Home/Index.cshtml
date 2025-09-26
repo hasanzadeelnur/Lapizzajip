@@ -5,7 +5,7 @@
 @using Application.Features.Sliders.Queries.GetList
 @using Core.Application.Responses
 @{
-    List<GetListSliderDto> sliders = ViewData[nameof(IGeneralRepository.GetSliders)] as List<GetListSliderDto> ?? [];
+    List<GetListSliderDto> sliders = await generalRepository.GetSliders() as List<GetListSliderDto> ?? [];
     List<GetListSpecialityProductDto> specialityProducts = await generalRepository.GetSpecialityProducts();
     GetListSpecialityForCategoryProductResponse specialityForCategoryProduct = await generalRepository.GetSpecialityProductsForCategories();
     GetAboutUsResponse aboutus = ViewData[nameof(IGeneralRepository.GetAboutUs)] as GetAboutUsResponse ?? new();
@@ -93,7 +93,7 @@
             {
                 <div class="col-xl-4 col-lg-4 col-md-4 text-center speciality-box wow fadeInUp">
                     <div class="speciality-img"><a href="#"><img src="@product.ImagePath" alt="@product.Name" class="spec-image"></a></div>
-                    <a href="#" class="ser-title text-uppercase fw-bold">@product.ShortDescription</a>
+                    <a href="#" class="ser-title text-uppercase fw-bold">@product.Name</a>
                 </div>
             }
         </div>
