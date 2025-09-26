@@ -126,7 +126,6 @@
                         @foreach (var category in specialityForCategoryProduct.Categories)
                         {
                             <li class="text-uppercase fw-bold nav-item" role="presentation">
-                                <a href="#tab-2" class="nav-link" id="drinks" data-bs-toggle="tab" data-bs-target="#data_drinks" role="tab" aria-selected="false"> Drinks</a>
                                 <a href="#category-@(category.Id)" class="nav-link" id="presentation-category-@(category.Id)" data-bs-toggle="tab" data-bs-target="#category-@(category.Id)" role="tab" aria-selected="false">@category.Name</a>
                             </li>
                         }
@@ -149,7 +148,7 @@
             @foreach (var category in specialityForCategoryProduct.Categories)
             {
                 <div role="tabpanel" class="row our-menu-panel tab-pane fade" role="tabpanel" id="category-@(category.Id)" aria-labelledby="category-@(category.Id)">
-                    @foreach (var product in specialityForCategoryProduct.Products)
+                    @foreach (var product in specialityForCategoryProduct.Products.Where(p => p.CategoryId == category.Id))
                     {
                         <div class="col-xl-3 col-lg-3 col-md-4 text-center menu-box">
                             <div class="menu-img"><a href="#"><img src="@product.SpecialImagePath" alt="menu" class="menu-image"></a></div>
