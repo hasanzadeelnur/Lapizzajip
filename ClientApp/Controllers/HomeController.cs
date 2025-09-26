@@ -6,8 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 namespace ClientApp.Controllers;
 public class HomeController(IGeneralRepository _generalRepository) : Controller
 {
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
+        ViewData[nameof(IGeneralRepository.GetAboutUs)] = await _generalRepository.GetAboutUs();
+        ViewData[nameof(IGeneralRepository.GetServices)] = await _generalRepository.GetServices();
         return View();
     }
 
