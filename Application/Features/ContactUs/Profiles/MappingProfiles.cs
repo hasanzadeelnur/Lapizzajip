@@ -9,7 +9,7 @@ internal class MappingProfiles : Profile
 {
     public MappingProfiles()
     {
-        //  CreateMap<SendMessageCommand, CustomerMessage>().ReverseMap();
+        CreateMap<SendMessageCommand, CustomerMessage>().ReverseMap();
         CreateMap<Domain.Entities.ContactUs, GetContactUsResponse>()
             .ForMember(cu => cu.WorkingHours, m => m.MapFrom(cu => cu.Translations.FirstOrDefault(t => t.LanguageKey == CultureInfo.CurrentCulture.Name)!.WorkingHours))
             .ForMember(cu => cu.Address, m => m.MapFrom(cu => cu.Translations.FirstOrDefault(t => t.LanguageKey == CultureInfo.CurrentCulture.Name)!.Address))
