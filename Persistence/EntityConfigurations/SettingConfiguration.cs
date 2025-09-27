@@ -31,6 +31,7 @@ internal class SettingConfiguration : BaseEntityTypeConfiguration<Setting, Guid>
         List<Setting> settings = [
             new(Guid.Parse("2b0a5d20-acff-4a78-a80b-ab7e0f61ba1d"), "home_slider_top_image", "/assets/images/order-top.png", SettingType.File, ""),
             new(Guid.Parse("9affa871-30f4-4ad9-8e04-3fd9d8823617"), "home_slider_bottom_image", "/assets/images/order-bottom.png", SettingType.File, ""),
+            new(Guid.Parse("8c6fcdf7-1952-4c34-a949-208e3962f77b"), "home_slider_background_image", "/assets/images/chef-bg.png", SettingType.File, ""),
             new(Guid.Parse("16324835-e330-4ab8-b85d-0c7592606af8"), "about_us_cover_image", "/assets/img/hero/about.jpg", SettingType.File, ""),
             new(Guid.Parse("13b2dfc9-d575-4c65-8004-0564fc366a79"), "menu_cover_image", "/assets/img/hero/about.jpg", SettingType.File, ""),
             new(Guid.Parse("d8605837-50ca-49f9-9ef7-a06f7db10ac5"), "menu_single_cover_image", "/assets/img/hero/about.jpg", SettingType.File, ""),

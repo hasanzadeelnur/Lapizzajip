@@ -4,6 +4,7 @@
 @using Application.Features.Services.Queries.GetList
 @using Application.Features.Sliders.Queries.GetList
 @using Core.Application.Responses
+@using Domain.Enums
 @{
     List<GetListSliderDto> sliders = await generalRepository.GetSliders() as List<GetListSliderDto> ?? [];
     List<GetListSpecialityProductDto> specialityProducts = await generalRepository.GetSpecialityProducts();
@@ -24,15 +25,14 @@
     TempData["MetaKeywords"] = textTranslations["home_page_keywords_meta"];
     TempData["MetaDescription"] = textTranslations["home_page_description_meta"];
     int sliderImageCount = 1;
-
 }
 
 
 <section class="banner" id="top">
     <div class="banner-carousel owl-carousel">
-        @foreach (var slider in sliders)
+        @foreach (GetListSliderDto slider in sliders)
         {
-            <div class="banner-slide">
+            <div class='@(slider.Type == SliderType.SliderType1 ? "banner-slide" : (slider.Type == SliderType.SliderType2 ? "banner-slide-2" : "banner-slide-3"))'>
                 <div class="container">
                     <div class="banner-box">
                         <div class="banner-text">
@@ -107,7 +107,7 @@
 
 <section class="special-menu ptb pt-140">
     <div class="container">
-        <div class="menu-top-bg"><img src="images/menu-top-bg.png" alt="meu-bg"></div>
+        <div class="menu-top-bg"><img src="~/assets/images/menu-top-bg.png" alt="meu-bg"></div>
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="headding-part text-center pb-50">
