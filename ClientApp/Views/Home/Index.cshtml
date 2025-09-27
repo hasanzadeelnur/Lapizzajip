@@ -44,7 +44,7 @@
                         <div class="banner-images">
                             <div class="all-img-banner">
                                 <img src="@slider.ImagePath" alt="@slider.Title" class="pizza-img">
-                                @foreach (var sliderImage in slider.Images)
+                                @foreach (var sliderImage in slider.Images ?? [])
                                 {
                                     <img src="@sliderImage.ImagePath" alt="@slider.Title" class="pizza-it pizza-@sliderImageCount">
                                 }
