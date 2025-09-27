@@ -101,7 +101,7 @@
                                           placeholder="@textTranslations["contact_us_get_in_touch_your_message_placeholder"]" required></textarea>
                                 <span asp-validation-for="Message" class="text-danger"></span>
                             </div>
-                            <button type="submit" style="color:#fff !important;" class="post-com text-success g-recaptcha"
+                            <button type="submit" class="post-com text-success g-recaptcha"
                                     data-sitekey="@(configuration["ReCaptchaClientSide"])"
                                     data-callback='onSubmit'
                                     data-action='submit'>
