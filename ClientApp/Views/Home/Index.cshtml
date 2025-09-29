@@ -47,6 +47,9 @@
                                 @foreach (var sliderImage in slider.Images ?? [])
                                 {
                                     <img src="@sliderImage.ImagePath" alt="@slider.Title" class="pizza-it pizza-@sliderImageCount">
+                                    {
+                                        sliderImageCount += 1;
+                                    }
                                 }
                             </div>
                         </div>
