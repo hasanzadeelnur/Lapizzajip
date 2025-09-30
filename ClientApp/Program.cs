@@ -54,9 +54,9 @@ CultureInfo[] supportedCultures =
 [
     new CultureInfo("ko"),
     new CultureInfo("en"),
-    new CultureInfo("az"),
+   // new CultureInfo("az"),
     new CultureInfo("ru"),
-    new CultureInfo("tr")
+   // new CultureInfo("tr")
 ];
 
 builder.Services.Configure<RequestLocalizationOptions>(options =>
